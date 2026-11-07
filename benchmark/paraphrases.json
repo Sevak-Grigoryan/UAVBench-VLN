@@ -1,0 +1,11 @@
+{
+ "vlnbench_mountain_013": {
+  "paraphrases": [
+   "Find the mountain hut that has a flag on it, go toward it and hold position roughly 50 m away with the camera pointed at it.",
+   "Your goal is the flagged mountain hut: approach until you are about 50 m from it, then halt so that it is in front of you.",
+   "Head over to the hut flying a flag in the mountains and come to a stop around 50 metres short of it, looking straight at it."
+  ],
+  "short": "Stop about 50 m from the flagged mountain hut, facing it.",
+  "source": "written by an LLM (Claude) from the canonical instruction; every one keeps the target and the 50 m stand-off"
+ }
+}

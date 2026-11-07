@@ -1,0 +1,104 @@
+{
+ "episode_id": "Easy/Mountain/Simulation_1",
+ "benchmark_version": "vln-x500-bench v0.1 (2026-11-04)",
+ "difficulty": "Easy",
+ "task_type": "inspect (stop at a stand-off distance, facing the target)",
+ "instruction": "Fly to the mountain hut with the flag and stop about 50 m from it, facing it.",
+ "instruction_paraphrases": [
+  "Find the mountain hut that has a flag on it, go toward it and hold position roughly 50 m away with the camera pointed at it.",
+  "Your goal is the flagged mountain hut: approach until you are about 50 m from it, then halt so that it is in front of you.",
+  "Head over to the hut flying a flag in the mountains and come to a stop around 50 metres short of it, looking straight at it."
+ ],
+ "instruction_short": "Stop about 50 m from the flagged mountain hut, facing it.",
+ "scene": {
+  "environment": "Mountain",
+  "scene_id": "easy_mountain_013",
+  "source_simulation": "All_Simulations/Easy/Mountain/Simulation_13",
+  "landscape": "glacial lake valley",
+  "season": "autumn",
+  "sky": "qwantani_mid_morning_puresky",
+  "rebuild": "dataset_codebase scene of Easy Mountain 13 (mountain_v2.plan(13, 0))"
+ },
+ "start": {
+  "xyz": [
+   545.195,
+   38.216,
+   35.627
+  ],
+  "yaw_deg": 73.72,
+  "camera_pitch_deg": 11.1,
+  "state": "in the air, hovering, armed, PX4 Position mode",
+  "note": "the runner flies the take-off and the turn to this heading by itself and hands control to the agent here"
+ },
+ "time_limit_s": 130.0,
+ "observation": {
+  "rgb": {
+   "size": [
+    1280,
+    720
+   ],
+   "fps": 30,
+   "camera_intrinsics": {
+    "model": "pinhole (USD camera)",
+    "focal_length_mm": 24.0,
+    "horizontal_aperture_mm": 20.955,
+    "vertical_aperture_mm": 11.7872,
+    "clipping_range_m": [
+     0.05,
+     10000.0
+    ],
+    "fov_horizontal_deg": 47.169,
+    "fov_vertical_deg": 27.594,
+    "fx_px": 1465.999,
+    "fy_px": 1465.999,
+    "cx_px": 640.0,
+    "cy_px": 360.0,
+    "frame_size": [
+     1280,
+     720
+    ],
+    "mount": {
+     "forward_m": 0.12,
+     "down_m": 0.07,
+     "yaw": "locked to airframe heading",
+     "roll/pitch": "stabilised gimbal; pitch commanded per mission stage, positive = looking down"
+    }
+   },
+   "mount": "0.12 m forward of and 0.07 m below the airframe centre, yaw locked to the airframe, stabilised (no roll)"
+  },
+  "pose": "drone position (ENU metres) and heading every frame, as in telemetry.json pose",
+  "instruction": "text"
+ },
+ "action": {
+  "decision_interval_s": 0.5,
+  "sticks": {
+   "x1": "yaw, + = rotate clockwise",
+   "y1": "throttle, + = climb",
+   "x2": "roll, + = move right",
+   "y2": "pitch, + = move forward",
+   "range": [
+    -1.0,
+    1.0
+   ],
+   "quantisation": 0.1,
+   "response_at_full_stick": {
+    "horizontal_mps": 8.0,
+    "climb_mps": 3.0,
+    "descent_mps": 2.0,
+    "yaw_dps": 60.0
+   }
+  },
+  "gimbal_pitch_deg": {
+   "range": [
+    0.0,
+    80.0
+   ],
+   "quantisation": 5.0,
+   "meaning": "positive = looking down",
+   "slew_dps": 35.0
+  },
+  "stop": "ends the episode; the drone holds its position (the agent says: I am done)",
+  "autopilot": "PX4 v1.14.3 SITL, Position mode, sticks over MAVLink MANUAL_CONTROL"
+ },
+ "coordinate_frame": "ENU metres (x east, y north, z up); yaw 0 = +x, counter-clockwise positive; camera pitch positive = down"
+}

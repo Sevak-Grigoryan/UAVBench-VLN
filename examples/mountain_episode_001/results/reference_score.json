@@ -1,0 +1,26 @@
+{
+ "episode_id": "Easy/Mountain/Simulation_1",
+ "success": true,
+ "oracle_success": true,
+ "navigation_error_m": 0.57,
+ "spl": 0.9999,
+ "episode_end": "STOP in the goal state",
+ "stopped": true,
+ "distance_to_target_at_end_m": 49.43,
+ "in_distance_band_at_end": true,
+ "target_in_frame_at_end": true,
+ "heading_error_at_end_deg": 0.1,
+ "target_in_frame_fraction": 0.726,
+ "closest_to_ring_m": 0.01,
+ "crashed": false,
+ "below_min_agl": false,
+ "path_length_m": 286.8,
+ "reference_path_m": 286.8,
+ "duration_s": 61.97,
+ "time_limit_s": 130.0,
+ "end_position_xyz": [
+  337.87,
+  184.43,
+  83.67
+ ]
+}

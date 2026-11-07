@@ -1,0 +1,3 @@
+# evaluate.py, selftest.py and geometry.py (scoring) need only NumPy.
+# Building episodes (fly.py, render.py, publish_episode.py) needs the full simulation stack: see ../docs/libraries.md.
+numpy

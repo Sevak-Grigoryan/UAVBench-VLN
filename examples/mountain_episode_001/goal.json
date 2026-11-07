@@ -1,0 +1,82 @@
+{
+ "episode_id": "Easy/Mountain/Simulation_1",
+ "hidden": "evaluator only -- never give this file to the agent",
+ "target": {
+  "name": "mountain_hut_1",
+  "description": "the mountain hut with the flag",
+  "kind": "mountain hut",
+  "xy": [
+   316.624,
+   229.064
+  ],
+  "point_xyz": [
+   316.624,
+   229.064,
+   45.181
+  ],
+  "base_z": 40.91,
+  "top_z": 51.59,
+  "in_view_at_start": false,
+  "start_turn_from_target_deg": -63.2
+ },
+ "success": {
+  "rule": "the agent says STOP within 130 s, and at that moment (1) its horizontal distance to the target is 50 +- 15 m, (2) the target point is inside the image with 10% of the frame clear at every edge, and (3) during the whole episode it never tilted beyond 60 deg nor came below 2 m above the ground (no crash, no landing)",
+  "standoff_m": 50.0,
+  "standoff_tolerance_m": 15.0,
+  "distance": "horizontal (x, y), drone to target.xy",
+  "frame_margin": 0.1,
+  "max_tilt_deg": 60.0,
+  "min_agl_m": 2.0,
+  "time_limit_s": 130.0,
+  "not_required": "the route, the speed, the height, how long it hovers -- any flight that ends in the goal state succeeds"
+ },
+ "metrics": {
+  "SR": "success (rule above)",
+  "OSR": "oracle success: at SOME frame the drone was in the goal state (distance band + target in frame), even if it did not stop there",
+  "NE": "navigation error at STOP = | horizontal distance to target - standoff_m | (0 = exactly on the stand-off ring)",
+  "SPL": "SR x reference_path_m / max(path_m, reference_path_m)",
+  "heading_error_deg": "angle between the drone heading and the direction to the target at STOP"
+ },
+ "reference": {
+  "path_m": 286.8,
+  "duration_s": 62.0,
+  "frames": 1860,
+  "actions": 54,
+  "stop_xyz": [
+   337.87,
+   184.43,
+   83.67
+  ],
+  "files": "reference/trajectory.mp4, reference/action.json, reference/telemetry.json",
+  "flown": {
+   "work_dir": "/mnt/weka/sgrigoryan/Benchmark_work/vlnbench_mountain_013",
+   "flight_frames": [
+    645,
+    2505
+   ],
+   "flight_t": [
+    21.533,
+    83.533
+   ],
+   "verification": {
+    "outcome": "completed",
+    "landed_and_disarmed": true,
+    "touchdown_error_m": 0.81,
+    "max_tilt_deg": 26.73,
+    "max_px4_heading_error_deg": 1.63,
+    "pegasus_lockstep_timeouts": 0,
+    "min_agl_in_transit_m": 8.25,
+    "canopy_height_max_m": 12.7
+   }
+  }
+ },
+ "instruction_checks": {
+  "paraphrase_similarity_to_canonical": [
+   0.358,
+   0.523,
+   0.488
+  ],
+  "similarity_limit": 0.8,
+  "paraphrase_source": "written by an LLM (Claude) from the canonical instruction; every one keeps the target and the 50 m stand-off"
+ }
+}

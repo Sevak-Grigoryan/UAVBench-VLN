@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Generated data and media
+*.mp4
+*.mov
+*.usd
+*.usda
+*.usdc
+*.usdz
+*.npy
+*.npz
+*.ulg
+*.zip
+
+# Working directories of the pipeline (runs, previews, renders, superseded experiments)
+_*/
+logs/
+logs*/
+manager_state/
+kit_*/
+tmp_*/
+
+# Built environments
+px4_env/
+px4_build_env/
+
+# Logs
+*.log
+*.out
+*.err

@@ -1,0 +1,12 @@
+135f7660 gpu05 Isaac Sim segfault at start-up (rc 139) on both attempts, render worker 357750, 2026-10-23
+b9c5ada4 gpu05 Isaac Sim segfault at start-up (rc 139) on both attempts, render worker 357752, 2026-10-23
+74449004 gpu02 Isaac Sim start-up crash on both attempts, render worker 357854, 2026-10-24
+da4342ff gpu02 Isaac Sim start-up crash on both attempts, render worker 357856, 2026-10-24
+d977eded gpu09 Isaac Sim start-up crash on both attempts, render worker 359727, 2026-10-25
+a782fd40 gpu09 Isaac Sim start-up crash on both attempts, render worker 359778, 2026-10-25
+0824fd9b gpu09 Isaac Sim start-up crash on both attempts, render worker 359770, 2026-10-25
+cf741e00 gpu09 Isaac Sim start-up crash on both attempts, render worker 359777, 2026-10-25
+b51472d9 gpu09 Isaac Sim start-up crash on both attempts, render worker 359403, 2026-10-25
+6c63483e gpu09 Isaac Sim start-up crash on both attempts, render worker 359402, 2026-10-25
+119a10fe gpu02 Isaac Sim start-up crash on both attempts, render worker 361125, 2026-10-25
+04754db1 gpu01 Isaac Sim start-up crash on both attempts, render worker 361122, 2026-10-26

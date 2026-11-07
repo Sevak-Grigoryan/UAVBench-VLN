@@ -1,0 +1,1002 @@
+{
+ "easy_coastal_001": {
+  "canonical": "Take off from a clear part of the quay at the fishing harbour with the fish market, fly to the sandy beach with colourful umbrellas and stop about 65 m from it and hover for about 6 seconds looking at it, then land at the landing pad on the hill at the west end of the coast.",
+  "paraphrases": [
+   "We want a look at the beach with the colourful umbrellas: lift off from an open stretch of the fish-market harbour quay, hold about 65 m from the beach and watch it for 6 seconds, then put down on the hilltop pad at the western end.",
+   "Starting on the quay of the fishing harbour, fly toward the umbrella beach, stop roughly 65 m short of it and hover facing it for about 6 seconds. Finish on the landing pad on the hill at the west end of the coast.",
+   "From a free spot on the harbour quay by the fish market, go and observe the sandy beach with umbrellas from about 65 m for 6 seconds, then head to the western hill pad and land."
+  ],
+  "short": "Watch the umbrella beach for 6 s from about 65 m, then land on the west hill pad.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_002": {
+  "canonical": "Take off from the landing pad beside the long wooden fishing pier, fly to the fishing harbour with the fish market and stop about 66 m from it and hover for about 5 seconds looking at it, then land at the landing pad on the hill at the east end of the coast.",
+  "paraphrases": [
+   "Go and have a look at the harbour where the fish market is. Leave from the pad by the long wooden pier, wait in the air about 66 m off the harbour with the camera on it for 5 seconds, then bring the drone down on the hilltop pad at the coast's eastern end.",
+   "Starting beside the fishing pier, go to the harbour with the fish market, hover about 66 m away and keep the camera on it for around 5 seconds, then head to the eastern hilltop pad and land.",
+   "Leave the pad by the wooden pier, approach the fish-market harbour, stop roughly 66 m off it and observe it for 5 seconds, and finally touch down on the landing pad on the eastern hill."
+  ],
+  "short": "Hover facing the fishing harbour for 5 s, then land on the east hill pad.",
+  "author": "LLM (Claude), 2026-10-13 (paraphrase 1 rewritten freer)"
+ },
+ "easy_coastal_003": {
+  "canonical": "Take off from the landing pad beside the marina full of yachts and sailing boats, fly directly over the fishing harbour with the fish market, with the camera looking down at it, then land on a clear part of the quay at the marina full of yachts and sailing boats.",
+  "paraphrases": [
+   "Cross straight over the fish-market harbour with the camera pointed down at it. You leave from the pad next to the yacht marina and come back down on an open part of that marina's quay.",
+   "Lift off from the landing pad beside the marina, pass directly above the fishing harbour looking down on it, and land on a clear patch of the marina quay.",
+   "Fly from the marina's landing pad over the top of the harbour with the fish market, camera down, and set the drone on the marina quay where it is free."
+  ],
+  "short": "Pass over the fish-market harbour, then land on the marina quay.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_004": {
+  "canonical": "Take off from the landing pad beside the fishing harbour with the fish market, fly out to the white research vessel and land on its helicopter deck.",
+  "paraphrases": [
+   "Fly from the fish-market harbour's pad out to sea and put the drone down on the helideck of the white research ship.",
+   "Starting next to the fish-market harbour, head out over the water to the white research ship and put the drone down on its helideck.",
+   "Your landing spot is the helicopter deck of the white research vessel: lift off from the harbour pad beside the fish market, fly out to the ship and land on its deck."
+  ],
+  "short": "Land on the white research vessel's helideck.",
+  "author": "LLM (Claude), 2026-10-13 (paraphrase 1 rewritten freer)"
+ },
+ "easy_coastal_005": {
+  "canonical": "Take off from the landing pad beside the boatyard with boats up on stands, fly to the marina full of yachts and sailing boats and stop about 62 m from it and hover for about 6 seconds looking at it, then land at the landing pad beside the marina full of yachts and sailing boats.",
+  "paraphrases": [
+   "From the pad by the boatyard where boats stand on cradles, approach the yacht marina, wait about 62 m away watching it for 6 seconds, and land on the pad next to the marina.",
+   "Hover roughly 62 m from the marina full of yachts and sailing boats and look at it for around 6 seconds; the flight starts at the boatyard pad and ends at the marina's own pad.",
+   "Take the drone from the boatyard landing pad to the marina, observe it for 6 seconds from about 62 m, then touch down on the marina pad."
+  ],
+  "short": "Look at the marina for 6 s from about 62 m, then land on its pad.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_006": {
+  "canonical": "Take off from the landing pad beside the boatyard with boats up on stands, fly to the sandy beach with colourful umbrellas and stop about 66 m from it and hover for about 5 seconds looking at it, then land at the landing pad on the hill at the west end of the coast.",
+  "paraphrases": [
+   "Starting at the boatyard where boats are propped up on stands, go towards the beach with the bright umbrellas, stop about 66 m before it and observe it for 5 seconds, then head to the western hilltop pad and land there.",
+   "From the boatyard landing pad, head to the umbrella beach, hover roughly 66 m away facing it for around 5 seconds, then fly to the western hill pad and land.",
+   "Leaving the boatyard, go and inspect the beach with the bright umbrellas from about 66 m for 5 seconds; your landing pad is on the hill at the west end of the coast."
+  ],
+  "short": "Inspect the umbrella beach for 5 s, then land on the west hill pad.",
+  "author": "LLM (Claude), 2026-10-13 (paraphrase 1 rewritten freer)"
+ },
+ "easy_coastal_007": {
+  "canonical": "Take off from an open patch of sand on the sandy beach with colourful umbrellas, fly out to the orange supply vessel and land on its helicopter deck.",
+  "paraphrases": [
+   "Lift off from a bare patch of sand on the umbrella beach, cross the water to the orange supply ship and land on its helicopter deck.",
+   "Starting on the open sand of the beach with the colourful umbrellas, fly out to sea and put the drone down on the helideck of the orange supply vessel.",
+   "This flight goes from the beach sand straight to the orange supply vessel, ending with a landing on its helicopter deck."
+  ],
+  "short": "From the beach sand, land on the orange supply ship's helideck.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_008": {
+  "canonical": "Take off from the landing pad beside the fishing harbour with the fish market, fly directly over the sleek white motor yacht, with the camera looking down at it, then land on the seafront promenade of the seaside village.",
+  "paraphrases": [
+   "From the pad by the fish-market harbour, fly right above the sleek white motor yacht with the camera aimed down at it, then land on the village's seafront promenade.",
+   "Pass over the white motor yacht looking straight down at it. Start at the fishing harbour's landing pad and finish on the seafront promenade of the seaside village.",
+   "Take off beside the fish market harbour, overfly the sleek white motor yacht camera-down, and set down on the promenade along the village seafront."
+  ],
+  "short": "Fly over the white motor yacht, then land on the village promenade.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_009": {
+  "canonical": "Take off from the grass beside the white lighthouse on the cliff headland, fly directly over the large green-hulled container ship loaded with coloured containers, with the camera looking down at it, then land on the open meadow inland of the seaside village with the promenade.",
+  "paraphrases": [
+   "Leave from the grass next to the white lighthouse on the headland, pass directly over the big green container ship stacked with coloured boxes while looking down at it, and land in the open meadow inland of the seaside village.",
+   "Fly over the top of the large green-hulled container ship with the camera pointing down. You lift off from the grass beside the white lighthouse and land on the meadow behind the village with the promenade.",
+   "From the lighthouse grass on the cliff, cross above the green container ship, camera down, then put the drone down in the open field inland of the seaside village."
+  ],
+  "short": "Pass over the green container ship, then land in the meadow behind the village.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_010": {
+  "canonical": "Take off from the landing pad beside the sandy beach with colourful umbrellas, fly to the water's edge near the boatyard with boats up on stands and follow the coastline west for about 298 m at about 28 m above the water, keeping the shore on your right, then land at the landing pad beside the boatyard with boats up on stands.",
+  "paraphrases": [
+   "Head west along the coast for about 298 m, roughly 28 m above the sea, with the land on your right. First leave the beach pad and drop to the shoreline near the boatyard, and when the run is done land on the boatyard pad.",
+   "From the beach pad, head down to the shoreline near the boatyard where boats stand on cradles, and trace the coast to the west for about 298 m, staying around 28 m over the sea with land on your right side. Then land at the boatyard pad.",
+   "Fly along the coast heading west: start at the umbrella beach pad, join the shoreline by the boatyard, keep about 28 m above the water and the shore to your right for about 298 m, and end on the landing pad next to the boatyard."
+  ],
+  "short": "Follow the coast west for about 298 m at 28 m, then land at the boatyard.",
+  "author": "LLM (Claude), 2026-10-13 (paraphrase 1 rewritten freer)"
+ },
+ "easy_coastal_011": {
+  "canonical": "Take off from the landing pad beside the boatyard with boats up on stands, fly to the black harbour tug and circle it once clockwise at about 38 m, keeping the camera on it, then land at the landing pad on the hill at the east end of the coast.",
+  "paraphrases": [
+   "Do one clockwise lap of about 38 m radius around the black tug, filming it all the way. Take off from the boatyard pad and land afterwards on the hill pad at the eastern end.",
+   "From the boatyard pad, go to the black tugboat and make one full clockwise loop around it at a distance of about 38 m, camera pointed at the tug, before landing on the eastern hill pad.",
+   "Orbit the black harbour tug once, clockwise, at roughly 38 m, keeping it in view. You start at the boatyard landing pad and finish on the landing pad on the hill at the east end of the coast."
+  ],
+  "short": "Circle the black tug clockwise at 38 m, then land on the east hill pad.",
+  "author": "LLM (Claude), 2026-10-13 (paraphrase 1 rewritten freer)"
+ },
+ "easy_coastal_012": {
+  "canonical": "Take off from a clear part of the quay at the marina full of yachts and sailing boats, fly directly over the orange fishing trawler with the orange gantry, with the camera looking down at it, then land at the landing pad beside the marina full of yachts and sailing boats.",
+  "paraphrases": [
+   "Lift off from a free part of the marina quay, fly directly over the orange trawler with the orange gantry looking down on it, then land on the pad beside the marina.",
+   "Pass above the orange fishing trawler with its orange gantry, camera down. The flight starts on the marina quay and finishes on the marina's landing pad.",
+   "From the open quay of the yacht marina, overfly the orange trawler with the camera tilted down, and come back to land at the marina's pad."
+  ],
+  "short": "Fly over the orange trawler, then land on the marina pad.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_013": {
+  "canonical": "Take off from the landward end of the long wooden fishing pier, fly to the marina full of yachts and sailing boats and stop about 63 m from it and hover for about 6 seconds looking at it, then land on an open patch of sand on the sandy beach with colourful umbrellas.",
+  "paraphrases": [
+   "From the shore end of the long wooden fishing pier, go to the yacht marina, hold about 63 m from it and watch it for 6 seconds, then land on a bare patch of the umbrella beach.",
+   "Hover around 63 m from the marina full of yachts and look at it for about 6 seconds. You start at the landward end of the wooden pier and finish on the open sand of the beach with umbrellas.",
+   "Taking off where the fishing pier meets the land, fly toward the marina, observe it for 6 seconds from roughly 63 m, and set the drone down on the beach sand."
+  ],
+  "short": "Watch the marina for 6 s from about 63 m, then land on the beach sand.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_014": {
+  "canonical": "Take off from a clear part of the quay at the coast-guard station with the red and white boathouse, fly to the white coast-guard cutter with the red stripe and circle it once clockwise at about 42 m, keeping the camera on it, then land on the open meadow inland of the fishing harbour with the fish market.",
+  "paraphrases": [
+   "Start on an open part of the quay at the coast-guard station with the red and white boathouse, do one clockwise lap of about 42 m around the white cutter with the red stripe, filming it, and land in the meadow inland of the fishing harbour.",
+   "Circle the white coast-guard cutter with the red stripe once, clockwise, at roughly 42 m with the camera on it. Take off from the coast-guard station quay and land on the open meadow behind the fish-market harbour.",
+   "From the quay of the coast-guard station, fly a single clockwise orbit of about 42 m around the red-striped cutter while keeping it in view, then put down in the field inland of the fishing harbour."
+  ],
+  "short": "One clockwise 42 m lap around the coast-guard cutter, then land in the meadow.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_015": {
+  "canonical": "Take off from the landing pad beside the sandy beach with colourful umbrellas, fly to the water's edge near the boatyard with boats up on stands and follow the coastline east for about 276 m at about 28 m above the water, keeping the shore on your left until you are near the sandy beach with colourful umbrellas, then land on an open patch of sand on the sandy beach with colourful umbrellas.",
+  "paraphrases": [
+   "Follow the coast eastwards for about 276 m at around 28 m above the sea, land on your left, from the water's edge at the boatyard until you near the umbrella beach. Begin at the beach's landing pad and finish on a bare patch of that beach's sand.",
+   "Lift off from the pad beside the sandy beach, drop to the shoreline near the boatyard, then fly east along the coast for roughly 276 m at 28 m with the shore on your left until the umbrella beach is close; land on the open sand there.",
+   "A coastal run heading east: about 276 m, 28 m over the water, keeping the land to the left, from the boatyard shore to the umbrella beach. Take off at the beach pad and land on the beach sand."
+  ],
+  "short": "Fly east along the coast about 276 m at 28 m, then land on the beach sand.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_016": {
+  "canonical": "Take off from the seafront promenade of the seaside village, fly out to the white research vessel and land on its helicopter deck.",
+  "paraphrases": [
+   "From the village's seafront promenade, fly out to the white research ship and land on its helicopter deck.",
+   "Lift off on the promenade along the seaside village and put the drone down on the helideck of the white research vessel.",
+   "Starting on the seafront promenade, head out over the water to the white research vessel and land on its helicopter deck."
+  ],
+  "short": "From the promenade, land on the white research ship's helideck.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_017": {
+  "canonical": "Take off from a clear part of the quay at the fishing harbour with the fish market, fly to the water's edge near the boatyard with boats up on stands and follow the coastline west for about 264 m at about 22 m above the water, keeping the shore on your right until you are near the container port with the big blue cranes, then land at the landing pad beside the boatyard with boats up on stands.",
+  "paraphrases": [
+   "Fly west along the coastline for about 264 m at 22 m above the water with the shore on your right, from the water's edge at the boatyard until you are close to the container port. Start on an open part of the fish-market harbour quay and land on the boatyard's pad.",
+   "Take off from the fishing harbour quay, go to the shoreline by the boatyard, then follow the coast west roughly 264 m at 22 m, land to your right, until the blue-crane container port is near; finish on the boatyard landing pad.",
+   "Westward shore run of about 264 m at 22 m altitude, keeping the shore on the right, from the boatyard to near the container port. You start on the harbour quay and end at the pad beside the boatyard."
+  ],
+  "short": "Follow the coast west about 264 m at 22 m, then land on the boatyard pad.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_018": {
+  "canonical": "Take off from an open patch of sand on the sandy beach with colourful umbrellas, fly directly over the dark blue fishing trawler with the orange gantry, with the camera looking down at it, then land at the landing pad beside the sandy beach with colourful umbrellas.",
+  "paraphrases": [
+   "From a bare patch of sand on the umbrella beach, fly directly above the dark blue trawler with the orange gantry looking down at it, then land on the pad beside the beach.",
+   "Pass over the dark blue fishing trawler with the orange gantry, camera pointed down. Take off on the open sand of the beach and land on the beach's landing pad.",
+   "Lift off from the umbrella beach sand, overfly the dark blue trawler camera-down, and come back to the landing pad next to the beach."
+  ],
+  "short": "Fly over the dark blue trawler, then land on the beach pad.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_019": {
+  "canonical": "Take off from the edge of the quay at the fishing harbour with the fish market, next to the water, fly to the water's edge near the sandy beach with colourful umbrellas and follow the coastline east for about 185 m at about 25 m above the water, keeping the shore on your left until you are near the coast-guard station with the red and white boathouse, then land on an open patch of sand on the sandy beach with colourful umbrellas.",
+  "paraphrases": [
+   "Starting at the very edge of the fish-market harbour quay beside the water, go to the shoreline at the umbrella beach and follow the coast east about 185 m at 25 m, land on your left, until the coast-guard station is near; then land on the beach's open sand.",
+   "Fly east along the coastline for roughly 185 m, 25 m above the water, with the shore to your left, from the umbrella beach to near the coast-guard station. Take off from the quay edge at the fishing harbour and land on a bare patch of the beach.",
+   "From the harbour quay edge, head to the water's edge by the beach, trace the coast eastward for about 185 m at 25 m keeping the land on the left, and finish on the beach sand."
+  ],
+  "short": "Follow the coast east about 185 m at 25 m, then land on the beach sand.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_020": {
+  "canonical": "Take off from the landing pad beside the container port with the big blue cranes, fly to the sandy beach with colourful umbrellas and circle it once clockwise at about 62 m, keeping the camera on it, then land at the landing pad on the hill at the east end of the coast.",
+  "paraphrases": [
+   "From the container port pad under the blue cranes, make one clockwise circle of about 62 m around the umbrella beach, keeping it on camera, and land on the hill pad at the eastern end.",
+   "Circle the sandy beach with colourful umbrellas once, clockwise, roughly 62 m out, filming it. Start at the container port's pad and finish on the eastern hilltop pad.",
+   "Leave the container port, orbit the umbrella beach clockwise at about 62 m with the camera on it, then land on the pad on the hill at the east end of the coast."
+  ],
+  "short": "One clockwise 62 m lap around the umbrella beach, then land on the east hill pad.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_021": {
+  "canonical": "Take off from the landing pad beside the container port with the big blue cranes, fly out to the yellow supply vessel and land on its helicopter deck.",
+  "paraphrases": [
+   "Take off from the pad beside the container port with the blue cranes, fly out to the yellow supply ship and land on its helideck.",
+   "From the landing pad at the container port, cross the water to the yellow supply vessel and put down on its helicopter deck.",
+   "Lift off by the big blue cranes and finish the flight on the helicopter deck of the yellow supply vessel."
+  ],
+  "short": "From the container port pad, land on the yellow supply ship's helideck.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_022": {
+  "canonical": "Take off from a clear part of the quay at the boatyard with boats up on stands, fly to the sandy beach with colourful umbrellas and circle it once clockwise at about 66 m, keeping the camera on it, then land on the grass beside the red and white lighthouse on the cliff headland.",
+  "paraphrases": [
+   "From an open part of the boatyard quay, do one clockwise orbit of about 66 m around the umbrella beach while filming it, then land on the grass beside the red and white lighthouse.",
+   "Circle the beach with the colourful umbrellas once clockwise, roughly 66 m away, camera on the beach. Lift off from the boatyard quay and land on the grass next to the red and white lighthouse on the headland.",
+   "Leave the boatyard quay, loop clockwise around the umbrella beach at about 66 m keeping it in view, and finish on the lighthouse grass on the cliff."
+  ],
+  "short": "One clockwise 66 m lap around the umbrella beach, then land by the lighthouse.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_023": {
+  "canonical": "Take off from an open patch of sand on the sandy beach with colourful umbrellas, fly to the water's edge near the sandy beach with colourful umbrellas and follow the coastline west for about 290 m at about 28 m above the water, keeping the shore on your right until you are near the long wooden fishing pier, then land at the landing pad beside the marina full of yachts and sailing boats.",
+  "paraphrases": [
+   "Take off from a bare patch of sand on the umbrella beach, drop to the water's edge there and follow the coast west for about 290 m at 28 m above the sea, shore on your right, until you near the wooden fishing pier; then land on the marina's pad.",
+   "Fly west along the coastline roughly 290 m at 28 m with the land to your right, from the umbrella beach until the long fishing pier is close. Start on the beach sand and finish on the landing pad beside the marina.",
+   "A westward coastal run of about 290 m at 28 m altitude, keeping the shore on the right: from the beach where you take off, to near the fishing pier, then to the marina pad to land."
+  ],
+  "short": "Follow the coast west about 290 m at 28 m, then land on the marina pad.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_024": {
+  "canonical": "Take off from an open patch of sand on the sandy beach with colourful umbrellas, fly to the water's edge near the sandy beach with colourful umbrellas and follow the coastline east for about 257 m at about 28 m above the water, keeping the shore on your left until you are near the coast-guard station with the red and white boathouse, then land on a clear part of the quay at the coast-guard station with the red and white boathouse.",
+  "paraphrases": [
+   "From the open sand of the umbrella beach, go to the water's edge and follow the coast east for about 257 m at 28 m, land on your left, until the coast-guard station is near; land on an open part of that station's quay.",
+   "Fly east along the shore for roughly 257 m, 28 m above the water, with the shore to your left, from the umbrella beach to the coast-guard station with the red and white boathouse. Take off from the beach sand and land on the station's quay.",
+   "Eastward shore run: about 257 m at 28 m, keeping the land on the left, starting from the beach and ending near the coast-guard station, where you land on a clear part of its quay."
+  ],
+  "short": "Follow the coast east about 257 m at 28 m, then land on the coast-guard quay.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_025": {
+  "canonical": "Take off from the helicopter deck of the white coast-guard cutter with the red stripe, fly to the white sailing yacht with its sail up and circle it once counter-clockwise at about 28 m, keeping the camera on it, then land on a clear part of the quay at the fishing harbour with the fish market.",
+  "paraphrases": [
+   "Leave the helideck of the white coast-guard cutter with the red stripe, circle the white sailing yacht with its sail up once counter-clockwise at about 28 m with the camera on it, then land on an open part of the fish-market harbour quay.",
+   "One counter-clockwise orbit of roughly 28 m around the white yacht with its sail raised, filming it. You take off from the coast-guard cutter's helicopter deck and land on the fishing harbour quay.",
+   "From the red-striped cutter's helideck, loop anticlockwise around the white sailing yacht at about 28 m keeping it in frame, then put down on a clear patch of the harbour quay."
+  ],
+  "short": "One counter-clockwise 28 m lap around the white yacht, then land on the harbour quay.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_026": {
+  "canonical": "Take off from the helicopter deck of the red research vessel, fly to the red and white passenger ferry and circle it once counter-clockwise at about 62 m, keeping the camera on it, then land on the edge of the quay at the marina full of yachts and sailing boats, next to the water.",
+  "paraphrases": [
+   "From the red research ship's helideck, fly one counter-clockwise circle of about 62 m around the red and white passenger ferry, keeping it filmed, then land at the water's edge on the marina quay.",
+   "Circle the red and white ferry once anticlockwise at roughly 62 m with the camera on it. Start on the helicopter deck of the red research vessel and finish on the edge of the marina quay next to the water.",
+   "Take off from the red research vessel, orbit the passenger ferry counter-clockwise at about 62 m, and land on the marina quay right beside the water."
+  ],
+  "short": "One counter-clockwise 62 m lap around the ferry, then land on the marina quay edge.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_027": {
+  "canonical": "Take off from the edge of the quay at the boatyard with boats up on stands, next to the water, fly to the sleek white motor yacht and stop about 32 m from it and hover for about 6 seconds looking at it, then land on the grass beside the red and white lighthouse on the cliff headland.",
+  "paraphrases": [
+   "Starting at the water's edge on the boatyard quay, fly to the sleek white motor yacht, hover about 32 m from it and look at it for 6 seconds, then land on the grass by the red and white lighthouse.",
+   "Hover roughly 32 m from the white motor yacht and watch it for about 6 seconds. Lift off from the quay edge at the boatyard and land on the grass beside the red and white lighthouse on the headland.",
+   "From the edge of the boatyard quay, go and observe the sleek white motor yacht from about 32 m for 6 seconds, then finish on the lighthouse grass."
+  ],
+  "short": "Watch the white motor yacht for 6 s from about 32 m, then land by the lighthouse.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_028": {
+  "canonical": "Take off from the helicopter deck of the dark blue research vessel, fly to the white sailing yacht with its sails furled and circle it once clockwise at about 30 m, keeping the camera on it, then land on the seafront promenade of the seaside village.",
+  "paraphrases": [
+   "From the dark blue research ship's helicopter deck, do one clockwise lap of about 30 m around the white yacht with furled sails while filming it, and land on the village's seafront promenade.",
+   "Circle the white sailing yacht with its sails furled once clockwise at roughly 30 m, camera on it. Take off from the dark blue research vessel's helideck and finish on the seafront promenade of the seaside village.",
+   "Leave the dark blue research vessel, orbit the furled-sail white yacht clockwise at about 30 m keeping it in view, then put down on the village promenade."
+  ],
+  "short": "One clockwise 30 m lap around the white yacht, then land on the promenade.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_029": {
+  "canonical": "Take off from the landing pad on the hill at the east end of the coast, fly directly over the dark blue sailing yacht with its sail up, with the camera looking down at it, then fly back and land where you took off.",
+  "paraphrases": [
+   "Lift off from the hill pad at the eastern end, fly over the dark blue sailing yacht with its sail up looking down at it, and come back to land where you started.",
+   "Pass directly above the dark blue yacht with its sail raised, camera down; the flight starts and ends on the same hilltop pad at the east end of the coast.",
+   "From the eastern hill pad, overfly the dark blue sailing yacht with the camera pointing down, then return and touch down on the pad you took off from."
+  ],
+  "short": "Fly over the dark blue yacht and return to land where you started.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_030": {
+  "canonical": "Take off from the grass beside the yellow and black lighthouse on the cliff headland, fly to the white sailing yacht with its sails furled and circle it once counter-clockwise at about 28 m, keeping the camera on it, then land on the open meadow inland of the boatyard with boats up on stands.",
+  "paraphrases": [
+   "From the grass beside the yellow and black lighthouse, make one counter-clockwise circle of about 28 m around the white yacht with furled sails, filming it, then land in the meadow inland of the boatyard.",
+   "Circle the white sailing yacht with its sails furled once anticlockwise at roughly 28 m with the camera on it. Take off on the lighthouse grass and land on the open meadow behind the boatyard.",
+   "Leave the headland by the yellow and black lighthouse, loop counter-clockwise around the furled-sail yacht at about 28 m, and finish in the field inland of the boatyard."
+  ],
+  "short": "One counter-clockwise 28 m lap around the white yacht, then land in the meadow.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_031": {
+  "canonical": "Take off from the landing pad beside the long wooden fishing pier, fly directly over the small rocky islet in the west part of the bay, with the camera looking down at it, then land on an open patch of sand on the sandy beach with colourful umbrellas.",
+  "paraphrases": [
+   "From the pad beside the wooden fishing pier, fly directly above the small rocky islet in the western part of the bay, looking down on it, then land on a bare patch of the umbrella beach.",
+   "Pass over the little rocky islet in the west of the bay with the camera aimed down. Start at the fishing pier's pad and finish on the open sand of the beach with umbrellas.",
+   "Take off by the long pier, overfly the western rocky islet camera-down, and set the drone down on the umbrella beach sand."
+  ],
+  "short": "Fly over the western islet, then land on the beach sand.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_032": {
+  "canonical": "Take off from the grass beside the yellow and black lighthouse on the cliff headland, fly to the yellow supply vessel and circle it once counter-clockwise at about 52 m, keeping the camera on it, then land at the landing pad beside the sandy beach with colourful umbrellas.",
+  "paraphrases": [
+   "From the grass next to the yellow and black lighthouse, fly one counter-clockwise loop of about 52 m around the yellow supply ship, keeping it on camera, then land on the pad by the umbrella beach.",
+   "Circle the yellow supply vessel once anticlockwise at roughly 52 m, filming it. Lift off on the lighthouse grass and finish at the landing pad beside the sandy beach.",
+   "Leave the headland lighthouse, orbit the yellow supply vessel counter-clockwise at about 52 m, and land on the beach's pad."
+  ],
+  "short": "One counter-clockwise 52 m lap around the yellow supply ship, then land on the beach pad.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_033": {
+  "canonical": "Take off from the helicopter deck of the orange supply vessel, fly to the marina full of yachts and sailing boats and stop about 58 m from it and hover for about 6 seconds looking at it, then land at the landing pad on the hill at the west end of the coast.",
+  "paraphrases": [
+   "Take off from the orange supply ship's helideck, hover about 58 m from the yacht marina and look at it for 6 seconds, then fly to the western hill pad and land.",
+   "Observe the marina full of yachts and sailing boats for around 6 seconds from roughly 58 m. You start on the helicopter deck of the orange supply vessel and end on the hilltop pad at the west end.",
+   "From the orange supply vessel's deck, head to the marina, hover facing it at about 58 m for 6 seconds, and finish on the pad on the western hill."
+  ],
+  "short": "Watch the marina for 6 s from about 58 m, then land on the west hill pad.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_034": {
+  "canonical": "Take off from a clear part of the quay at the coast-guard station with the red and white boathouse, fly to the teal and white passenger ferry and circle it once clockwise at about 61 m, keeping the camera on it, then fly back and land where you took off.",
+  "paraphrases": [
+   "From an open part of the coast-guard station quay, circle the teal and white passenger ferry once clockwise at about 61 m with the camera on it, then come back and land where you took off.",
+   "One clockwise orbit of roughly 61 m around the teal and white ferry, filming it; the flight starts and ends at the same spot on the coast-guard station quay.",
+   "Lift off from the quay by the red and white boathouse, loop clockwise around the teal ferry at about 61 m, and return to land on your take-off spot."
+  ],
+  "short": "One clockwise 61 m lap around the teal ferry, then return to the start.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_035": {
+  "canonical": "Take off from a clear part of the quay at the fishing harbour with the fish market, fly to the light blue fishing trawler with the orange gantry and circle it once counter-clockwise at about 39 m, keeping the camera on it, then land on a clear part of the quay at the coast-guard station with the red and white boathouse.",
+  "paraphrases": [
+   "Start on an open part of the fish-market harbour quay, do one counter-clockwise lap of about 39 m around the light blue trawler with the orange gantry while filming it, and land on the quay of the coast-guard station.",
+   "Circle the light blue fishing trawler once anticlockwise at roughly 39 m, camera on it. Take off from the harbour quay and land on a clear part of the coast-guard station quay.",
+   "From the fishing harbour quay, orbit the light blue trawler with the orange gantry counter-clockwise at about 39 m, then put down on the coast-guard station's quay."
+  ],
+  "short": "One counter-clockwise 39 m lap around the light blue trawler, then land on the coast-guard quay.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_036": {
+  "canonical": "Take off from the seafront promenade of the seaside village, fly out to the white coast-guard cutter with the red stripe and land on its helicopter deck.",
+  "paraphrases": [
+   "From the village's seafront promenade, fly out to the white coast-guard cutter with the red stripe and land on its helideck.",
+   "Lift off on the seaside promenade and put the drone down on the helicopter deck of the red-striped white cutter.",
+   "Starting on the village promenade, cross the water to the white coast-guard cutter and finish on its helicopter deck."
+  ],
+  "short": "From the promenade, land on the coast-guard cutter's helideck.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_037": {
+  "canonical": "Take off from the open meadow inland of the fishing harbour with the fish market, fly directly over the small rocky islet, with the camera looking down at it, then land on the seafront promenade of the seaside village.",
+  "paraphrases": [
+   "Take off in the open meadow inland of the fishing harbour, pass directly over the small rocky islet looking down at it, and land on the village's seafront promenade.",
+   "Fly over the little rocky islet with the camera pointed down. Start in the field behind the fish-market harbour and finish on the seafront promenade of the village.",
+   "From the meadow inland of the harbour, overfly the rocky islet camera-down, then put down on the village promenade."
+  ],
+  "short": "Fly over the rocky islet, then land on the promenade.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_038": {
+  "canonical": "Take off from the grass beside the red and white lighthouse on the cliff headland, fly directly over the red sailing yacht with its sails furled, with the camera looking down at it, then fly back and land where you took off.",
+  "paraphrases": [
+   "From the grass beside the red and white lighthouse, fly over the red sailing yacht with furled sails, camera down, and return to land where you took off.",
+   "Pass directly above the red yacht with its sails furled, looking down at it; you start and finish on the same grass by the red and white lighthouse.",
+   "Lift off on the lighthouse headland, overfly the red furled-sail yacht with the camera aimed down, then come back to your take-off spot to land."
+  ],
+  "short": "Fly over the red yacht and return to land where you started.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_039": {
+  "canonical": "Take off from the helicopter deck of the red supply vessel, fly directly over the dark blue sailing yacht with its sails furled, with the camera looking down at it, then land on an open patch of sand on the sandy beach with colourful umbrellas.",
+  "paraphrases": [
+   "From the red supply ship's helideck, fly directly above the dark blue yacht with furled sails looking down on it, then land on a bare patch of the umbrella beach.",
+   "Pass over the dark blue sailing yacht with its sails furled, camera down. Take off from the helicopter deck of the red supply vessel and finish on the open sand of the beach.",
+   "Leave the red supply vessel, overfly the dark blue furled-sail yacht camera-down, and set down on the umbrella beach sand."
+  ],
+  "short": "Fly over the dark blue yacht, then land on the beach sand.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_040": {
+  "canonical": "Take off from an open patch of sand on the sandy beach with colourful umbrellas, fly out to the white coast-guard cutter with the red stripe and land on its helicopter deck.",
+  "paraphrases": [
+   "Lift off from a bare patch of sand on the umbrella beach and land on the helideck of the white coast-guard cutter with the red stripe.",
+   "From the open sand of the beach with colourful umbrellas, fly out to the red-striped cutter and put down on its helicopter deck.",
+   "Starting on the beach sand, cross the water to the white coast-guard cutter and finish on its helicopter deck."
+  ],
+  "short": "From the beach sand, land on the coast-guard cutter's helideck.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_041": {
+  "canonical": "Take off from the edge of the quay at the marina full of yachts and sailing boats, next to the water, fly to the white sailing yacht with its sail up and circle it once clockwise at about 28 m, keeping the camera on it, then land at the landing pad beside the sandy beach with colourful umbrellas.",
+  "paraphrases": [
+   "Starting at the water's edge on the marina quay, do one clockwise loop of about 28 m around the white yacht with its sail up, filming it, then land on the pad by the umbrella beach.",
+   "Circle the white sailing yacht with its sail raised once clockwise at roughly 28 m, camera on it. Take off from the marina quay edge and land on the landing pad beside the sandy beach.",
+   "From the edge of the marina quay, orbit the white yacht clockwise at about 28 m, then finish at the beach's pad."
+  ],
+  "short": "One clockwise 28 m lap around the white yacht, then land on the beach pad.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_042": {
+  "canonical": "Take off from the helicopter deck of the dark blue supply vessel, fly to the large green-hulled container ship loaded with coloured containers and stop about 80 m from it and hover for about 5 seconds looking at it, then land on an open patch of sand on the sandy beach with colourful umbrellas.",
+  "paraphrases": [
+   "Take off from the dark blue supply ship's helideck, hover about 80 m from the big green container ship and watch it for 5 seconds, then land on a bare patch of the umbrella beach.",
+   "Observe the large green-hulled container ship for around 5 seconds from roughly 80 m. Start on the helicopter deck of the dark blue supply vessel and finish on the open sand of the beach.",
+   "From the dark blue supply vessel, fly toward the green container ship, hover facing it at about 80 m for 5 seconds, and land on the beach sand."
+  ],
+  "short": "Watch the green container ship for 5 s from about 80 m, then land on the beach sand.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_043": {
+  "canonical": "Take off from the seafront promenade of the seaside village, fly out to the white coast-guard cutter with the red stripe in the west part of the bay and land on its helicopter deck.",
+  "paraphrases": [
+   "From the village's seafront promenade, fly out to the white red-striped coast-guard cutter in the western part of the bay and land on its helideck.",
+   "Lift off on the seaside promenade and land on the helicopter deck of the coast-guard cutter with the red stripe, the one in the west of the bay.",
+   "Starting on the village promenade, head out west in the bay to the white coast-guard cutter and put down on its helicopter deck."
+  ],
+  "short": "From the promenade, land on the western coast-guard cutter's helideck.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_044": {
+  "canonical": "Take off from the landing pad beside the marina full of yachts and sailing boats, fly out to the white coast-guard cutter with the red stripe and land on its helicopter deck.",
+  "paraphrases": [
+   "From the pad beside the yacht marina, fly out to the white coast-guard cutter with the red stripe and land on its helideck.",
+   "Lift off next to the marina and put the drone down on the helicopter deck of the red-striped cutter.",
+   "Starting at the marina's landing pad, cross the water to the white coast-guard cutter and finish on its helicopter deck."
+  ],
+  "short": "From the marina pad, land on the coast-guard cutter's helideck.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_045": {
+  "canonical": "Take off from the landing pad beside the marina full of yachts and sailing boats, fly directly over the sleek white motor yacht, with the camera looking down at it, then land on a clear part of the quay at the marina full of yachts and sailing boats.",
+  "paraphrases": [
+   "From the pad by the yacht marina, fly directly above the sleek white motor yacht with the camera pointing down, then land on an open part of the marina quay.",
+   "Pass over the white motor yacht looking straight down at it. Start at the marina's landing pad and finish on a clear patch of the marina quay.",
+   "Take off beside the marina, overfly the sleek motor yacht camera-down, and set down on the marina quay."
+  ],
+  "short": "Fly over the white motor yacht, then land on the marina quay.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_046": {
+  "canonical": "Take off from the landing pad beside the seaside village with the promenade, fly to the water's edge near the sandy beach with colourful umbrellas and follow the coastline west for about 224 m at about 22 m above the water, keeping the shore on your right until you are near the seaside village with the promenade, then land on an open patch of sand on the sandy beach with colourful umbrellas.",
+  "paraphrases": [
+   "From the pad by the seaside village, go to the water's edge at the umbrella beach and follow the coast west about 224 m at 22 m, shore on your right, until the village is close; land on a bare patch of the beach.",
+   "Fly west along the coast for roughly 224 m at 22 m above the water, keeping the shore to your right, from the umbrella beach until you near the seaside village. Take off from the village pad and land on the beach sand.",
+   "Westward coastal run of about 224 m at 22 m, land on the right, starting at the umbrella beach and ending near the village; you lift off at the village's pad and finish on the open sand."
+  ],
+  "short": "Follow the coast west about 224 m at 22 m, then land on the beach sand.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_047": {
+  "canonical": "Take off from the landing pad beside the sandy beach with colourful umbrellas, fly to the long dark blue oil tanker with pipes along its deck and circle it once clockwise at about 95 m, keeping the camera on it, then land on a clear part of the quay at the fishing harbour with the fish market.",
+  "paraphrases": [
+   "From the pad by the umbrella beach, do one clockwise orbit of about 95 m around the long dark blue oil tanker with pipes on deck, filming it, and land on an open part of the fish-market harbour quay.",
+   "Circle the dark blue tanker once clockwise at roughly 95 m, camera on it. Start at the beach's landing pad and finish on a clear part of the fishing harbour quay.",
+   "Leave the beach pad, loop clockwise around the long oil tanker at about 95 m keeping it in view, and put down on the harbour quay."
+  ],
+  "short": "One clockwise 95 m lap around the oil tanker, then land on the harbour quay.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_048": {
+  "canonical": "Take off from the helicopter deck of the white coast-guard cutter with the red stripe, fly to the fishing harbour with the fish market and circle it once counter-clockwise at about 65 m, keeping the camera on it, then land on the landward end of the long wooden fishing pier.",
+  "paraphrases": [
+   "From the coast-guard cutter's helideck, circle the fish-market harbour once counter-clockwise at about 65 m with the camera on it, then land on the shore end of the wooden fishing pier.",
+   "One anticlockwise orbit of roughly 65 m around the fishing harbour, filming it. Take off from the red-striped cutter's helicopter deck and land on the landward end of the long pier.",
+   "Leave the white coast-guard cutter, loop counter-clockwise around the harbour with the fish market at about 65 m, then set down where the fishing pier meets the land."
+  ],
+  "short": "One counter-clockwise 65 m lap around the harbour, then land on the pier.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_049": {
+  "canonical": "Take off from a clear part of the quay at the marina full of yachts and sailing boats, fly to the white coast-guard cutter with the red stripe in the middle of the bay and circle it once clockwise at about 47 m, keeping the camera on it, then fly back and land where you took off.",
+  "paraphrases": [
+   "From an open part of the marina quay, do one clockwise circle of about 47 m around the white coast-guard cutter with the red stripe in the middle of the bay, filming it, then return and land where you took off.",
+   "Circle the red-striped cutter in the middle of the bay once clockwise at roughly 47 m, camera on it; you start and finish on the same spot of the marina quay.",
+   "Lift off from the marina quay, orbit the mid-bay coast-guard cutter clockwise at about 47 m, and come back to land on your take-off spot."
+  ],
+  "short": "One clockwise 47 m lap around the coast-guard cutter, then return to the start.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_050": {
+  "canonical": "Take off from the landing pad on the hill above the middle of the bay, fly to the large green-hulled container ship loaded with coloured containers and stop about 78 m from it and hover for about 6 seconds looking at it, then land on an open patch of sand on the sandy beach with colourful umbrellas.",
+  "paraphrases": [
+   "From the hill pad over the middle of the bay, hover about 78 m from the big green container ship and look at it for 6 seconds, then land on a bare patch of the umbrella beach.",
+   "Observe the large green container ship loaded with coloured containers for about 6 seconds from roughly 78 m. Take off from the central hill pad and finish on the open beach sand.",
+   "Leave the hilltop pad above the bay's centre, hold facing the green container ship at about 78 m for 6 seconds, and land on the umbrella beach."
+  ],
+  "short": "Watch the green container ship for 6 s from about 78 m, then land on the beach sand.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_051": {
+  "canonical": "Take off from the grass beside the white lighthouse on the cliff headland, fly to the orange supply vessel and circle it once counter-clockwise at about 54 m, keeping the camera on it, then land on the seafront promenade of the seaside village.",
+  "paraphrases": [
+   "From the grass beside the white lighthouse, make one counter-clockwise loop of about 54 m around the orange supply ship, keeping it filmed, and land on the village's seafront promenade.",
+   "Circle the orange supply vessel once anticlockwise at roughly 54 m, camera on it. Lift off on the lighthouse grass and finish on the seafront promenade of the seaside village.",
+   "Leave the white lighthouse on the headland, orbit the orange supply vessel counter-clockwise at about 54 m, and put down on the village promenade."
+  ],
+  "short": "One counter-clockwise 54 m lap around the orange supply ship, then land on the promenade.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_052": {
+  "canonical": "Take off from a clear part of the quay at the fishing harbour with the fish market, fly to the red supply vessel and circle it once counter-clockwise at about 46 m, keeping the camera on it, then land on the seafront promenade of the seaside village.",
+  "paraphrases": [
+   "Start on an open part of the fish-market harbour quay, fly one counter-clockwise circle of about 46 m around the red supply ship with the camera on it, then land on the village's seafront promenade.",
+   "Circle the red supply vessel once anticlockwise at roughly 46 m, filming it. Take off from the fishing harbour quay and finish on the seafront promenade.",
+   "From the harbour quay, orbit the red supply vessel counter-clockwise at about 46 m, and set the drone down on the village promenade."
+  ],
+  "short": "One counter-clockwise 46 m lap around the red supply ship, then land on the promenade.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_053": {
+  "canonical": "Take off from the landing pad beside the container port with the big blue cranes, fly out to the white coast-guard cutter with the red stripe and land on its helicopter deck.",
+  "paraphrases": [
+   "From the pad by the container port with the blue cranes, fly out to the white coast-guard cutter with the red stripe and land on its helideck.",
+   "Lift off at the container port's landing pad and put the drone down on the helicopter deck of the red-striped cutter.",
+   "Starting under the big blue cranes, cross the water to the white coast-guard cutter and finish on its helicopter deck."
+  ],
+  "short": "From the container port pad, land on the coast-guard cutter's helideck.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_054": {
+  "canonical": "Take off from the landing pad beside the sandy beach with colourful umbrellas, fly to the red research vessel and stop about 48 m from it and hover for about 6 seconds looking at it, then fly back and land where you took off.",
+  "paraphrases": [
+   "From the pad by the umbrella beach, hover about 48 m from the red research ship and look at it for 6 seconds, then come back and land where you took off.",
+   "Observe the red research vessel for around 6 seconds from roughly 48 m; the flight starts and ends on the landing pad beside the sandy beach.",
+   "Lift off at the beach pad, hold facing the red research vessel at about 48 m for 6 seconds, and return to your take-off pad to land."
+  ],
+  "short": "Watch the red research ship for 6 s from about 48 m, then return to the start.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_055": {
+  "canonical": "Take off from a clear part of the quay at the coast-guard station with the red and white boathouse, fly to the long black oil tanker with pipes along its deck and stop about 80 m from it and hover for about 6 seconds looking at it, then land at the landing pad beside the coast-guard station with the red and white boathouse.",
+  "paraphrases": [
+   "Start on an open part of the coast-guard station quay, hover about 80 m from the long black oil tanker with pipes on deck and watch it for 6 seconds, then land on the station's pad.",
+   "Observe the black tanker for around 6 seconds from roughly 80 m. Take off from the quay of the coast-guard station with the red and white boathouse and finish on that station's landing pad.",
+   "From the coast-guard quay, go to the long black oil tanker, hold facing it at about 80 m for 6 seconds, and land on the pad beside the station."
+  ],
+  "short": "Watch the black oil tanker for 6 s from about 80 m, then land on the coast-guard pad.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_056": {
+  "canonical": "Take off from an open patch of sand on the sandy beach with colourful umbrellas, fly out to the white coast-guard cutter with the red stripe and land on its helicopter deck.",
+  "paraphrases": [
+   "Lift off from a bare patch of sand on the umbrella beach and land on the helideck of the white coast-guard cutter with the red stripe.",
+   "From the open sand of the beach with colourful umbrellas, fly out and put down on the red-striped cutter's helicopter deck.",
+   "Starting on the beach sand, cross the water to the white coast-guard cutter and finish on its helicopter deck."
+  ],
+  "short": "From the beach sand, land on the coast-guard cutter's helideck.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_057": {
+  "canonical": "Take off from the landing pad beside the marina full of yachts and sailing boats, fly out to the red supply vessel and land on its helicopter deck.",
+  "paraphrases": [
+   "From the pad beside the yacht marina, fly out to the red supply ship and land on its helideck.",
+   "Lift off next to the marina and put the drone down on the helicopter deck of the red supply vessel.",
+   "Starting at the marina's landing pad, cross the water to the red supply vessel and finish on its helicopter deck."
+  ],
+  "short": "From the marina pad, land on the red supply ship's helideck.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_058": {
+  "canonical": "Take off from the landward end of the long wooden fishing pier, fly to the sleek white motor yacht far out to sea in the east part of the bay (the eastern one) and circle it once clockwise at about 37 m, keeping the camera on it, then land on a clear part of the quay at the coast-guard station with the red and white boathouse.",
+  "paraphrases": [
+   "From the shore end of the fishing pier, do one clockwise lap of about 37 m around the eastern of the two sleek white motor yachts, far out in the east of the bay, filming it, then land on the coast-guard station quay.",
+   "Circle the white motor yacht far out to sea in the east part of the bay (the eastern one) once clockwise at roughly 37 m, camera on it. Take off where the pier meets the land and land on a clear part of the coast-guard quay.",
+   "Leave the landward end of the long pier, orbit the eastern white motor yacht clockwise at about 37 m, and put down on the quay by the red and white boathouse."
+  ],
+  "short": "One clockwise 37 m lap around the eastern motor yacht, then land on the coast-guard quay.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_059": {
+  "canonical": "Take off from the landing pad beside the fishing harbour with the fish market, fly out to the dark blue research vessel and land on its helicopter deck.",
+  "paraphrases": [
+   "From the pad by the fish-market harbour, fly out to the dark blue research ship and land on its helideck.",
+   "Lift off beside the fishing harbour and put the drone down on the helicopter deck of the dark blue research vessel.",
+   "Starting at the harbour's landing pad, cross the water to the dark blue research vessel and finish on its helicopter deck."
+  ],
+  "short": "From the harbour pad, land on the dark blue research ship's helideck.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_060": {
+  "canonical": "Take off from the landing pad beside the boatyard with boats up on stands, fly to the teal and white passenger ferry and circle it once counter-clockwise at about 63 m, keeping the camera on it, then land at the landing pad beside the coast-guard station with the red and white boathouse.",
+  "paraphrases": [
+   "From the boatyard pad, circle the teal and white passenger ferry once counter-clockwise at about 63 m with the camera on it, then land on the pad by the coast-guard station.",
+   "One anticlockwise orbit of roughly 63 m around the teal ferry, filming it. Start at the boatyard's landing pad and finish at the coast-guard station's pad.",
+   "Leave the boatyard, loop counter-clockwise around the teal and white ferry at about 63 m, and put down on the pad beside the red and white boathouse."
+  ],
+  "short": "One counter-clockwise 63 m lap around the teal ferry, then land on the coast-guard pad.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_061": {
+  "canonical": "Take off from an open patch of sand on the sandy beach with colourful umbrellas, fly to the old wooden two-masted sailing ship and circle it once counter-clockwise at about 38 m, keeping the camera on it, then land at the landing pad beside the marina full of yachts and sailing boats.",
+  "paraphrases": [
+   "From a bare patch of sand on the umbrella beach, do one counter-clockwise lap of about 38 m around the old two-masted wooden sailing ship, filming it, then land on the marina's pad.",
+   "Circle the old wooden two-master once anticlockwise at roughly 38 m, camera on it. Take off from the beach sand and land at the landing pad beside the marina.",
+   "From the open sand, orbit the old two-masted sailing ship counter-clockwise at about 38 m, and finish on the marina pad."
+  ],
+  "short": "One counter-clockwise 38 m lap around the old two-master, then land on the marina pad.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_062": {
+  "canonical": "Take off from a clear part of the quay at the coast-guard station with the red and white boathouse, fly to the marina full of yachts and sailing boats and stop about 57 m from it and hover for about 6 seconds looking at it, then land at the landing pad beside the sandy beach with colourful umbrellas.",
+  "paraphrases": [
+   "Start on an open part of the coast-guard station quay, hover about 57 m from the yacht marina and watch it for 6 seconds, then land on the pad by the umbrella beach.",
+   "Observe the marina full of yachts and sailing boats for around 6 seconds from roughly 57 m. Take off from the coast-guard quay and finish at the beach's landing pad.",
+   "From the quay by the red and white boathouse, fly to the marina, hold facing it at about 57 m for 6 seconds, and land on the beach pad."
+  ],
+  "short": "Watch the marina for 6 s from about 57 m, then land on the beach pad.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_063": {
+  "canonical": "Take off from the open meadow inland of the sandy beach with colourful umbrellas, fly directly over the sandy beach with colourful umbrellas, with the camera looking down at it, then land at the landing pad beside the fishing harbour with the fish market.",
+  "paraphrases": [
+   "From the open meadow inland of the umbrella beach, fly directly above that beach with the camera pointing down at it, then land on the pad by the fish-market harbour.",
+   "Pass over the sandy beach with colourful umbrellas, looking straight down. Lift off in the field behind the beach and finish at the fishing harbour's landing pad.",
+   "Take off in the meadow above the beach, overfly the umbrella beach camera-down, and put down on the harbour pad."
+  ],
+  "short": "Fly over the umbrella beach, then land on the harbour pad.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_064": {
+  "canonical": "Take off from the landing pad beside the long wooden fishing pier, fly out to the red research vessel and land on its helicopter deck.",
+  "paraphrases": [
+   "From the pad beside the wooden fishing pier, fly out to the red research ship and land on its helideck.",
+   "Lift off by the long pier and put the drone down on the helicopter deck of the red research vessel.",
+   "Starting at the fishing pier's landing pad, cross the water to the red research vessel and finish on its helicopter deck."
+  ],
+  "short": "From the pier pad, land on the red research ship's helideck.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_065": {
+  "canonical": "Take off from the landing pad on the hill above the middle of the bay, fly to the red and white passenger ferry and circle it once counter-clockwise at about 51 m, keeping the camera on it, then land on a clear part of the quay at the fishing harbour with the fish market.",
+  "paraphrases": [
+   "From the hill pad over the middle of the bay, circle the red and white passenger ferry once counter-clockwise at about 51 m, filming it, then land on an open part of the fish-market harbour quay.",
+   "One anticlockwise orbit of roughly 51 m around the red and white ferry, camera on it. Take off at the central hilltop pad and land on the fishing harbour quay.",
+   "Leave the hill pad above the bay's centre, loop counter-clockwise around the passenger ferry at about 51 m, and put down on a clear patch of the harbour quay."
+  ],
+  "short": "One counter-clockwise 51 m lap around the ferry, then land on the harbour quay.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_066": {
+  "canonical": "Take off from the open meadow inland of the container port with the big blue cranes, fly to the white coast-guard cutter with the red stripe in the east part of the bay and stop about 41 m from it and hover for about 5 seconds looking at it, then land on a clear part of the quay at the container port with the big blue cranes.",
+  "paraphrases": [
+   "From the meadow inland of the container port, hover about 41 m from the white red-striped coast-guard cutter in the east of the bay and look at it for 5 seconds, then land on an open part of the container port quay.",
+   "Observe the coast-guard cutter in the east part of the bay for around 5 seconds from roughly 41 m. Take off in the field behind the container port and finish on the port's quay.",
+   "Leave the meadow above the blue-crane port, hold facing the eastern cutter at about 41 m for 5 seconds, and land on a clear part of the container quay."
+  ],
+  "short": "Watch the eastern coast-guard cutter for 5 s from about 41 m, then land on the container quay.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_067": {
+  "canonical": "Take off from an open patch of sand on the sandy beach with colourful umbrellas, fly out to the white coast-guard cutter with the red stripe far out to sea in the east part of the bay (the eastern one) and land on its helicopter deck.",
+  "paraphrases": [
+   "From a bare patch of sand on the umbrella beach, fly out to the eastern of the two coast-guard cutters, far out in the east part of the bay, and land on its helideck.",
+   "Lift off on the beach sand and put the drone down on the helicopter deck of the white red-striped cutter far out to sea in the east (the eastern one).",
+   "Starting on the umbrella beach, head far out east in the bay to the eastern coast-guard cutter and finish on its helicopter deck."
+  ],
+  "short": "From the beach sand, land on the eastern coast-guard cutter's helideck.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_068": {
+  "canonical": "Take off from the open meadow inland of the coast-guard station with the red and white boathouse, fly to the old wooden three-masted sailing ship and stop about 34 m from it and hover for about 8 seconds looking at it, then land on a clear part of the quay at the coast-guard station with the red and white boathouse.",
+  "paraphrases": [
+   "From the meadow inland of the coast-guard station, hover about 34 m from the old three-masted wooden sailing ship and watch it for 8 seconds, then land on an open part of the station's quay.",
+   "Observe the old wooden three-master for around 8 seconds from roughly 34 m. Take off in the field behind the coast-guard station and finish on a clear part of its quay.",
+   "Leave the meadow above the red and white boathouse, hold facing the three-masted ship at about 34 m for 8 seconds, and land on the coast-guard quay."
+  ],
+  "short": "Watch the old three-master for 8 s from about 34 m, then land on the coast-guard quay.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_069": {
+  "canonical": "Take off from the landing pad beside the seaside village with the promenade, fly to the dark blue fishing trawler with the orange gantry and stop about 30 m from it and hover for about 5 seconds looking at it, then land on the seafront promenade of the seaside village.",
+  "paraphrases": [
+   "From the pad beside the seaside village, hover about 30 m from the dark blue trawler with the orange gantry and look at it for 5 seconds, then land on the village's seafront promenade.",
+   "Observe the dark blue fishing trawler for around 5 seconds from roughly 30 m. Start at the village's landing pad and finish on the seafront promenade.",
+   "Lift off by the village, hold facing the dark blue trawler at about 30 m for 5 seconds, and put down on the promenade along the seafront."
+  ],
+  "short": "Watch the dark blue trawler for 5 s from about 30 m, then land on the promenade.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_070": {
+  "canonical": "Take off from the seafront promenade of the seaside village, fly to the container port with the big blue cranes and circle it once clockwise at about 64 m, keeping the camera on it, then land on the open meadow inland of the seaside village with the promenade.",
+  "paraphrases": [
+   "From the village's seafront promenade, circle the container port with the big blue cranes once clockwise at about 64 m with the camera on it, then land in the meadow inland of the village.",
+   "One clockwise orbit of roughly 64 m around the container port, filming it. Take off on the seafront promenade and finish on the open meadow behind the seaside village.",
+   "Leave the promenade, loop clockwise around the blue-crane container port at about 64 m, and put down in the field inland of the village."
+  ],
+  "short": "One clockwise 64 m lap around the container port, then land in the meadow.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_071": {
+  "canonical": "Take off from the landing pad beside the long wooden fishing pier, fly out to the white coast-guard cutter with the red stripe in the east part of the bay and land on its helicopter deck.",
+  "paraphrases": [
+   "From the pad by the wooden fishing pier, fly out to the white red-striped coast-guard cutter in the east part of the bay and land on its helideck.",
+   "Lift off beside the long pier and land on the helicopter deck of the coast-guard cutter in the east of the bay.",
+   "Starting at the pier's landing pad, head east across the bay to the white coast-guard cutter and finish on its helicopter deck."
+  ],
+  "short": "From the pier pad, land on the eastern coast-guard cutter's helideck.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_072": {
+  "canonical": "Take off from a clear part of the quay at the boatyard with boats up on stands, fly to the seaside village with the promenade and stop about 67 m from it and hover for about 6 seconds looking at it, then land at the landing pad beside the boatyard with boats up on stands.",
+  "paraphrases": [
+   "Start on an open part of the boatyard quay, hover about 67 m from the seaside village with the promenade and watch it for 6 seconds, then land on the boatyard's pad.",
+   "Observe the seaside village for around 6 seconds from roughly 67 m. Take off from the boatyard quay and finish at the boatyard's landing pad.",
+   "From the quay where boats stand on cradles, fly to the village, hold facing it at about 67 m for 6 seconds, and come back to land on the boatyard pad."
+  ],
+  "short": "Watch the village for 6 s from about 67 m, then land on the boatyard pad.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_073": {
+  "canonical": "Take off from the landing pad beside the sandy beach with colourful umbrellas, fly to the white coast-guard cutter with the red stripe and stop about 49 m from it and hover for about 5 seconds looking at it, then land at the landing pad on the hill above the middle of the bay.",
+  "paraphrases": [
+   "From the pad by the umbrella beach, hover about 49 m from the white coast-guard cutter with the red stripe and look at it for 5 seconds, then land on the hill pad over the middle of the bay.",
+   "Observe the red-striped cutter for around 5 seconds from roughly 49 m. Start at the beach's landing pad and finish on the central hilltop pad.",
+   "Lift off by the beach, hold facing the coast-guard cutter at about 49 m for 5 seconds, and land on the pad on the hill above the bay's centre."
+  ],
+  "short": "Watch the coast-guard cutter for 5 s from about 49 m, then land on the central hill pad.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_074": {
+  "canonical": "Take off from a clear part of the quay at the marina full of yachts and sailing boats, fly directly over the long wooden fishing pier, with the camera looking down at it, then land on an open patch of sand on the sandy beach with colourful umbrellas.",
+  "paraphrases": [
+   "From an open part of the marina quay, fly directly above the long wooden fishing pier with the camera looking down, then land on a bare patch of the umbrella beach.",
+   "Pass over the wooden fishing pier looking straight down at it. Take off from the marina quay and finish on the open sand of the beach.",
+   "Lift off on the marina quay, overfly the long pier camera-down, and set the drone down on the umbrella beach sand."
+  ],
+  "short": "Fly over the fishing pier, then land on the beach sand.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_075": {
+  "canonical": "Take off from the landing pad beside the coast-guard station with the red and white boathouse, fly out to the white coast-guard cutter with the red stripe in the east part of the bay and land on its helicopter deck.",
+  "paraphrases": [
+   "From the pad by the coast-guard station, fly out to the white red-striped cutter in the east part of the bay and land on its helideck.",
+   "Lift off beside the red and white boathouse and land on the helicopter deck of the coast-guard cutter in the east of the bay.",
+   "Starting at the coast-guard station's pad, head east across the bay to the white cutter and finish on its helicopter deck."
+  ],
+  "short": "From the coast-guard pad, land on the eastern cutter's helideck.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_076": {
+  "canonical": "Take off from the landing pad beside the sandy beach with colourful umbrellas, fly out to the orange supply vessel and land on its helicopter deck.",
+  "paraphrases": [
+   "From the pad by the umbrella beach, fly out to the orange supply ship and land on its helideck.",
+   "Lift off beside the sandy beach and put the drone down on the helicopter deck of the orange supply vessel.",
+   "Starting at the beach's landing pad, cross the water to the orange supply vessel and finish on its helicopter deck."
+  ],
+  "short": "From the beach pad, land on the orange supply ship's helideck.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_077": {
+  "canonical": "Take off from a clear part of the quay at the container port with the big blue cranes, fly to the boatyard with boats up on stands and circle it once counter-clockwise at about 67 m, keeping the camera on it, then land at the landing pad beside the sandy beach with colourful umbrellas.",
+  "paraphrases": [
+   "Start on an open part of the container port quay, do one counter-clockwise loop of about 67 m around the boatyard, filming it, then land on the pad by the umbrella beach.",
+   "Circle the boatyard with boats up on stands once anticlockwise at roughly 67 m, camera on it. Take off from the container quay and finish at the beach's landing pad.",
+   "From the quay under the blue cranes, orbit the boatyard counter-clockwise at about 67 m, and put down on the beach pad."
+  ],
+  "short": "One counter-clockwise 67 m lap around the boatyard, then land on the beach pad.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_078": {
+  "canonical": "Take off from a clear part of the quay at the marina full of yachts and sailing boats, fly to the small rocky islet and circle it once counter-clockwise at about 45 m, keeping the camera on it, then fly back and land where you took off.",
+  "paraphrases": [
+   "From an open part of the marina quay, circle the small rocky islet once counter-clockwise at about 45 m with the camera on it, then come back and land where you took off.",
+   "One anticlockwise orbit of roughly 45 m around the little rocky islet, filming it; the flight starts and ends at the same spot on the marina quay.",
+   "Lift off from the marina quay, loop counter-clockwise around the islet at about 45 m, and return to your take-off spot to land."
+  ],
+  "short": "One counter-clockwise 45 m lap around the islet, then return to the start.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_079": {
+  "canonical": "Take off from the helicopter deck of the red supply vessel, fly to the long grey oil tanker with pipes along its deck and circle it once counter-clockwise at about 84 m, keeping the camera on it, then land at the landing pad beside the coast-guard station with the red and white boathouse.",
+  "paraphrases": [
+   "From the red supply ship's helideck, do one counter-clockwise orbit of about 84 m around the long grey oil tanker with pipes on deck, filming it, then land on the pad by the coast-guard station.",
+   "Circle the grey tanker once anticlockwise at roughly 84 m, camera on it. Take off from the helicopter deck of the red supply vessel and finish at the coast-guard station's pad.",
+   "Leave the red supply vessel, loop counter-clockwise around the long grey oil tanker at about 84 m, and put down on the pad beside the red and white boathouse."
+  ],
+  "short": "One counter-clockwise 84 m lap around the grey tanker, then land on the coast-guard pad.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_080": {
+  "canonical": "Take off from the landward end of the long wooden fishing pier, fly out to the red research vessel and land on its helicopter deck.",
+  "paraphrases": [
+   "From the shore end of the long wooden fishing pier, fly out to the red research ship and land on its helideck.",
+   "Lift off where the fishing pier meets the land and put the drone down on the helicopter deck of the red research vessel.",
+   "Starting on the landward end of the pier, cross the water to the red research vessel and finish on its helicopter deck."
+  ],
+  "short": "From the pier, land on the red research ship's helideck.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_081": {
+  "canonical": "Take off from an open patch of sand on the sandy beach with colourful umbrellas, fly to the old wooden three-masted sailing ship and circle it once clockwise at about 40 m, keeping the camera on it, then land at the landing pad beside the marina full of yachts and sailing boats.",
+  "paraphrases": [
+   "From a bare patch of sand on the umbrella beach, do one clockwise lap of about 40 m around the old three-masted wooden sailing ship, filming it, then land on the marina's pad.",
+   "Circle the old wooden three-master once clockwise at roughly 40 m, camera on it. Take off from the beach sand and finish at the landing pad beside the marina.",
+   "From the open sand, orbit the three-masted sailing ship clockwise at about 40 m, and put down on the marina pad."
+  ],
+  "short": "One clockwise 40 m lap around the old three-master, then land on the marina pad.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_082": {
+  "canonical": "Take off from a clear part of the quay at the marina full of yachts and sailing boats, fly to the container port with the big blue cranes and circle it once clockwise at about 70 m, keeping the camera on it, then fly back and land where you took off.",
+  "paraphrases": [
+   "From an open part of the marina quay, circle the container port with the big blue cranes once clockwise at about 70 m, keeping it on camera, then come back and land where you took off.",
+   "One clockwise orbit of roughly 70 m around the container port, filming it; you start and finish at the same spot on the marina quay.",
+   "Lift off from the marina quay, loop clockwise around the blue-crane port at about 70 m, and return to your take-off spot to land."
+  ],
+  "short": "One clockwise 70 m lap around the container port, then return to the start.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_083": {
+  "canonical": "Take off from an open patch of sand on the sandy beach with colourful umbrellas, fly to the water's edge near the sandy beach with colourful umbrellas and follow the coastline west for about 218 m at about 22 m above the water, keeping the shore on your right until you are near the fishing harbour with the fish market, then land at the landing pad beside the fishing harbour with the fish market.",
+  "paraphrases": [
+   "From a bare patch of sand on the umbrella beach, go to the water's edge there and follow the coast west about 218 m at 22 m, shore on your right, until the fish-market harbour is near; then land on the harbour's pad.",
+   "Fly west along the coastline for roughly 218 m at 22 m above the water, keeping the land to your right, from the umbrella beach to near the fishing harbour. Take off from the beach sand and finish at the harbour's landing pad.",
+   "Westward shore run of about 218 m at 22 m, land on the right, from the beach where you start until close to the harbour with the fish market, then land on its pad."
+  ],
+  "short": "Follow the coast west about 218 m at 22 m, then land on the harbour pad.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_084": {
+  "canonical": "Take off from an open patch of sand on the sandy beach with colourful umbrellas, fly to the coast-guard station with the red and white boathouse and circle it once counter-clockwise at about 67 m, keeping the camera on it, then land at the landing pad beside the sandy beach with colourful umbrellas.",
+  "paraphrases": [
+   "From a bare patch of sand on the umbrella beach, do one counter-clockwise loop of about 67 m around the coast-guard station with the red and white boathouse, filming it, then land on the beach's pad.",
+   "Circle the coast-guard station once anticlockwise at roughly 67 m, camera on it. Take off from the beach sand and finish at the landing pad beside the beach.",
+   "From the open sand, orbit the station with the red and white boathouse counter-clockwise at about 67 m, and put down on the beach pad."
+  ],
+  "short": "One counter-clockwise 67 m lap around the coast-guard station, then land on the beach pad.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_085": {
+  "canonical": "Take off from the landing pad beside the long wooden fishing pier, fly to the boatyard with boats up on stands and stop about 64 m from it and hover for about 5 seconds looking at it, then land on the landward end of the long wooden fishing pier.",
+  "paraphrases": [
+   "From the pad beside the wooden fishing pier, hover about 64 m from the boatyard and look at it for 5 seconds, then land on the shore end of the pier.",
+   "Observe the boatyard with boats up on stands for around 5 seconds from roughly 64 m. Start at the pier's landing pad and finish on the landward end of the long pier.",
+   "Lift off by the fishing pier, hold facing the boatyard at about 64 m for 5 seconds, and set down where the pier meets the land."
+  ],
+  "short": "Watch the boatyard for 5 s from about 64 m, then land on the pier.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_086": {
+  "canonical": "Take off from a clear part of the quay at the fishing harbour with the fish market, fly to the old wooden three-masted sailing ship and circle it once counter-clockwise at about 42 m, keeping the camera on it, then fly back and land where you took off.",
+  "paraphrases": [
+   "Start on an open part of the fish-market harbour quay, circle the old three-masted wooden sailing ship once counter-clockwise at about 42 m with the camera on it, then come back and land where you took off.",
+   "One anticlockwise orbit of roughly 42 m around the old wooden three-master, filming it; the flight starts and ends at the same spot on the harbour quay.",
+   "Lift off from the fishing harbour quay, loop counter-clockwise around the three-masted ship at about 42 m, and return to your take-off spot to land."
+  ],
+  "short": "One counter-clockwise 42 m lap around the three-master, then return to the start.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_087": {
+  "canonical": "Take off from an open patch of sand on the sandy beach with colourful umbrellas, fly to the white sailing yacht with its sail up and stop about 30 m from it and hover for about 6 seconds looking at it, then land at the landing pad beside the sandy beach with colourful umbrellas.",
+  "paraphrases": [
+   "From a bare patch of sand on the umbrella beach, hover about 30 m from the white yacht with its sail up and watch it for 6 seconds, then land on the beach's pad.",
+   "Observe the white sailing yacht with its sail raised for around 6 seconds from roughly 30 m. Take off from the beach sand and finish at the landing pad beside the beach.",
+   "From the open sand, hold facing the white yacht at about 30 m for 6 seconds, then put down on the beach pad."
+  ],
+  "short": "Watch the white yacht for 6 s from about 30 m, then land on the beach pad.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_088": {
+  "canonical": "Take off from a clear part of the quay at the fishing harbour with the fish market, fly to the boatyard with boats up on stands and stop about 62 m from it and hover for about 8 seconds looking at it, then land at the landing pad beside the long wooden fishing pier.",
+  "paraphrases": [
+   "Start on an open part of the fish-market harbour quay, hover about 62 m from the boatyard and look at it for 8 seconds, then land on the pad by the wooden fishing pier.",
+   "Observe the boatyard with boats up on stands for around 8 seconds from roughly 62 m. Take off from the harbour quay and finish at the fishing pier's landing pad.",
+   "From the fishing harbour quay, fly to the boatyard, hold facing it at about 62 m for 8 seconds, and land on the pier pad."
+  ],
+  "short": "Watch the boatyard for 8 s from about 62 m, then land on the pier pad.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_089": {
+  "canonical": "Take off from the landing pad on the hill above the middle of the bay, fly to the sandy beach with colourful umbrellas and circle it once counter-clockwise at about 64 m, keeping the camera on it, then land at the landing pad beside the marina full of yachts and sailing boats.",
+  "paraphrases": [
+   "From the hill pad over the middle of the bay, circle the umbrella beach once counter-clockwise at about 64 m with the camera on it, then land on the marina's pad.",
+   "One anticlockwise orbit of roughly 64 m around the sandy beach with colourful umbrellas, filming it. Take off at the central hilltop pad and finish at the marina's landing pad.",
+   "Leave the hill pad above the bay's centre, loop counter-clockwise around the umbrella beach at about 64 m, and put down beside the marina."
+  ],
+  "short": "One counter-clockwise 64 m lap around the umbrella beach, then land on the marina pad.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_090": {
+  "canonical": "Take off from the landing pad beside the sandy beach with colourful umbrellas, fly to the white research vessel and circle it once counter-clockwise at about 44 m, keeping the camera on it, then land at the landing pad beside the fishing harbour with the fish market.",
+  "paraphrases": [
+   "From the pad by the umbrella beach, do one counter-clockwise lap of about 44 m around the white research ship, filming it, then land on the pad by the fish-market harbour.",
+   "Circle the white research vessel once anticlockwise at roughly 44 m, camera on it. Start at the beach's landing pad and finish at the fishing harbour's pad.",
+   "Lift off by the beach, orbit the white research vessel counter-clockwise at about 44 m, and put down on the harbour pad."
+  ],
+  "short": "One counter-clockwise 44 m lap around the white research ship, then land on the harbour pad.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_091": {
+  "canonical": "Take off from the landward end of the long wooden fishing pier, fly to the coast-guard station with the red and white boathouse and circle it once counter-clockwise at about 60 m, keeping the camera on it, then land on a clear part of the quay at the marina full of yachts and sailing boats.",
+  "paraphrases": [
+   "From the shore end of the fishing pier, circle the coast-guard station with the red and white boathouse once counter-clockwise at about 60 m, filming it, then land on an open part of the marina quay.",
+   "One anticlockwise orbit of roughly 60 m around the coast-guard station, camera on it. Take off where the pier meets the land and land on a clear patch of the marina quay.",
+   "Leave the landward end of the pier, loop counter-clockwise around the red and white boathouse at about 60 m, and put down on the marina quay."
+  ],
+  "short": "One counter-clockwise 60 m lap around the coast-guard station, then land on the marina quay.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_092": {
+  "canonical": "Take off from the landing pad beside the long wooden fishing pier, fly to the black fishing trawler with the orange gantry and circle it once counter-clockwise at about 36 m, keeping the camera on it, then land on a clear part of the quay at the marina full of yachts and sailing boats.",
+  "paraphrases": [
+   "From the pad by the wooden fishing pier, do one counter-clockwise loop of about 36 m around the black trawler with the orange gantry, filming it, then land on an open part of the marina quay.",
+   "Circle the black fishing trawler once anticlockwise at roughly 36 m, camera on it. Start at the pier's landing pad and finish on a clear part of the marina quay.",
+   "Lift off by the long pier, orbit the black trawler counter-clockwise at about 36 m, and put down on the marina quay."
+  ],
+  "short": "One counter-clockwise 36 m lap around the black trawler, then land on the marina quay.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_093": {
+  "canonical": "Take off from an open patch of sand on the sandy beach with colourful umbrellas, fly directly over the dark blue fishing trawler with the orange gantry, with the camera looking down at it, then land on a clear part of the quay at the fishing harbour with the fish market.",
+  "paraphrases": [
+   "From a bare patch of sand on the umbrella beach, fly directly above the dark blue trawler with the orange gantry looking down at it, then land on an open part of the fish-market harbour quay.",
+   "Pass over the dark blue fishing trawler, camera pointed down. Take off from the beach sand and finish on a clear part of the fishing harbour quay.",
+   "Lift off on the umbrella beach, overfly the dark blue trawler camera-down, and set down on the harbour quay."
+  ],
+  "short": "Fly over the dark blue trawler, then land on the harbour quay.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_094": {
+  "canonical": "Take off from the landing pad beside the sandy beach with colourful umbrellas, fly to the small rocky islet with a navigation beacon and circle it once clockwise at about 48 m, keeping the camera on it, then land on an open patch of sand on the sandy beach with colourful umbrellas.",
+  "paraphrases": [
+   "From the pad by the umbrella beach, circle the rocky islet with the navigation beacon once clockwise at about 48 m with the camera on it, then land on a bare patch of that beach's sand.",
+   "One clockwise orbit of roughly 48 m around the beacon islet, filming it. Take off at the beach's landing pad and finish on the open sand of the beach.",
+   "Lift off by the beach, loop clockwise around the islet with the beacon at about 48 m, and put down on the beach sand."
+  ],
+  "short": "One clockwise 48 m lap around the beacon islet, then land on the beach sand.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_095": {
+  "canonical": "Take off from a clear part of the quay at the marina full of yachts and sailing boats, fly to the sleek white motor yacht and circle it once counter-clockwise at about 33 m, keeping the camera on it, then land on an open patch of sand on the sandy beach with colourful umbrellas.",
+  "paraphrases": [
+   "From an open part of the marina quay, do one counter-clockwise lap of about 33 m around the sleek white motor yacht, filming it, then land on a bare patch of the umbrella beach.",
+   "Circle the white motor yacht once anticlockwise at roughly 33 m, camera on it. Take off from the marina quay and finish on the open sand of the beach.",
+   "From the marina quay, orbit the sleek motor yacht counter-clockwise at about 33 m, and set down on the umbrella beach sand."
+  ],
+  "short": "One counter-clockwise 33 m lap around the motor yacht, then land on the beach sand.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_096": {
+  "canonical": "Take off from an open patch of sand on the sandy beach with colourful umbrellas, fly out to the orange research vessel and land on its helicopter deck.",
+  "paraphrases": [
+   "Lift off from a bare patch of sand on the umbrella beach and land on the helideck of the orange research ship.",
+   "From the open sand of the beach with colourful umbrellas, fly out and put down on the orange research vessel's helicopter deck.",
+   "Starting on the beach sand, cross the water to the orange research vessel and finish on its helicopter deck."
+  ],
+  "short": "From the beach sand, land on the orange research ship's helideck.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_097": {
+  "canonical": "Take off from a clear part of the quay at the fishing harbour with the fish market, fly to the water's edge near the long wooden fishing pier and follow the coastline east for about 231 m at about 28 m above the water, keeping the shore on your left until you are near the boatyard with boats up on stands, then land on the landward end of the long wooden fishing pier.",
+  "paraphrases": [
+   "Start on an open part of the fish-market harbour quay, go to the water's edge at the wooden pier and follow the coast east about 231 m at 28 m, shore on your left, until the boatyard is near; land on the shore end of the pier.",
+   "Fly east along the coastline for roughly 231 m at 28 m above the water, keeping the land to your left, from the fishing pier to near the boatyard. Take off from the harbour quay and finish on the landward end of the pier.",
+   "Eastward shore run of about 231 m at 28 m, land on the left, starting at the pier and ending near the boatyard; you lift off on the harbour quay and land where the pier meets the land."
+  ],
+  "short": "Follow the coast east about 231 m at 28 m, then land on the pier.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_098": {
+  "canonical": "Take off from a clear part of the quay at the boatyard with boats up on stands, fly to the water's edge near the sandy beach with colourful umbrellas and follow the coastline east for about 305 m at about 22 m above the water, keeping the shore on your left until you are near the seaside village with the promenade, then land on the seafront promenade of the seaside village.",
+  "paraphrases": [
+   "Start on an open part of the boatyard quay, go to the water's edge at the umbrella beach and follow the coast east about 305 m at 22 m, shore on your left, until the seaside village is near; land on its seafront promenade.",
+   "Fly east along the coastline for roughly 305 m at 22 m above the water, keeping the land to your left, from the umbrella beach to near the village. Take off from the boatyard quay and finish on the seafront promenade.",
+   "Eastward shore run of about 305 m at 22 m, land on the left, from the beach to the seaside village; you start on the boatyard quay and land on the village promenade."
+  ],
+  "short": "Follow the coast east about 305 m at 22 m, then land on the promenade.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_099": {
+  "canonical": "Take off from the landing pad beside the sandy beach with colourful umbrellas, fly directly over the white sailing yacht with its sails furled in the middle of the bay, with the camera looking down at it, then land on the edge of the quay at the fishing harbour with the fish market, next to the water.",
+  "paraphrases": [
+   "From the pad by the umbrella beach, fly directly above the white yacht with furled sails in the middle of the bay looking down at it, then land at the water's edge on the fish-market harbour quay.",
+   "Pass over the white sailing yacht with its sails furled in the middle of the bay, camera pointed down. Start at the beach's landing pad and finish on the edge of the fishing harbour quay next to the water.",
+   "Lift off by the beach, overfly the mid-bay white yacht camera-down, and set down on the harbour quay right by the water."
+  ],
+  "short": "Fly over the mid-bay white yacht, then land on the harbour quay edge.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ },
+ "easy_coastal_100": {
+  "canonical": "Take off from the edge of the quay at the marina full of yachts and sailing boats, next to the water, fly out to the white coast-guard cutter with the red stripe and land on its helicopter deck.",
+  "paraphrases": [
+   "Starting at the water's edge on the marina quay, fly out to the white coast-guard cutter with the red stripe and land on its helideck.",
+   "Lift off from the edge of the marina quay and put the drone down on the helicopter deck of the red-striped cutter.",
+   "From the marina quay by the water, cross to the white coast-guard cutter and finish on its helicopter deck."
+  ],
+  "short": "From the marina quay, land on the coast-guard cutter's helideck.",
+  "author": "LLM (Claude), 2026-10-14 (v2.1 missions)"
+ }
+}

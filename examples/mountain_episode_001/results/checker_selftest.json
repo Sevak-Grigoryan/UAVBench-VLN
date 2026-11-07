@@ -1,0 +1,96 @@
+{
+ "note": "checker self-test: edited copies of the expert flight, in memory; not agent flights",
+ "all_pass": true,
+ "cases": [
+  {
+   "case": "expert flight, unchanged",
+   "expected_success": true,
+   "success": true,
+   "oracle_success": true,
+   "navigation_error_m": 0.57,
+   "spl": 0.9999,
+   "episode_end": "STOP in the goal state",
+   "pass": true
+  },
+  {
+   "case": "stops 9 m further out (inside the +-15 m band)",
+   "expected_success": true,
+   "success": true,
+   "oracle_success": true,
+   "navigation_error_m": 8.43,
+   "spl": 0.9695,
+   "episode_end": "STOP in the goal state",
+   "pass": true
+  },
+  {
+   "case": "stops half-way to the target",
+   "expected_success": false,
+   "success": false,
+   "oracle_success": false,
+   "navigation_error_m": 154.09,
+   "spl": 0.0,
+   "episode_end": "STOP at 204.1 m from the target (needs 50 +- 15 m)",
+   "pass": true
+  },
+  {
+   "case": "stops 25 m too close to the target",
+   "expected_success": false,
+   "success": false,
+   "oracle_success": true,
+   "navigation_error_m": 25.57,
+   "spl": 0.0,
+   "episode_end": "STOP at 24.4 m from the target (needs 50 +- 15 m)",
+   "pass": true
+  },
+  {
+   "case": "stops at the right distance but turned 120 deg away",
+   "expected_success": false,
+   "success": false,
+   "oracle_success": true,
+   "navigation_error_m": 0.57,
+   "spl": 0.0,
+   "episode_end": "STOP at the right distance, but the target is not in the frame",
+   "pass": true
+  },
+  {
+   "case": "never says STOP (flies until the time limit)",
+   "expected_success": false,
+   "success": false,
+   "oracle_success": true,
+   "navigation_error_m": 0.57,
+   "spl": 0.0,
+   "episode_end": "flight ended without STOP",
+   "pass": true
+  },
+  {
+   "case": "too slow: time limit cut to 20 s",
+   "expected_success": false,
+   "success": false,
+   "oracle_success": false,
+   "navigation_error_m": 213.61,
+   "spl": 0.0,
+   "episode_end": "time limit reached without STOP",
+   "pass": true
+  },
+  {
+   "case": "crash: 75 deg tilt in the middle of the flight",
+   "expected_success": false,
+   "success": false,
+   "oracle_success": false,
+   "navigation_error_m": 0.57,
+   "spl": 0.0,
+   "episode_end": "STOP, but tilted beyond 60 deg at t = 31.0 s (crash)",
+   "pass": true
+  },
+  {
+   "case": "touches the ground in the middle of the flight",
+   "expected_success": false,
+   "success": false,
+   "oracle_success": false,
+   "navigation_error_m": 0.57,
+   "spl": 0.0,
+   "episode_end": "STOP, but below 2 m above the ground at t = 31.0 s",
+   "pass": true
+  }
+ ]
+}
