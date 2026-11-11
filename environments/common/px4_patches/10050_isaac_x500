@@ -1,0 +1,59 @@
+#!/bin/sh
+#
+# @name Holybro X500 V2 (Isaac Sim / Pegasus, MAVLink HIL)
+#
+# @type Quadrotor x
+#
+# @maintainer Simulation_0_1_0_X500
+#
+# Same vehicle as 4001_gz_x500 (geometry, motor ordering, hover thrust), but driven through
+# simulator_mavlink (HIL_SENSOR / HIL_ACTUATOR_CONTROLS) the way Pegasus Simulator talks to PX4,
+# instead of the gz bridge (SIM_GZ_EN) that 4001 needs -- Gazebo is not in the loop here.
+#
+
+. ${R}etc/init.d/rc.mc_defaults
+
+param set-default CA_AIRFRAME 0
+param set-default CA_ROTOR_COUNT 4
+
+# Rotor geometry / yaw moments copied verbatim from 4001_gz_x500.
+param set-default CA_ROTOR0_PX 0.13
+param set-default CA_ROTOR0_PY 0.22
+param set-default CA_ROTOR0_KM  0.05
+param set-default CA_ROTOR1_PX -0.13
+param set-default CA_ROTOR1_PY -0.20
+param set-default CA_ROTOR1_KM  0.05
+param set-default CA_ROTOR2_PX 0.13
+param set-default CA_ROTOR2_PY -0.22
+param set-default CA_ROTOR2_KM -0.05
+param set-default CA_ROTOR3_PX -0.13
+param set-default CA_ROTOR3_PY 0.20
+param set-default CA_ROTOR3_KM -0.05
+
+# Motor outputs over MAVLink (same as 10015_gazebo-classic_iris).
+param set-default PWM_MAIN_FUNC1 101
+param set-default PWM_MAIN_FUNC2 102
+param set-default PWM_MAIN_FUNC3 103
+param set-default PWM_MAIN_FUNC4 104
+
+param set-default MPC_THR_HOVER 0.60
+
+# ---- Stick response used for dataset generation (Position mode, MAVLink MANUAL_CONTROL) ----
+# Linear sticks (no expo), so a recorded stick value maps directly to a
+# commanded rate: horizontal 8 m/s, climb 3 m/s, descent 2 m/s, yaw 60 deg/s at full deflection.
+param set-default MPC_VEL_MANUAL 8.0
+param set-default MPC_Z_VEL_MAX_UP 3.0
+param set-default MPC_Z_VEL_MAX_DN 2.0
+param set-default MPC_MAN_Y_MAX 60.0
+param set-default MPC_XY_MAN_EXPO 0.0
+param set-default MPC_Z_MAN_EXPO 0.0
+param set-default MPC_YAW_EXPO 0.0
+# Landing detector / auto-disarm as PX4 defaults for multicopters.
+param set-default COM_DISARM_LAND 2.0
+# PX4's default 0.1 stick deadzone (MPC_HOLD_DZ) swallowed the pilot's 0.1-step corrections and
+# left the first forest landing hovering 2.6 m off the pad for minutes; keep it tiny instead.
+param set-default MPC_HOLD_DZ 0.02
+# Easy v2 flight 010 (2026-10-11): on a loaded node MANUAL_CONTROL arrived 0.4-0.7 s apart once, PX4's 0.5 s
+# stick-loss timeout fired at take-off and RTL'd/disarmed the vehicle. The pilot streams sticks every frame;
+# tolerate brief gaps.
+param set-default COM_RC_LOSS_T 3.0

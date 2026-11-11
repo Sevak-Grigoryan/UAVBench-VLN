@@ -1,0 +1,9 @@
+{
+ "episode_id": "Easy/Forest/Collision_situations/1_wall",
+ "expected": {
+  "outcome": "collision",
+  "first_prohibited_other_prefix": "/World/TestFixtures/wall"
+ },
+ "rule": "first prohibited UAV-environment contact during the episode = failure; landing-gear contact with the designated landing surface inside its footprint during the land beat is allowed; internal UAV pairs are ignored; a flight without verified collision monitoring is invalid",
+ "source_flight": "/mnt/weka/sgrigoryan/Benchmark_collision_work/colltest_wall"
+}

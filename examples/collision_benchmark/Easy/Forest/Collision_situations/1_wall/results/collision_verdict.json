@@ -1,0 +1,16 @@
+{
+ "valid": true,
+ "collided": true,
+ "success_possible": false,
+ "episode_end": "COLLISION at t = 3.7709 s (physics step 905): rotor rotor_disc_0 touched /World/TestFixtures/wall",
+ "collision": {
+  "t": 3.770867,
+  "episode_step": 905,
+  "drone_part": "rotor",
+  "drone_collider": "/World/x500/body/collision_proxies/rotor_disc_0",
+  "other_collider": "/World/TestFixtures/wall",
+  "total_impulse_ns": 4.462948
+ },
+ "allowed_landing_contact": null,
+ "matches_expected": true
+}

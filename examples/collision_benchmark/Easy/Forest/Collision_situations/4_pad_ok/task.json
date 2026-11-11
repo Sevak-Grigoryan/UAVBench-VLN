@@ -1,0 +1,34 @@
+{
+ "episode_id": "Easy/Forest/Collision_situations/4_pad_ok",
+ "benchmark_version": "vln-x500-bench-collision v0.2 (2026-11-07; v0.1 + PhysX collision termination, collision-v1)",
+ "kind": "collision TEST flight (not a benchmark episode: no instruction, no target)",
+ "test": "pad_ok",
+ "scenario": "land on the designated landing clearing (allowed contact)",
+ "scene": {
+  "environment": "Forest",
+  "scene_id": "easy_v2_037",
+  "same_scene_as": "Easy/Forest/Simulation_1"
+ },
+ "start": {
+  "xyz": [
+   -40.0161,
+   44.9694,
+   11.9884
+  ],
+  "yaw_deg": -103.787,
+  "flight_t_s": 13.0333,
+  "note": "first frame of the evaluated part; take-off and settling are flown before it"
+ },
+ "test_obstacles": [],
+ "test_notes": {},
+ "video": {
+  "file": "reference/trajectory.mp4",
+  "layout": "left: outside camera following the drone; right: onboard camera",
+  "frames": [
+   1080,
+   1470
+  ],
+  "stride": 2,
+  "note": "frames are episode-relative (telemetry frame index); red banner + circle = first prohibited contact"
+ }
+}

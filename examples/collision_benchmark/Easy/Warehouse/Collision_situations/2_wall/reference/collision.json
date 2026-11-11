@@ -1,0 +1,1244 @@
+{
+ "version": "collision-v1",
+ "rule": "first prohibited UAV-environment contact during the episode = failure; landing-gear contact with the designated landing surface inside its footprint during the land beat is allowed; internal UAV pairs are ignored",
+ "monitor_verified": true,
+ "monitor_verified_by": "the resting landing-gear contact on the take-off surface was reported during initialization",
+ "api": "omni.physx get_physx_simulation_interface().subscribe_contact_report_events (PhysxContactReportAPI, threshold 0)",
+ "physics": {
+  "hz": 240,
+  "substeps_per_frame": 8,
+  "gpu_dynamics": false,
+  "ccd": {
+   "scenes": [
+    "/PhysicsScene"
+   ],
+   "bodies": [
+    "/World/x500/body",
+    "/World/x500/rotor0",
+    "/World/x500/rotor1",
+    "/World/x500/rotor2",
+    "/World/x500/rotor3"
+   ]
+  },
+  "judged": "after every physics step, outside the PhysX callback"
+ },
+ "touch_separation_m": 0.005,
+ "drone_colliders": {
+  "/World/x500/body/collision/top_plate": "airframe",
+  "/World/x500/body/collision/leg_right": "landing_gear",
+  "/World/x500/body/collision/leg_left": "landing_gear",
+  "/World/x500/body/collision/skid_right": "landing_gear",
+  "/World/x500/body/collision/skid_left": "landing_gear",
+  "/World/x500/body/collision_proxies/rotor_disc_0": "rotor",
+  "/World/x500/body/collision_proxies/rotor_disc_1": "rotor",
+  "/World/x500/body/collision_proxies/rotor_disc_2": "rotor",
+  "/World/x500/body/collision_proxies/rotor_disc_3": "rotor",
+  "/World/x500/rotor0/collision": "rotor",
+  "/World/x500/rotor1/collision": "rotor",
+  "/World/x500/rotor2/collision": "rotor",
+  "/World/x500/rotor3/collision": "rotor"
+ },
+ "uav_coverage": {
+  "rotor_disc_proxies": [
+   "/World/x500/body/collision_proxies/rotor_disc_0",
+   "/World/x500/body/collision_proxies/rotor_disc_1",
+   "/World/x500/body/collision_proxies/rotor_disc_2",
+   "/World/x500/body/collision_proxies/rotor_disc_3"
+  ],
+  "rotor_disc_radius_m": 0.1396153846153846,
+  "rotor_disc_height_m": 0.02
+ },
+ "environment_coverage": {
+  "excluded_by_dataset_runner": [
+   "/World/Nature",
+   "/World/DenseNature",
+   "/World/EgoCamera",
+   "/World/Looks",
+   "/World/Materials",
+   "/World/River",
+   "/World/Far",
+   "/World/City/Marks",
+   "/World/City/Zebra",
+   "/World/City/Props",
+   "/World/City/Trees",
+   "/World/City/ParkTrees",
+   "/World/Ocean",
+   "/World/DistantTerrain"
+  ],
+  "vegetation_proxies": {
+   "instances_by_instancer": {},
+   "shapes": 0,
+   "not_collidable": {}
+  },
+  "proxy_file": "proxies.json",
+  "warehouse_triangle_mesh_colliders": {
+   "deinstanced": 0,
+   "colliders_added": 0,
+   "colliders_present": 1878
+  }
+ },
+ "landing_exception": null,
+ "episode": {
+  "flight_t0_s": 8.5333,
+  "flight_t1_s": 14.029167,
+  "flight_step0": 4144
+ },
+ "first_prohibited": {
+  "step": 5463,
+  "t": 5.495867,
+  "phase": "episode",
+  "beat": 2,
+  "beat_label": "fly forward into the east wall",
+  "event": "persist",
+  "verdict": "prohibited",
+  "drone_part": "rotor",
+  "drone_collider": "/World/x500/body/collision_proxies/rotor_disc_2",
+  "other_collider": "/Root/SM_WallA_6M15/SM_WallA_6M/Section0",
+  "other_actor": "/Root/SM_WallA_6M15/SM_WallA_6M/Section0",
+  "other_proto_index": null,
+  "points": [
+   {
+    "position": [
+     9.4098,
+     -5.9724,
+     2.4717
+    ],
+    "normal": [
+     -1.0,
+     -0.0001,
+     -0.0
+    ],
+    "impulse": [
+     -0.669064,
+     -4.7e-05,
+     -2e-06
+    ],
+    "separation": 0.00423
+   },
+   {
+    "position": [
+     9.4096,
+     -5.9724,
+     2.4517
+    ],
+    "normal": [
+     -1.0,
+     -0.0001,
+     -0.0
+    ],
+    "impulse": [
+     -0.0,
+     -0.0,
+     -0.0
+    ],
+    "separation": 0.00469
+   },
+   {
+    "position": [
+     9.4098,
+     -5.97,
+     2.4717
+    ],
+    "normal": [
+     -1.0,
+     -0.0001,
+     -0.0
+    ],
+    "impulse": [
+     -0.382837,
+     -2.7e-05,
+     -1e-06
+    ],
+    "separation": 0.00423
+   }
+  ],
+  "total_impulse_ns": 1.051901,
+  "episode_step": 1319,
+  "flight_t": 14.029167,
+  "flight_step": 5463
+ },
+ "first_allowed_landing": null,
+ "invalid": null,
+ "contacts": [
+  {
+   "step": 5457,
+   "t": 5.470867,
+   "phase": "episode",
+   "beat": 2,
+   "beat_label": "fly forward into the east wall",
+   "event": "found",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/body/collision_proxies/rotor_disc_0",
+   "other_collider": "/Root/SM_WallA_6M15/SM_WallA_6M/Section0",
+   "other_actor": "/Root/SM_WallA_6M15/SM_WallA_6M/Section0",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      9.3934,
+      -6.3218,
+      2.4725
+     ],
+     "normal": [
+      -1.0,
+      -0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.0,
+      -0.0,
+      0.0
+     ],
+     "separation": 0.03707
+    },
+    {
+     "position": [
+      9.3932,
+      -6.3218,
+      2.4525
+     ],
+     "normal": [
+      -1.0,
+      -0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.0,
+      -0.0,
+      0.0
+     ],
+     "separation": 0.03753
+    },
+    {
+     "position": [
+      9.3934,
+      -6.3224,
+      2.4725
+     ],
+     "normal": [
+      -1.0,
+      -0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.0,
+      -0.0,
+      0.0
+     ],
+     "separation": 0.03707
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 1313,
+   "flight_t": 14.004167,
+   "flight_step": 5457
+  },
+  {
+   "step": 5457,
+   "t": 5.470867,
+   "phase": "episode",
+   "beat": 2,
+   "beat_label": "fly forward into the east wall",
+   "event": "found",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/body/collision_proxies/rotor_disc_2",
+   "other_collider": "/Root/SM_WallA_6M15/SM_WallA_6M/Section0",
+   "other_actor": "/Root/SM_WallA_6M15/SM_WallA_6M/Section0",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      9.3929,
+      -5.9716,
+      2.4719
+     ],
+     "normal": [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.03806
+    },
+    {
+     "position": [
+      9.3927,
+      -5.9738,
+      2.4519
+     ],
+     "normal": [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.03852
+    },
+    {
+     "position": [
+      9.3929,
+      -5.9738,
+      2.4719
+     ],
+     "normal": [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.03806
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 1313,
+   "flight_t": 14.004167,
+   "flight_step": 5457
+  },
+  {
+   "step": 5458,
+   "t": 5.475033,
+   "phase": "episode",
+   "beat": 2,
+   "beat_label": "fly forward into the east wall",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/body/collision_proxies/rotor_disc_2",
+   "other_collider": "/Root/SM_WallA_6M15/SM_WallA_6M/Section0",
+   "other_actor": "/Root/SM_WallA_6M15/SM_WallA_6M/Section0",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      9.3957,
+      -5.9736,
+      2.4719
+     ],
+     "normal": [
+      -1.0,
+      -0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.0,
+      -0.0,
+      0.0
+     ],
+     "separation": 0.03242
+    },
+    {
+     "position": [
+      9.3955,
+      -5.9736,
+      2.4519
+     ],
+     "normal": [
+      -1.0,
+      -0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.0,
+      -0.0,
+      0.0
+     ],
+     "separation": 0.03288
+    },
+    {
+     "position": [
+      9.3957,
+      -5.9713,
+      2.4719
+     ],
+     "normal": [
+      -1.0,
+      -0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.0,
+      -0.0,
+      0.0
+     ],
+     "separation": 0.03242
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 1314,
+   "flight_t": 14.008333,
+   "flight_step": 5458
+  },
+  {
+   "step": 5458,
+   "t": 5.475033,
+   "phase": "episode",
+   "beat": 2,
+   "beat_label": "fly forward into the east wall",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/body/collision_proxies/rotor_disc_0",
+   "other_collider": "/Root/SM_WallA_6M15/SM_WallA_6M/Section0",
+   "other_actor": "/Root/SM_WallA_6M15/SM_WallA_6M/Section0",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      9.3962,
+      -6.3216,
+      2.4724
+     ],
+     "normal": [
+      -1.0,
+      -0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.0,
+      -0.0,
+      0.0
+     ],
+     "separation": 0.03143
+    },
+    {
+     "position": [
+      9.396,
+      -6.3216,
+      2.4524
+     ],
+     "normal": [
+      -1.0,
+      -0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.0,
+      -0.0,
+      0.0
+     ],
+     "separation": 0.03189
+    },
+    {
+     "position": [
+      9.3962,
+      -6.3221,
+      2.4724
+     ],
+     "normal": [
+      -1.0,
+      -0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.0,
+      -0.0,
+      0.0
+     ],
+     "separation": 0.03143
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 1314,
+   "flight_t": 14.008333,
+   "flight_step": 5458
+  },
+  {
+   "step": 5459,
+   "t": 5.4792,
+   "phase": "episode",
+   "beat": 2,
+   "beat_label": "fly forward into the east wall",
+   "event": "found",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/rotor0/collision",
+   "other_collider": "/Root/SM_WallA_6M15/SM_WallA_6M/Section0",
+   "other_actor": "/Root/SM_WallA_6M15/SM_WallA_6M/Section0",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      9.4119,
+      -6.2636,
+      2.463
+     ],
+     "normal": [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.03825
+    },
+    {
+     "position": [
+      9.4119,
+      -6.2636,
+      2.4622
+     ],
+     "normal": [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.03827
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 1315,
+   "flight_t": 14.0125,
+   "flight_step": 5459
+  },
+  {
+   "step": 5459,
+   "t": 5.4792,
+   "phase": "episode",
+   "beat": 2,
+   "beat_label": "fly forward into the east wall",
+   "event": "found",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/rotor2/collision",
+   "other_collider": "/Root/SM_WallA_6M15/SM_WallA_6M/Section0",
+   "other_actor": "/Root/SM_WallA_6M15/SM_WallA_6M/Section0",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      9.4119,
+      -6.031,
+      2.4626
+     ],
+     "normal": [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.03917
+    },
+    {
+     "position": [
+      9.4119,
+      -6.031,
+      2.4618
+     ],
+     "normal": [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.03919
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 1315,
+   "flight_t": 14.0125,
+   "flight_step": 5459
+  },
+  {
+   "step": 5459,
+   "t": 5.4792,
+   "phase": "episode",
+   "beat": 2,
+   "beat_label": "fly forward into the east wall",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/body/collision_proxies/rotor_disc_2",
+   "other_collider": "/Root/SM_WallA_6M15/SM_WallA_6M/Section0",
+   "other_actor": "/Root/SM_WallA_6M15/SM_WallA_6M/Section0",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      9.3985,
+      -5.9711,
+      2.4718
+     ],
+     "normal": [
+      -1.0,
+      0.0,
+      -0.0
+     ],
+     "impulse": [
+      -0.0,
+      0.0,
+      -0.0
+     ],
+     "separation": 0.02678
+    },
+    {
+     "position": [
+      9.3983,
+      -5.9734,
+      2.4518
+     ],
+     "normal": [
+      -1.0,
+      0.0,
+      -0.0
+     ],
+     "impulse": [
+      -0.0,
+      0.0,
+      -0.0
+     ],
+     "separation": 0.02724
+    },
+    {
+     "position": [
+      9.3985,
+      -5.9733,
+      2.4718
+     ],
+     "normal": [
+      -1.0,
+      0.0,
+      -0.0
+     ],
+     "impulse": [
+      -0.0,
+      0.0,
+      -0.0
+     ],
+     "separation": 0.02678
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 1315,
+   "flight_t": 14.0125,
+   "flight_step": 5459
+  },
+  {
+   "step": 5459,
+   "t": 5.4792,
+   "phase": "episode",
+   "beat": 2,
+   "beat_label": "fly forward into the east wall",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/body/collision_proxies/rotor_disc_0",
+   "other_collider": "/Root/SM_WallA_6M15/SM_WallA_6M/Section0",
+   "other_actor": "/Root/SM_WallA_6M15/SM_WallA_6M/Section0",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      9.399,
+      -6.3213,
+      2.4724
+     ],
+     "normal": [
+      -1.0,
+      -0.0,
+      -0.0
+     ],
+     "impulse": [
+      -0.0,
+      -0.0,
+      -0.0
+     ],
+     "separation": 0.0258
+    },
+    {
+     "position": [
+      9.3988,
+      -6.3214,
+      2.4524
+     ],
+     "normal": [
+      -1.0,
+      -0.0,
+      -0.0
+     ],
+     "impulse": [
+      -0.0,
+      -0.0,
+      -0.0
+     ],
+     "separation": 0.02626
+    },
+    {
+     "position": [
+      9.399,
+      -6.3218,
+      2.4724
+     ],
+     "normal": [
+      -1.0,
+      -0.0,
+      -0.0
+     ],
+     "impulse": [
+      -0.0,
+      -0.0,
+      -0.0
+     ],
+     "separation": 0.0258
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 1315,
+   "flight_t": 14.0125,
+   "flight_step": 5459
+  },
+  {
+   "step": 5460,
+   "t": 5.483367,
+   "phase": "episode",
+   "beat": 2,
+   "beat_label": "fly forward into the east wall",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/rotor0/collision",
+   "other_collider": "/Root/SM_WallA_6M15/SM_WallA_6M/Section0",
+   "other_actor": "/Root/SM_WallA_6M15/SM_WallA_6M/Section0",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      9.4119,
+      -6.303,
+      2.4628
+     ],
+     "normal": [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.02131
+    },
+    {
+     "position": [
+      9.4119,
+      -6.3198,
+      2.4628
+     ],
+     "normal": [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.02014
+    },
+    {
+     "position": [
+      9.4119,
+      -6.3198,
+      2.4619
+     ],
+     "normal": [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.02016
+    },
+    {
+     "position": [
+      9.4119,
+      -6.303,
+      2.4619
+     ],
+     "normal": [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.02133
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 1316,
+   "flight_t": 14.016667,
+   "flight_step": 5460
+  },
+  {
+   "step": 5460,
+   "t": 5.483367,
+   "phase": "episode",
+   "beat": 2,
+   "beat_label": "fly forward into the east wall",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/rotor2/collision",
+   "other_collider": "/Root/SM_WallA_6M15/SM_WallA_6M/Section0",
+   "other_actor": "/Root/SM_WallA_6M15/SM_WallA_6M/Section0",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      9.4119,
+      -5.9743,
+      2.4622
+     ],
+     "normal": [
+      -1.0,
+      0.0,
+      -0.0
+     ],
+     "impulse": [
+      -0.0,
+      0.0,
+      -0.0
+     ],
+     "separation": 0.02112
+    },
+    {
+     "position": [
+      9.4119,
+      -5.9911,
+      2.4623
+     ],
+     "normal": [
+      -1.0,
+      0.0,
+      -0.0
+     ],
+     "impulse": [
+      -0.0,
+      0.0,
+      -0.0
+     ],
+     "separation": 0.02228
+    },
+    {
+     "position": [
+      9.4119,
+      -5.9911,
+      2.4614
+     ],
+     "normal": [
+      -1.0,
+      0.0,
+      -0.0
+     ],
+     "impulse": [
+      -0.0,
+      0.0,
+      -0.0
+     ],
+     "separation": 0.0223
+    },
+    {
+     "position": [
+      9.4119,
+      -5.9743,
+      2.4614
+     ],
+     "normal": [
+      -1.0,
+      0.0,
+      -0.0
+     ],
+     "impulse": [
+      -0.0,
+      0.0,
+      -0.0
+     ],
+     "separation": 0.02114
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 1316,
+   "flight_t": 14.016667,
+   "flight_step": 5460
+  },
+  {
+   "step": 5461,
+   "t": 5.487533,
+   "phase": "episode",
+   "beat": 2,
+   "beat_label": "fly forward into the east wall",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/rotor0/collision",
+   "other_collider": "/Root/SM_WallA_6M15/SM_WallA_6M/Section0",
+   "other_actor": "/Root/SM_WallA_6M15/SM_WallA_6M/Section0",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      9.4119,
+      -6.3604,
+      2.4629
+     ],
+     "normal": [
+      -1.0,
+      0.0,
+      -0.0
+     ],
+     "impulse": [
+      -0.0,
+      0.0,
+      -0.0
+     ],
+     "separation": 0.02018
+    },
+    {
+     "position": [
+      9.4119,
+      -6.3763,
+      2.4631
+     ],
+     "normal": [
+      -1.0,
+      0.0,
+      -0.0
+     ],
+     "impulse": [
+      -0.0,
+      0.0,
+      -0.0
+     ],
+     "separation": 0.02594
+    },
+    {
+     "position": [
+      9.4119,
+      -6.3763,
+      2.4622
+     ],
+     "normal": [
+      -1.0,
+      0.0,
+      -0.0
+     ],
+     "impulse": [
+      -0.0,
+      0.0,
+      -0.0
+     ],
+     "separation": 0.02596
+    },
+    {
+     "position": [
+      9.4119,
+      -6.3604,
+      2.4621
+     ],
+     "normal": [
+      -1.0,
+      0.0,
+      -0.0
+     ],
+     "impulse": [
+      -0.0,
+      0.0,
+      -0.0
+     ],
+     "separation": 0.0202
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 1317,
+   "flight_t": 14.020833,
+   "flight_step": 5461
+  },
+  {
+   "step": 5461,
+   "t": 5.487533,
+   "phase": "episode",
+   "beat": 2,
+   "beat_label": "fly forward into the east wall",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/rotor2/collision",
+   "other_collider": "/Root/SM_WallA_6M15/SM_WallA_6M/Section0",
+   "other_actor": "/Root/SM_WallA_6M15/SM_WallA_6M/Section0",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      9.4119,
+      -5.9173,
+      2.4623
+     ],
+     "normal": [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.02698
+    },
+    {
+     "position": [
+      9.4119,
+      -5.9332,
+      2.4622
+     ],
+     "normal": [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.02122
+    },
+    {
+     "position": [
+      9.4119,
+      -5.9332,
+      2.4614
+     ],
+     "normal": [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.02123
+    },
+    {
+     "position": [
+      9.4119,
+      -5.9173,
+      2.4615
+     ],
+     "normal": [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.027
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 1317,
+   "flight_t": 14.020833,
+   "flight_step": 5461
+  },
+  {
+   "step": 5463,
+   "t": 5.495867,
+   "phase": "episode",
+   "beat": 2,
+   "beat_label": "fly forward into the east wall",
+   "event": "persist",
+   "verdict": "prohibited",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/body/collision_proxies/rotor_disc_2",
+   "other_collider": "/Root/SM_WallA_6M15/SM_WallA_6M/Section0",
+   "other_actor": "/Root/SM_WallA_6M15/SM_WallA_6M/Section0",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      9.4098,
+      -5.9724,
+      2.4717
+     ],
+     "normal": [
+      -1.0,
+      -0.0001,
+      -0.0
+     ],
+     "impulse": [
+      -0.669064,
+      -4.7e-05,
+      -2e-06
+     ],
+     "separation": 0.00423
+    },
+    {
+     "position": [
+      9.4096,
+      -5.9724,
+      2.4517
+     ],
+     "normal": [
+      -1.0,
+      -0.0001,
+      -0.0
+     ],
+     "impulse": [
+      -0.0,
+      -0.0,
+      -0.0
+     ],
+     "separation": 0.00469
+    },
+    {
+     "position": [
+      9.4098,
+      -5.97,
+      2.4717
+     ],
+     "normal": [
+      -1.0,
+      -0.0001,
+      -0.0
+     ],
+     "impulse": [
+      -0.382837,
+      -2.7e-05,
+      -1e-06
+     ],
+     "separation": 0.00423
+    }
+   ],
+   "total_impulse_ns": 1.051901,
+   "episode_step": 1319,
+   "flight_t": 14.029167,
+   "flight_step": 5463
+  },
+  {
+   "step": 5463,
+   "t": 5.495867,
+   "phase": "episode",
+   "beat": 2,
+   "beat_label": "fly forward into the east wall",
+   "event": "persist",
+   "verdict": "prohibited",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/body/collision_proxies/rotor_disc_0",
+   "other_collider": "/Root/SM_WallA_6M15/SM_WallA_6M/Section0",
+   "other_actor": "/Root/SM_WallA_6M15/SM_WallA_6M/Section0",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      9.4103,
+      -6.3204,
+      2.4722
+     ],
+     "normal": [
+      -1.0,
+      0.0,
+      0.0001
+     ],
+     "impulse": [
+      -1.063175,
+      3.7e-05,
+      0.000157
+     ],
+     "separation": 0.00324
+    },
+    {
+     "position": [
+      9.4101,
+      -6.3205,
+      2.4522
+     ],
+     "normal": [
+      -1.0,
+      0.0,
+      0.0001
+     ],
+     "impulse": [
+      -0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.0037
+    },
+    {
+     "position": [
+      9.4102,
+      -6.3198,
+      2.4647
+     ],
+     "normal": [
+      -1.0,
+      0.0,
+      0.0001
+     ],
+     "impulse": [
+      -0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.00342
+    }
+   ],
+   "total_impulse_ns": 1.063175,
+   "episode_step": 1319,
+   "flight_t": 14.029167,
+   "flight_step": 5463
+  }
+ ],
+ "termination": {
+  "reason": "prohibited contact",
+  "step": 5463,
+  "t": 5.495867,
+  "contact_step": 5463,
+  "episode_step": 1319,
+  "flight_t": 14.029166666666667
+ }
+}

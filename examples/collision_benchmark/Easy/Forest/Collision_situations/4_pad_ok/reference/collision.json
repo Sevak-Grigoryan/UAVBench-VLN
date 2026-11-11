@@ -1,0 +1,7054 @@
+{
+ "version": "collision-v1",
+ "rule": "first prohibited UAV-environment contact during the episode = failure; landing-gear contact with the designated landing surface inside its footprint during the land beat is allowed; internal UAV pairs are ignored",
+ "monitor_verified": true,
+ "monitor_verified_by": "the resting landing-gear contact on the take-off surface was reported during initialization",
+ "api": "omni.physx get_physx_simulation_interface().subscribe_contact_report_events (PhysxContactReportAPI, threshold 0)",
+ "physics": {
+  "hz": 240,
+  "substeps_per_frame": 8,
+  "gpu_dynamics": false,
+  "ccd": {
+   "scenes": [
+    "/physicsScene"
+   ],
+   "bodies": [
+    "/World/x500/body",
+    "/World/x500/rotor0",
+    "/World/x500/rotor1",
+    "/World/x500/rotor2",
+    "/World/x500/rotor3"
+   ]
+  },
+  "judged": "after every physics step, outside the PhysX callback"
+ },
+ "touch_separation_m": 0.005,
+ "drone_colliders": {
+  "/World/x500/body/collision/top_plate": "airframe",
+  "/World/x500/body/collision/leg_right": "landing_gear",
+  "/World/x500/body/collision/leg_left": "landing_gear",
+  "/World/x500/body/collision/skid_right": "landing_gear",
+  "/World/x500/body/collision/skid_left": "landing_gear",
+  "/World/x500/body/collision_proxies/rotor_disc_0": "rotor",
+  "/World/x500/body/collision_proxies/rotor_disc_1": "rotor",
+  "/World/x500/body/collision_proxies/rotor_disc_2": "rotor",
+  "/World/x500/body/collision_proxies/rotor_disc_3": "rotor",
+  "/World/x500/rotor0/collision": "rotor",
+  "/World/x500/rotor1/collision": "rotor",
+  "/World/x500/rotor2/collision": "rotor",
+  "/World/x500/rotor3/collision": "rotor"
+ },
+ "uav_coverage": {
+  "rotor_disc_proxies": [
+   "/World/x500/body/collision_proxies/rotor_disc_0",
+   "/World/x500/body/collision_proxies/rotor_disc_1",
+   "/World/x500/body/collision_proxies/rotor_disc_2",
+   "/World/x500/body/collision_proxies/rotor_disc_3"
+  ],
+  "rotor_disc_radius_m": 0.1396153846153846,
+  "rotor_disc_height_m": 0.02
+ },
+ "environment_coverage": {
+  "excluded_by_dataset_runner": [
+   "/World/Nature",
+   "/World/DenseNature",
+   "/World/EgoCamera",
+   "/World/Looks",
+   "/World/Materials",
+   "/World/River",
+   "/World/Far",
+   "/World/City/Marks",
+   "/World/City/Zebra",
+   "/World/City/Props",
+   "/World/City/Trees",
+   "/World/City/ParkTrees",
+   "/World/Ocean",
+   "/World/DistantTerrain"
+  ],
+  "vegetation_proxies": {
+   "instances_by_instancer": {
+    "Nature/Trees": 483,
+    "Nature/DistantTrees": 1200,
+    "Nature/MatureTrees": 141,
+    "Nature/Rocks": 376,
+    "Nature/Debris": 50,
+    "DenseNature/MatureTrees": 235,
+    "DenseNature/Trees": 757,
+    "DenseNature/Rocks": 299,
+    "DenseNature/Debris": 122
+   },
+   "shapes": 4039,
+   "not_collidable": {
+    "Nature/Groundcover": 926,
+    "DenseNature/Groundcover": 2972
+   }
+  },
+  "proxy_file": "proxies.json"
+ },
+ "landing_exception": {
+  "pad": "W",
+  "xy": [
+   -120.0,
+   -45.0
+  ],
+  "radius_m": 2.5,
+  "surface_colliders": [
+   "/World/Terrain"
+  ],
+  "note": "Forest landing clearings are unmarked spots on the shared terrain mesh: the supporting collider is /World/Terrain, so every contact point must also lie within radius_m of the pad centre"
+ },
+ "episode": {
+  "flight_t0_s": 13.0333,
+  "flight_t1_s": 62.0333,
+  "flight_step0": 5112
+ },
+ "first_prohibited": null,
+ "first_allowed_landing": {
+  "step": 15569,
+  "t": 43.570867,
+  "phase": "episode",
+  "beat": 3,
+  "beat_label": "land W",
+  "event": "persist",
+  "verdict": "allowed_landing",
+  "drone_part": "landing_gear",
+  "drone_collider": "/World/x500/body/collision/skid_right",
+  "other_collider": "/World/Terrain",
+  "other_actor": "/World/Terrain",
+  "other_proto_index": null,
+  "points": [
+   {
+    "position": [
+     -120.7918,
+     -45.3596,
+     -0.7489
+    ],
+    "normal": [
+     0.0038,
+     0.0033,
+     1.0
+    ],
+    "impulse": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "separation": 0.00583
+   },
+   {
+    "position": [
+     -120.7778,
+     -45.3648,
+     -0.7489
+    ],
+    "normal": [
+     0.0038,
+     0.0033,
+     1.0
+    ],
+    "impulse": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "separation": 0.00585
+   },
+   {
+    "position": [
+     -120.8657,
+     -45.5988,
+     -0.7478
+    ],
+    "normal": [
+     0.0038,
+     0.0033,
+     1.0
+    ],
+    "impulse": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "separation": 0.00497
+   },
+   {
+    "position": [
+     -120.8798,
+     -45.5936,
+     -0.7478
+    ],
+    "normal": [
+     0.0038,
+     0.0033,
+     1.0
+    ],
+    "impulse": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "separation": 0.00495
+   }
+  ],
+  "total_impulse_ns": 0.0,
+  "episode_step": 10457,
+  "flight_t": 56.604167,
+  "flight_step": 15569
+ },
+ "invalid": null,
+ "contacts": [
+  {
+   "step": 15341,
+   "t": 42.620867,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "found",
+   "verdict": "proximity",
+   "drone_part": "landing_gear",
+   "drone_collider": "/World/x500/body/collision/skid_left",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.6161,
+      -45.6787,
+      -0.7485
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54949
+    },
+    {
+     "position": [
+      -120.6302,
+      -45.6734,
+      -0.7484
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54946
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10229,
+   "flight_t": 55.654167,
+   "flight_step": 15341
+  },
+  {
+   "step": 15341,
+   "t": 42.620867,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "found",
+   "verdict": "proximity",
+   "drone_part": "landing_gear",
+   "drone_collider": "/World/x500/body/collision/skid_right",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.789,
+      -45.3463,
+      -0.7489
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.55051
+    },
+    {
+     "position": [
+      -120.775,
+      -45.3516,
+      -0.7489
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.55054
+    },
+    {
+     "position": [
+      -120.8632,
+      -45.5855,
+      -0.7478
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54896
+    },
+    {
+     "position": [
+      -120.8772,
+      -45.5803,
+      -0.7478
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54893
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10229,
+   "flight_t": 55.654167,
+   "flight_step": 15341
+  },
+  {
+   "step": 15342,
+   "t": 42.625033,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "found",
+   "verdict": "proximity",
+   "drone_part": "landing_gear",
+   "drone_collider": "/World/x500/body/collision/leg_right",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.8188,
+      -45.4608,
+      -0.7484
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.55021
+    },
+    {
+     "position": [
+      -120.8241,
+      -45.4748,
+      -0.7484
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.55011
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10230,
+   "flight_t": 55.658333,
+   "flight_step": 15342
+  },
+  {
+   "step": 15342,
+   "t": 42.625033,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "found",
+   "verdict": "proximity",
+   "drone_part": "landing_gear",
+   "drone_collider": "/World/x500/body/collision/leg_left",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.5812,
+      -45.5503,
+      -0.749
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.55072
+    },
+    {
+     "position": [
+      -120.5865,
+      -45.5644,
+      -0.749
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.55063
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10230,
+   "flight_t": 55.658333,
+   "flight_step": 15342
+  },
+  {
+   "step": 15342,
+   "t": 42.625033,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "landing_gear",
+   "drone_collider": "/World/x500/body/collision/skid_left",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.542,
+      -45.4395,
+      -0.7495
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54867
+    },
+    {
+     "position": [
+      -120.528,
+      -45.4448,
+      -0.7496
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.5487
+    },
+    {
+     "position": [
+      -120.6162,
+      -45.6787,
+      -0.7485
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54712
+    },
+    {
+     "position": [
+      -120.6302,
+      -45.6734,
+      -0.7484
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54709
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10230,
+   "flight_t": 55.658333,
+   "flight_step": 15342
+  },
+  {
+   "step": 15342,
+   "t": 42.625033,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "landing_gear",
+   "drone_collider": "/World/x500/body/collision/skid_right",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.7891,
+      -45.3464,
+      -0.7489
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54813
+    },
+    {
+     "position": [
+      -120.775,
+      -45.3517,
+      -0.7489
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54817
+    },
+    {
+     "position": [
+      -120.8632,
+      -45.5856,
+      -0.7478
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54659
+    },
+    {
+     "position": [
+      -120.8773,
+      -45.5803,
+      -0.7478
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54656
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10230,
+   "flight_t": 55.658333,
+   "flight_step": 15342
+  },
+  {
+   "step": 15343,
+   "t": 42.6292,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "landing_gear",
+   "drone_collider": "/World/x500/body/collision/skid_left",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.5421,
+      -45.4395,
+      -0.7495
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.5463
+    },
+    {
+     "position": [
+      -120.528,
+      -45.4448,
+      -0.7496
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54633
+    },
+    {
+     "position": [
+      -120.6162,
+      -45.6787,
+      -0.7485
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54475
+    },
+    {
+     "position": [
+      -120.6302,
+      -45.6734,
+      -0.7484
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54472
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10231,
+   "flight_t": 55.6625,
+   "flight_step": 15343
+  },
+  {
+   "step": 15343,
+   "t": 42.6292,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "landing_gear",
+   "drone_collider": "/World/x500/body/collision/skid_right",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.7891,
+      -45.3464,
+      -0.7489
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54576
+    },
+    {
+     "position": [
+      -120.7751,
+      -45.3517,
+      -0.7489
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54579
+    },
+    {
+     "position": [
+      -120.8632,
+      -45.5856,
+      -0.7478
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54421
+    },
+    {
+     "position": [
+      -120.8773,
+      -45.5803,
+      -0.7478
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54418
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10231,
+   "flight_t": 55.6625,
+   "flight_step": 15343
+  },
+  {
+   "step": 15343,
+   "t": 42.6292,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "landing_gear",
+   "drone_collider": "/World/x500/body/collision/leg_right",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.8188,
+      -45.4608,
+      -0.7484
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54784
+    },
+    {
+     "position": [
+      -120.8241,
+      -45.4748,
+      -0.7484
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54774
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10231,
+   "flight_t": 55.6625,
+   "flight_step": 15343
+  },
+  {
+   "step": 15343,
+   "t": 42.6292,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "landing_gear",
+   "drone_collider": "/World/x500/body/collision/leg_left",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.5812,
+      -45.5504,
+      -0.749
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54835
+    },
+    {
+     "position": [
+      -120.5865,
+      -45.5644,
+      -0.7489
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54825
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10231,
+   "flight_t": 55.6625,
+   "flight_step": 15343
+  },
+  {
+   "step": 15344,
+   "t": 42.633367,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "landing_gear",
+   "drone_collider": "/World/x500/body/collision/leg_right",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.832,
+      -45.4559,
+      -0.7484
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.55058
+    },
+    {
+     "position": [
+      -120.8188,
+      -45.4608,
+      -0.7484
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54546
+    },
+    {
+     "position": [
+      -120.8241,
+      -45.4748,
+      -0.7484
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54537
+    },
+    {
+     "position": [
+      -120.8373,
+      -45.4699,
+      -0.7483
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.55048
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10232,
+   "flight_t": 55.666667,
+   "flight_step": 15344
+  },
+  {
+   "step": 15344,
+   "t": 42.633367,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "landing_gear",
+   "drone_collider": "/World/x500/body/collision/leg_left",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.5812,
+      -45.5504,
+      -0.749
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54598
+    },
+    {
+     "position": [
+      -120.5865,
+      -45.5644,
+      -0.749
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54589
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10232,
+   "flight_t": 55.666667,
+   "flight_step": 15344
+  },
+  {
+   "step": 15428,
+   "t": 42.983367,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "found",
+   "verdict": "proximity",
+   "drone_part": "airframe",
+   "drone_collider": "/World/x500/body/collision/top_plate",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.6019,
+      -45.7452,
+      -0.7483
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.55084
+    },
+    {
+     "position": [
+      -120.9328,
+      -45.6207,
+      -0.7475
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.55033
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10316,
+   "flight_t": 56.016667,
+   "flight_step": 15428
+  },
+  {
+   "step": 15429,
+   "t": 42.987533,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "airframe",
+   "drone_collider": "/World/x500/body/collision/top_plate",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.8082,
+      -45.2898,
+      -0.749
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.5498
+    },
+    {
+     "position": [
+      -120.4773,
+      -45.4144,
+      -0.7499
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.55031
+    },
+    {
+     "position": [
+      -120.6019,
+      -45.7453,
+      -0.7483
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54845
+    },
+    {
+     "position": [
+      -120.9328,
+      -45.6207,
+      -0.7475
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54794
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10317,
+   "flight_t": 56.020833,
+   "flight_step": 15429
+  },
+  {
+   "step": 15430,
+   "t": 42.9917,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "airframe",
+   "drone_collider": "/World/x500/body/collision/top_plate",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.8082,
+      -45.2899,
+      -0.749
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.5474
+    },
+    {
+     "position": [
+      -120.4774,
+      -45.4145,
+      -0.7499
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54791
+    },
+    {
+     "position": [
+      -120.6019,
+      -45.7453,
+      -0.7483
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54607
+    },
+    {
+     "position": [
+      -120.9328,
+      -45.6208,
+      -0.7475
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54556
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10318,
+   "flight_t": 56.025,
+   "flight_step": 15430
+  },
+  {
+   "step": 15456,
+   "t": 43.100033,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "found",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/body/collision_proxies/rotor_disc_0",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -121.0041,
+      -45.7376,
+      -0.4714
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.5507
+    },
+    {
+     "position": [
+      -120.8533,
+      -45.5025,
+      -0.472
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.55212
+    },
+    {
+     "position": [
+      -120.8112,
+      -45.6954,
+      -0.4719
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.55143
+    },
+    {
+     "position": [
+      -121.0462,
+      -45.5447,
+      -0.4715
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.55139
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10344,
+   "flight_t": 56.133333,
+   "flight_step": 15456
+  },
+  {
+   "step": 15457,
+   "t": 43.1042,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "found",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/body/collision_proxies/rotor_disc_2",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.6788,
+      -45.8599,
+      -0.4732
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54873
+    },
+    {
+     "position": [
+      -120.5272,
+      -45.6254,
+      -0.4738
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.55014
+    },
+    {
+     "position": [
+      -120.4857,
+      -45.8185,
+      -0.4737
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54946
+    },
+    {
+     "position": [
+      -120.7203,
+      -45.6669,
+      -0.4733
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54942
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10345,
+   "flight_t": 56.1375,
+   "flight_step": 15457
+  },
+  {
+   "step": 15457,
+   "t": 43.1042,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "found",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/body/collision_proxies/rotor_disc_3",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.8847,
+      -45.4098,
+      -0.4733
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.55002
+    },
+    {
+     "position": [
+      -120.7276,
+      -45.179,
+      -0.4739
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.55143
+    },
+    {
+     "position": [
+      -120.6908,
+      -45.373,
+      -0.4738
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.55073
+    },
+    {
+     "position": [
+      -120.9215,
+      -45.2158,
+      -0.4734
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.55073
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10345,
+   "flight_t": 56.1375,
+   "flight_step": 15457
+  },
+  {
+   "step": 15457,
+   "t": 43.1042,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "found",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/body/collision_proxies/rotor_disc_1",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.5558,
+      -45.5345,
+      -0.4739
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.55044
+    },
+    {
+     "position": [
+      -120.4051,
+      -45.2994,
+      -0.4745
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.55185
+    },
+    {
+     "position": [
+      -120.3629,
+      -45.4923,
+      -0.4744
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.55117
+    },
+    {
+     "position": [
+      -120.5979,
+      -45.3416,
+      -0.474
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.55113
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10345,
+   "flight_t": 56.1375,
+   "flight_step": 15457
+  },
+  {
+   "step": 15457,
+   "t": 43.1042,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/body/collision_proxies/rotor_disc_0",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -121.0073,
+      -45.7355,
+      -0.4726
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54831
+    },
+    {
+     "position": [
+      -120.8501,
+      -45.5048,
+      -0.4732
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54972
+    },
+    {
+     "position": [
+      -120.8133,
+      -45.6988,
+      -0.4731
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54902
+    },
+    {
+     "position": [
+      -121.0441,
+      -45.5415,
+      -0.4727
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54902
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10345,
+   "flight_t": 56.1375,
+   "flight_step": 15457
+  },
+  {
+   "step": 15458,
+   "t": 43.108367,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/body/collision_proxies/rotor_disc_0",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -121.004,
+      -45.7377,
+      -0.4738
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54592
+    },
+    {
+     "position": [
+      -120.8534,
+      -45.5026,
+      -0.4744
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54733
+    },
+    {
+     "position": [
+      -120.8111,
+      -45.6954,
+      -0.4743
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54665
+    },
+    {
+     "position": [
+      -121.0463,
+      -45.5449,
+      -0.4739
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.5466
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10346,
+   "flight_t": 56.141667,
+   "flight_step": 15458
+  },
+  {
+   "step": 15458,
+   "t": 43.108367,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/body/collision_proxies/rotor_disc_3",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.881,
+      -45.4123,
+      -0.4745
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54763
+    },
+    {
+     "position": [
+      -120.7314,
+      -45.1766,
+      -0.4751
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54904
+    },
+    {
+     "position": [
+      -120.6883,
+      -45.3693,
+      -0.475
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54836
+    },
+    {
+     "position": [
+      -120.9241,
+      -45.2197,
+      -0.4746
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54831
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10346,
+   "flight_t": 56.141667,
+   "flight_step": 15458
+  },
+  {
+   "step": 15458,
+   "t": 43.108367,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/body/collision_proxies/rotor_disc_1",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.5558,
+      -45.5345,
+      -0.4751
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54805
+    },
+    {
+     "position": [
+      -120.4051,
+      -45.2995,
+      -0.4757
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54946
+    },
+    {
+     "position": [
+      -120.3629,
+      -45.4924,
+      -0.4756
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54878
+    },
+    {
+     "position": [
+      -120.598,
+      -45.3417,
+      -0.4752
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54874
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10346,
+   "flight_t": 56.141667,
+   "flight_step": 15458
+  },
+  {
+   "step": 15458,
+   "t": 43.108367,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/body/collision_proxies/rotor_disc_2",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.6788,
+      -45.86,
+      -0.4744
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54634
+    },
+    {
+     "position": [
+      -120.5273,
+      -45.6254,
+      -0.475
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54775
+    },
+    {
+     "position": [
+      -120.4857,
+      -45.8185,
+      -0.4749
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54706
+    },
+    {
+     "position": [
+      -120.7203,
+      -45.6669,
+      -0.4745
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54702
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10346,
+   "flight_t": 56.141667,
+   "flight_step": 15458
+  },
+  {
+   "step": 15459,
+   "t": 43.112533,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/body/collision_proxies/rotor_disc_3",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.8848,
+      -45.4099,
+      -0.4757
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54524
+    },
+    {
+     "position": [
+      -120.7276,
+      -45.1791,
+      -0.4763
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54665
+    },
+    {
+     "position": [
+      -120.6908,
+      -45.3731,
+      -0.4762
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54595
+    },
+    {
+     "position": [
+      -120.9216,
+      -45.216,
+      -0.4758
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54594
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10347,
+   "flight_t": 56.145833,
+   "flight_step": 15459
+  },
+  {
+   "step": 15459,
+   "t": 43.112533,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/body/collision_proxies/rotor_disc_1",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.5558,
+      -45.5346,
+      -0.4763
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54566
+    },
+    {
+     "position": [
+      -120.4052,
+      -45.2995,
+      -0.4769
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54707
+    },
+    {
+     "position": [
+      -120.3629,
+      -45.4924,
+      -0.4768
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54639
+    },
+    {
+     "position": [
+      -120.598,
+      -45.3417,
+      -0.4764
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54634
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10347,
+   "flight_t": 56.145833,
+   "flight_step": 15459
+  },
+  {
+   "step": 15459,
+   "t": 43.112533,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/body/collision_proxies/rotor_disc_2",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.6788,
+      -45.8601,
+      -0.4756
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54394
+    },
+    {
+     "position": [
+      -120.5273,
+      -45.6255,
+      -0.4762
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54536
+    },
+    {
+     "position": [
+      -120.4857,
+      -45.8185,
+      -0.4761
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54467
+    },
+    {
+     "position": [
+      -120.7203,
+      -45.667,
+      -0.4757
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54463
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10347,
+   "flight_t": 56.145833,
+   "flight_step": 15459
+  },
+  {
+   "step": 15461,
+   "t": 43.120867,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "found",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/rotor0/collision",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.8491,
+      -45.7355,
+      -0.7474
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54883
+    },
+    {
+     "position": [
+      -120.8635,
+      -45.7444,
+      -0.7473
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54875
+    },
+    {
+     "position": [
+      -121.0105,
+      -45.507,
+      -0.7476
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54933
+    },
+    {
+     "position": [
+      -120.9961,
+      -45.4981,
+      -0.7476
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54941
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10349,
+   "flight_t": 56.154167,
+   "flight_step": 15461
+  },
+  {
+   "step": 15461,
+   "t": 43.120867,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "found",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/rotor1/collision",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.4009,
+      -45.5324,
+      -0.7498
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.55097
+    },
+    {
+     "position": [
+      -120.4153,
+      -45.5413,
+      -0.7497
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.55089
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10349,
+   "flight_t": 56.154167,
+   "flight_step": 15461
+  },
+  {
+   "step": 15461,
+   "t": 43.120867,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "found",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/rotor3/collision",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.9392,
+      -45.3421,
+      -0.7484
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.55022
+    },
+    {
+     "position": [
+      -120.9439,
+      -45.3259,
+      -0.7484
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.55028
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10349,
+   "flight_t": 56.154167,
+   "flight_step": 15461
+  },
+  {
+   "step": 15461,
+   "t": 43.120867,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "found",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/rotor2/collision",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.7361,
+      -45.7904,
+      -0.7477
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54893
+    },
+    {
+     "position": [
+      -120.7407,
+      -45.7741,
+      -0.7477
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54898
+    },
+    {
+     "position": [
+      -120.4723,
+      -45.6973,
+      -0.7489
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.55007
+    },
+    {
+     "position": [
+      -120.4676,
+      -45.7136,
+      -0.7489
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.55002
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10349,
+   "flight_t": 56.154167,
+   "flight_step": 15461
+  },
+  {
+   "step": 15462,
+   "t": 43.125033,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/rotor3/collision",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.9091,
+      -45.3916,
+      -0.7483
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54771
+    },
+    {
+     "position": [
+      -120.9199,
+      -45.3786,
+      -0.7483
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54773
+    },
+    {
+     "position": [
+      -120.7055,
+      -45.1997,
+      -0.7497
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.5491
+    },
+    {
+     "position": [
+      -120.6947,
+      -45.2127,
+      -0.7497
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54908
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10350,
+   "flight_t": 56.158333,
+   "flight_step": 15462
+  },
+  {
+   "step": 15462,
+   "t": 43.125033,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/rotor2/collision",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.7059,
+      -45.8398,
+      -0.7476
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54641
+    },
+    {
+     "position": [
+      -120.7168,
+      -45.8268,
+      -0.7476
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54643
+    },
+    {
+     "position": [
+      -120.5023,
+      -45.648,
+      -0.749
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.5478
+    },
+    {
+     "position": [
+      -120.4915,
+      -45.661,
+      -0.749
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54778
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10350,
+   "flight_t": 56.158333,
+   "flight_step": 15462
+  },
+  {
+   "step": 15462,
+   "t": 43.125033,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/rotor0/collision",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.9023,
+      -45.7585,
+      -0.7471
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54619
+    },
+    {
+     "position": [
+      -120.919,
+      -45.7608,
+      -0.7471
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54613
+    },
+    {
+     "position": [
+      -120.9574,
+      -45.4842,
+      -0.7478
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54718
+    },
+    {
+     "position": [
+      -120.9406,
+      -45.4819,
+      -0.7479
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54724
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10350,
+   "flight_t": 56.158333,
+   "flight_step": 15462
+  },
+  {
+   "step": 15462,
+   "t": 43.125033,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/rotor1/collision",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.454,
+      -45.5553,
+      -0.7495
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54833
+    },
+    {
+     "position": [
+      -120.4708,
+      -45.5576,
+      -0.7494
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54827
+    },
+    {
+     "position": [
+      -120.5091,
+      -45.2811,
+      -0.7502
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54932
+    },
+    {
+     "position": [
+      -120.4924,
+      -45.2787,
+      -0.7502
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54938
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10350,
+   "flight_t": 56.158333,
+   "flight_step": 15462
+  },
+  {
+   "step": 15463,
+   "t": 43.1292,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/rotor3/collision",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.8616,
+      -45.4246,
+      -0.7484
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54532
+    },
+    {
+     "position": [
+      -120.8768,
+      -45.4171,
+      -0.7484
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.5453
+    },
+    {
+     "position": [
+      -120.7531,
+      -45.1668,
+      -0.7496
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54671
+    },
+    {
+     "position": [
+      -120.7379,
+      -45.1743,
+      -0.7497
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54673
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10351,
+   "flight_t": 56.1625,
+   "flight_step": 15463
+  },
+  {
+   "step": 15463,
+   "t": 43.1292,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/rotor2/collision",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.6585,
+      -45.8729,
+      -0.7477
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54402
+    },
+    {
+     "position": [
+      -120.6736,
+      -45.8654,
+      -0.7476
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.544
+    },
+    {
+     "position": [
+      -120.5499,
+      -45.6151,
+      -0.7489
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54541
+    },
+    {
+     "position": [
+      -120.5348,
+      -45.6226,
+      -0.749
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54542
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10351,
+   "flight_t": 56.1625,
+   "flight_step": 15463
+  },
+  {
+   "step": 15463,
+   "t": 43.1292,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/rotor0/collision",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.9601,
+      -45.758,
+      -0.7469
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54363
+    },
+    {
+     "position": [
+      -120.9764,
+      -45.7533,
+      -0.7469
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.5436
+    },
+    {
+     "position": [
+      -120.8996,
+      -45.4849,
+      -0.748
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54495
+    },
+    {
+     "position": [
+      -120.8833,
+      -45.4895,
+      -0.7481
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54498
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10351,
+   "flight_t": 56.1625,
+   "flight_step": 15463
+  },
+  {
+   "step": 15463,
+   "t": 43.1292,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/rotor1/collision",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.5119,
+      -45.5548,
+      -0.7493
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54578
+    },
+    {
+     "position": [
+      -120.5281,
+      -45.5502,
+      -0.7492
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54575
+    },
+    {
+     "position": [
+      -120.4513,
+      -45.2817,
+      -0.7504
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.5471
+    },
+    {
+     "position": [
+      -120.435,
+      -45.2864,
+      -0.7504
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.54713
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10351,
+   "flight_t": 56.1625,
+   "flight_step": 15463
+  },
+  {
+   "step": 15569,
+   "t": 43.570867,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "allowed_landing",
+   "drone_part": "landing_gear",
+   "drone_collider": "/World/x500/body/collision/skid_right",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.7918,
+      -45.3596,
+      -0.7489
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.00583
+    },
+    {
+     "position": [
+      -120.7778,
+      -45.3648,
+      -0.7489
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.00585
+    },
+    {
+     "position": [
+      -120.8657,
+      -45.5988,
+      -0.7478
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.00497
+    },
+    {
+     "position": [
+      -120.8798,
+      -45.5936,
+      -0.7478
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.00495
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10457,
+   "flight_t": 56.604167,
+   "flight_step": 15569
+  },
+  {
+   "step": 15570,
+   "t": 43.575033,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "allowed_landing",
+   "drone_part": "landing_gear",
+   "drone_collider": "/World/x500/body/collision/skid_left",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.5447,
+      -45.4525,
+      -0.7495
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.00383
+    },
+    {
+     "position": [
+      -120.5306,
+      -45.4577,
+      -0.7495
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.00385
+    },
+    {
+     "position": [
+      -120.6186,
+      -45.6918,
+      -0.7484
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.00295
+    },
+    {
+     "position": [
+      -120.6326,
+      -45.6865,
+      -0.7484
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.00293
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10458,
+   "flight_t": 56.608333,
+   "flight_step": 15570
+  },
+  {
+   "step": 15570,
+   "t": 43.575033,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "allowed_landing",
+   "drone_part": "landing_gear",
+   "drone_collider": "/World/x500/body/collision/skid_right",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.7918,
+      -45.3596,
+      -0.7489
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.00345
+    },
+    {
+     "position": [
+      -120.7778,
+      -45.3649,
+      -0.7489
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.00347
+    },
+    {
+     "position": [
+      -120.8657,
+      -45.5989,
+      -0.7478
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.00258
+    },
+    {
+     "position": [
+      -120.8798,
+      -45.5936,
+      -0.7478
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.00256
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10458,
+   "flight_t": 56.608333,
+   "flight_step": 15570
+  },
+  {
+   "step": 15571,
+   "t": 43.5792,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "allowed_landing",
+   "drone_part": "landing_gear",
+   "drone_collider": "/World/x500/body/collision/skid_left",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.5447,
+      -45.4525,
+      -0.7495
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.00145
+    },
+    {
+     "position": [
+      -120.5306,
+      -45.4578,
+      -0.7495
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.00147
+    },
+    {
+     "position": [
+      -120.6186,
+      -45.6918,
+      -0.7484
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.001783,
+      0.001562,
+      0.475282
+     ],
+     "separation": 0.00057
+    },
+    {
+     "position": [
+      -120.6326,
+      -45.6865,
+      -0.7484
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      8e-06
+     ],
+     "separation": 0.00055
+    }
+   ],
+   "total_impulse_ns": 0.475296,
+   "episode_step": 10459,
+   "flight_t": 56.6125,
+   "flight_step": 15571
+  },
+  {
+   "step": 15571,
+   "t": 43.5792,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "allowed_landing",
+   "drone_part": "landing_gear",
+   "drone_collider": "/World/x500/body/collision/skid_right",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.7918,
+      -45.3597,
+      -0.7489
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.00107
+    },
+    {
+     "position": [
+      -120.7778,
+      -45.365,
+      -0.7489
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.00109
+    },
+    {
+     "position": [
+      -120.8657,
+      -45.599,
+      -0.7478
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.000552,
+      0.000483,
+      0.147018
+     ],
+     "separation": 0.00019
+    },
+    {
+     "position": [
+      -120.8797,
+      -45.5937,
+      -0.7478
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.001525,
+      0.001336,
+      0.406437
+     ],
+     "separation": 0.00017
+    }
+   ],
+   "total_impulse_ns": 0.553461,
+   "episode_step": 10459,
+   "flight_t": 56.6125,
+   "flight_step": 15571
+  },
+  {
+   "step": 15571,
+   "t": 43.5792,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "allowed_landing",
+   "drone_part": "landing_gear",
+   "drone_collider": "/World/x500/body/collision/leg_right",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.8346,
+      -45.4691,
+      -0.7483
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.00859
+    },
+    {
+     "position": [
+      -120.8214,
+      -45.4741,
+      -0.7484
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.00346
+    },
+    {
+     "position": [
+      -120.8267,
+      -45.4881,
+      -0.7483
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.00341
+    },
+    {
+     "position": [
+      -120.8399,
+      -45.4832,
+      -0.7483
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.00853
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10459,
+   "flight_t": 56.6125,
+   "flight_step": 15571
+  },
+  {
+   "step": 15571,
+   "t": 43.5792,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "allowed_landing",
+   "drone_part": "landing_gear",
+   "drone_collider": "/World/x500/body/collision/leg_left",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.5837,
+      -45.5634,
+      -0.749
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.00383
+    },
+    {
+     "position": [
+      -120.5705,
+      -45.5684,
+      -0.749
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.00899
+    },
+    {
+     "position": [
+      -120.5758,
+      -45.5824,
+      -0.7489
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.00894
+    },
+    {
+     "position": [
+      -120.589,
+      -45.5774,
+      -0.7489
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.00377
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10459,
+   "flight_t": 56.6125,
+   "flight_step": 15571
+  },
+  {
+   "step": 15572,
+   "t": 43.583367,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "allowed_landing",
+   "drone_part": "landing_gear",
+   "drone_collider": "/World/x500/body/collision/skid_left",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.5447,
+      -45.4527,
+      -0.7495
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.000584,
+      0.000511,
+      0.155615
+     ],
+     "separation": 4e-05
+    },
+    {
+     "position": [
+      -120.5307,
+      -45.458,
+      -0.7495
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      3e-06,
+      3e-06,
+      0.000863
+     ],
+     "separation": 4e-05
+    },
+    {
+     "position": [
+      -120.6187,
+      -45.692,
+      -0.7484
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.0
+    },
+    {
+     "position": [
+      -120.6327,
+      -45.6867,
+      -0.7484
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.0
+    }
+   ],
+   "total_impulse_ns": 0.15648,
+   "episode_step": 10460,
+   "flight_t": 56.616667,
+   "flight_step": 15572
+  },
+  {
+   "step": 15572,
+   "t": 43.583367,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "allowed_landing",
+   "drone_part": "landing_gear",
+   "drone_collider": "/World/x500/body/collision/leg_right",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.8346,
+      -45.4692,
+      -0.7483
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.00796
+    },
+    {
+     "position": [
+      -120.8214,
+      -45.4742,
+      -0.7484
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.00281
+    },
+    {
+     "position": [
+      -120.8267,
+      -45.4882,
+      -0.7483
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.00281
+    },
+    {
+     "position": [
+      -120.8399,
+      -45.4832,
+      -0.7483
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.00796
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10460,
+   "flight_t": 56.616667,
+   "flight_step": 15572
+  },
+  {
+   "step": 15572,
+   "t": 43.583367,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "allowed_landing",
+   "drone_part": "landing_gear",
+   "drone_collider": "/World/x500/body/collision/leg_left",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.5838,
+      -45.5636,
+      -0.749
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.00281
+    },
+    {
+     "position": [
+      -120.5706,
+      -45.5685,
+      -0.749
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.00795
+    },
+    {
+     "position": [
+      -120.5759,
+      -45.5826,
+      -0.7489
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.00795
+    },
+    {
+     "position": [
+      -120.589,
+      -45.5776,
+      -0.7489
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.00281
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10460,
+   "flight_t": 56.616667,
+   "flight_step": 15572
+  },
+  {
+   "step": 15573,
+   "t": 43.587533,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "allowed_landing",
+   "drone_part": "landing_gear",
+   "drone_collider": "/World/x500/body/collision/leg_right",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.8345,
+      -45.469,
+      -0.7483
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.00813
+    },
+    {
+     "position": [
+      -120.8213,
+      -45.4739,
+      -0.7484
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.00298
+    },
+    {
+     "position": [
+      -120.8266,
+      -45.488,
+      -0.7483
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.00301
+    },
+    {
+     "position": [
+      -120.8398,
+      -45.483,
+      -0.7483
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.00815
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10461,
+   "flight_t": 56.620833,
+   "flight_step": 15573
+  },
+  {
+   "step": 15573,
+   "t": 43.587533,
+   "phase": "episode",
+   "beat": 3,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "allowed_landing",
+   "drone_part": "landing_gear",
+   "drone_collider": "/World/x500/body/collision/leg_left",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.5836,
+      -45.5632,
+      -0.749
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.00299
+    },
+    {
+     "position": [
+      -120.5704,
+      -45.5682,
+      -0.749
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.00813
+    },
+    {
+     "position": [
+      -120.5757,
+      -45.5822,
+      -0.7489
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.00816
+    },
+    {
+     "position": [
+      -120.5889,
+      -45.5773,
+      -0.7489
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.00301
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 10461,
+   "flight_t": 56.620833,
+   "flight_step": 15573
+  },
+  {
+   "step": 16633,
+   "t": 48.0042,
+   "phase": "post-roll",
+   "beat": 4,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "airframe",
+   "drone_collider": "/World/x500/body/collision/top_plate",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.8034,
+      -45.2842,
+      -0.7491
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.209
+    },
+    {
+     "position": [
+      -120.4716,
+      -45.4061,
+      -0.7499
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.209
+    },
+    {
+     "position": [
+      -120.5935,
+      -45.738,
+      -0.7484
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.209
+    },
+    {
+     "position": [
+      -120.9254,
+      -45.616,
+      -0.7475
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.209
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 11521,
+   "flight_t": 61.0375,
+   "flight_step": 16633
+  },
+  {
+   "step": 16633,
+   "t": 48.0042,
+   "phase": "post-roll",
+   "beat": 4,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/body/collision_proxies/rotor_disc_0",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.8972,
+      -45.4759,
+      -0.6096
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    },
+    {
+     "position": [
+      -120.945,
+      -45.751,
+      -0.6085
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    },
+    {
+     "position": [
+      -121.0587,
+      -45.5896,
+      -0.6086
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    },
+    {
+     "position": [
+      -120.7836,
+      -45.6374,
+      -0.6094
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 11521,
+   "flight_t": 61.0375,
+   "flight_step": 16633
+  },
+  {
+   "step": 16633,
+   "t": 48.0042,
+   "phase": "post-roll",
+   "beat": 4,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/body/collision_proxies/rotor_disc_3",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.9346,
+      -45.2459,
+      -0.6102
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    },
+    {
+     "position": [
+      -120.6676,
+      -45.3278,
+      -0.6109
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    },
+    {
+     "position": [
+      -120.8421,
+      -45.4203,
+      -0.6099
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    },
+    {
+     "position": [
+      -120.7601,
+      -45.1534,
+      -0.6111
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 11521,
+   "flight_t": 61.0375,
+   "flight_step": 16633
+  },
+  {
+   "step": 16633,
+   "t": 48.0042,
+   "phase": "post-roll",
+   "beat": 4,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/body/collision_proxies/rotor_disc_1",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.6095,
+      -45.3714,
+      -0.611
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    },
+    {
+     "position": [
+      -120.3394,
+      -45.4424,
+      -0.6118
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    },
+    {
+     "position": [
+      -120.51,
+      -45.5419,
+      -0.6108
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    },
+    {
+     "position": [
+      -120.4389,
+      -45.2719,
+      -0.6119
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 11521,
+   "flight_t": 61.0375,
+   "flight_step": 16633
+  },
+  {
+   "step": 16633,
+   "t": 48.0042,
+   "phase": "post-roll",
+   "beat": 4,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/body/collision_proxies/rotor_disc_2",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.579,
+      -45.5948,
+      -0.6104
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    },
+    {
+     "position": [
+      -120.61,
+      -45.8723,
+      -0.6093
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    },
+    {
+     "position": [
+      -120.7332,
+      -45.718,
+      -0.6094
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    },
+    {
+     "position": [
+      -120.4557,
+      -45.749,
+      -0.6103
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 11521,
+   "flight_t": 61.0375,
+   "flight_step": 16633
+  },
+  {
+   "step": 16633,
+   "t": 48.0042,
+   "phase": "post-roll",
+   "beat": 4,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/rotor3/collision",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.8603,
+      -45.1603,
+      -0.7493
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    },
+    {
+     "position": [
+      -120.8445,
+      -45.1541,
+      -0.7493
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    },
+    {
+     "position": [
+      -120.743,
+      -45.4143,
+      -0.7489
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    },
+    {
+     "position": [
+      -120.7588,
+      -45.4204,
+      -0.7488
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 11521,
+   "flight_t": 61.0375,
+   "flight_step": 16633
+  },
+  {
+   "step": 16633,
+   "t": 48.0042,
+   "phase": "post-roll",
+   "beat": 4,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/rotor2/collision",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.6536,
+      -45.607,
+      -0.7486
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    },
+    {
+     "position": [
+      -120.6379,
+      -45.6008,
+      -0.7486
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    },
+    {
+     "position": [
+      -120.5364,
+      -45.861,
+      -0.7482
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    },
+    {
+     "position": [
+      -120.5522,
+      -45.8671,
+      -0.7481
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 11521,
+   "flight_t": 61.0375,
+   "flight_step": 16633
+  },
+  {
+   "step": 16633,
+   "t": 48.0042,
+   "phase": "post-roll",
+   "beat": 4,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/rotor0/collision",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.801,
+      -45.5432,
+      -0.7482
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    },
+    {
+     "position": [
+      -120.7934,
+      -45.5583,
+      -0.7482
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    },
+    {
+     "position": [
+      -121.0423,
+      -45.6847,
+      -0.7468
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    },
+    {
+     "position": [
+      -121.05,
+      -45.6696,
+      -0.7469
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 11521,
+   "flight_t": 61.0375,
+   "flight_step": 16633
+  },
+  {
+   "step": 16633,
+   "t": 48.0042,
+   "phase": "post-roll",
+   "beat": 4,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/rotor1/collision",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.3543,
+      -45.3366,
+      -0.7506
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    },
+    {
+     "position": [
+      -120.3467,
+      -45.3517,
+      -0.7506
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    },
+    {
+     "position": [
+      -120.5956,
+      -45.4781,
+      -0.7492
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    },
+    {
+     "position": [
+      -120.6033,
+      -45.463,
+      -0.7492
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 11521,
+   "flight_t": 61.0375,
+   "flight_step": 16633
+  },
+  {
+   "step": 16634,
+   "t": 48.008367,
+   "phase": "post-roll",
+   "beat": 4,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "airframe",
+   "drone_collider": "/World/x500/body/collision/top_plate",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.8034,
+      -45.2842,
+      -0.7491
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.209
+    },
+    {
+     "position": [
+      -120.4716,
+      -45.4061,
+      -0.7499
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.209
+    },
+    {
+     "position": [
+      -120.5935,
+      -45.738,
+      -0.7484
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.209
+    },
+    {
+     "position": [
+      -120.9254,
+      -45.616,
+      -0.7475
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.209
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 11522,
+   "flight_t": 61.041667,
+   "flight_step": 16634
+  },
+  {
+   "step": 16634,
+   "t": 48.008367,
+   "phase": "post-roll",
+   "beat": 4,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/body/collision_proxies/rotor_disc_0",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.7836,
+      -45.6374,
+      -0.6094
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    },
+    {
+     "position": [
+      -121.0587,
+      -45.5896,
+      -0.6086
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    },
+    {
+     "position": [
+      -120.8972,
+      -45.4759,
+      -0.6096
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    },
+    {
+     "position": [
+      -120.945,
+      -45.751,
+      -0.6085
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 11522,
+   "flight_t": 61.041667,
+   "flight_step": 16634
+  },
+  {
+   "step": 16634,
+   "t": 48.008367,
+   "phase": "post-roll",
+   "beat": 4,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/body/collision_proxies/rotor_disc_3",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.6676,
+      -45.3278,
+      -0.6109
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    },
+    {
+     "position": [
+      -120.9346,
+      -45.2458,
+      -0.6102
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    },
+    {
+     "position": [
+      -120.7601,
+      -45.1534,
+      -0.6111
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    },
+    {
+     "position": [
+      -120.8421,
+      -45.4203,
+      -0.6099
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 11522,
+   "flight_t": 61.041667,
+   "flight_step": 16634
+  },
+  {
+   "step": 16634,
+   "t": 48.008367,
+   "phase": "post-roll",
+   "beat": 4,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/body/collision_proxies/rotor_disc_1",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.4389,
+      -45.2719,
+      -0.6119
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    },
+    {
+     "position": [
+      -120.51,
+      -45.5419,
+      -0.6108
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    },
+    {
+     "position": [
+      -120.6095,
+      -45.3714,
+      -0.611
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    },
+    {
+     "position": [
+      -120.3394,
+      -45.4424,
+      -0.6118
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 11522,
+   "flight_t": 61.041667,
+   "flight_step": 16634
+  },
+  {
+   "step": 16634,
+   "t": 48.008367,
+   "phase": "post-roll",
+   "beat": 4,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/body/collision_proxies/rotor_disc_2",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.579,
+      -45.5948,
+      -0.6104
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    },
+    {
+     "position": [
+      -120.61,
+      -45.8723,
+      -0.6093
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    },
+    {
+     "position": [
+      -120.7332,
+      -45.718,
+      -0.6094
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    },
+    {
+     "position": [
+      -120.4557,
+      -45.749,
+      -0.6103
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 11522,
+   "flight_t": 61.041667,
+   "flight_step": 16634
+  },
+  {
+   "step": 16634,
+   "t": 48.008367,
+   "phase": "post-roll",
+   "beat": 4,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/rotor3/collision",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.8603,
+      -45.1603,
+      -0.7493
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    },
+    {
+     "position": [
+      -120.8445,
+      -45.1541,
+      -0.7493
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    },
+    {
+     "position": [
+      -120.743,
+      -45.4143,
+      -0.7489
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    },
+    {
+     "position": [
+      -120.7588,
+      -45.4204,
+      -0.7488
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 11522,
+   "flight_t": 61.041667,
+   "flight_step": 16634
+  },
+  {
+   "step": 16634,
+   "t": 48.008367,
+   "phase": "post-roll",
+   "beat": 4,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/rotor2/collision",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.6536,
+      -45.607,
+      -0.7486
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    },
+    {
+     "position": [
+      -120.6379,
+      -45.6008,
+      -0.7486
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    },
+    {
+     "position": [
+      -120.5364,
+      -45.861,
+      -0.7482
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    },
+    {
+     "position": [
+      -120.5522,
+      -45.8671,
+      -0.7481
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 11522,
+   "flight_t": 61.041667,
+   "flight_step": 16634
+  },
+  {
+   "step": 16634,
+   "t": 48.008367,
+   "phase": "post-roll",
+   "beat": 4,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/rotor0/collision",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.801,
+      -45.5432,
+      -0.7482
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    },
+    {
+     "position": [
+      -120.7934,
+      -45.5583,
+      -0.7482
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    },
+    {
+     "position": [
+      -121.0423,
+      -45.6847,
+      -0.7468
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    },
+    {
+     "position": [
+      -121.05,
+      -45.6696,
+      -0.7469
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 11522,
+   "flight_t": 61.041667,
+   "flight_step": 16634
+  },
+  {
+   "step": 16634,
+   "t": 48.008367,
+   "phase": "post-roll",
+   "beat": 4,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/rotor1/collision",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.3543,
+      -45.3366,
+      -0.7506
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    },
+    {
+     "position": [
+      -120.3467,
+      -45.3517,
+      -0.7506
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    },
+    {
+     "position": [
+      -120.5956,
+      -45.4781,
+      -0.7492
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    },
+    {
+     "position": [
+      -120.6033,
+      -45.463,
+      -0.7492
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 11522,
+   "flight_t": 61.041667,
+   "flight_step": 16634
+  },
+  {
+   "step": 16635,
+   "t": 48.012533,
+   "phase": "post-roll",
+   "beat": 4,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "airframe",
+   "drone_collider": "/World/x500/body/collision/top_plate",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.8034,
+      -45.2842,
+      -0.7491
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.209
+    },
+    {
+     "position": [
+      -120.4716,
+      -45.4061,
+      -0.7499
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.209
+    },
+    {
+     "position": [
+      -120.5935,
+      -45.738,
+      -0.7484
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.209
+    },
+    {
+     "position": [
+      -120.9254,
+      -45.616,
+      -0.7475
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.209
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 11523,
+   "flight_t": 61.045833,
+   "flight_step": 16635
+  },
+  {
+   "step": 16635,
+   "t": 48.012533,
+   "phase": "post-roll",
+   "beat": 4,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/body/collision_proxies/rotor_disc_0",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.8972,
+      -45.4759,
+      -0.6096
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    },
+    {
+     "position": [
+      -120.945,
+      -45.751,
+      -0.6085
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    },
+    {
+     "position": [
+      -121.0587,
+      -45.5896,
+      -0.6086
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    },
+    {
+     "position": [
+      -120.7836,
+      -45.6374,
+      -0.6094
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 11523,
+   "flight_t": 61.045833,
+   "flight_step": 16635
+  },
+  {
+   "step": 16635,
+   "t": 48.012533,
+   "phase": "post-roll",
+   "beat": 4,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/body/collision_proxies/rotor_disc_3",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.6676,
+      -45.3278,
+      -0.6109
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    },
+    {
+     "position": [
+      -120.9346,
+      -45.2458,
+      -0.6102
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    },
+    {
+     "position": [
+      -120.7601,
+      -45.1534,
+      -0.6111
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    },
+    {
+     "position": [
+      -120.8421,
+      -45.4203,
+      -0.6099
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 11523,
+   "flight_t": 61.045833,
+   "flight_step": 16635
+  },
+  {
+   "step": 16635,
+   "t": 48.012533,
+   "phase": "post-roll",
+   "beat": 4,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/body/collision_proxies/rotor_disc_1",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.6095,
+      -45.3714,
+      -0.611
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    },
+    {
+     "position": [
+      -120.3394,
+      -45.4424,
+      -0.6118
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    },
+    {
+     "position": [
+      -120.51,
+      -45.5419,
+      -0.6108
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    },
+    {
+     "position": [
+      -120.4389,
+      -45.2719,
+      -0.6119
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 11523,
+   "flight_t": 61.045833,
+   "flight_step": 16635
+  },
+  {
+   "step": 16635,
+   "t": 48.012533,
+   "phase": "post-roll",
+   "beat": 4,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/body/collision_proxies/rotor_disc_2",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.579,
+      -45.5948,
+      -0.6104
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    },
+    {
+     "position": [
+      -120.61,
+      -45.8723,
+      -0.6093
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    },
+    {
+     "position": [
+      -120.7332,
+      -45.718,
+      -0.6094
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    },
+    {
+     "position": [
+      -120.4557,
+      -45.749,
+      -0.6103
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.27694
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 11523,
+   "flight_t": 61.045833,
+   "flight_step": 16635
+  },
+  {
+   "step": 16635,
+   "t": 48.012533,
+   "phase": "post-roll",
+   "beat": 4,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/rotor3/collision",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.8603,
+      -45.1603,
+      -0.7493
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    },
+    {
+     "position": [
+      -120.8445,
+      -45.1541,
+      -0.7493
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    },
+    {
+     "position": [
+      -120.743,
+      -45.4143,
+      -0.7489
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    },
+    {
+     "position": [
+      -120.7588,
+      -45.4204,
+      -0.7488
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 11523,
+   "flight_t": 61.045833,
+   "flight_step": 16635
+  },
+  {
+   "step": 16635,
+   "t": 48.012533,
+   "phase": "post-roll",
+   "beat": 4,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/rotor2/collision",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.6536,
+      -45.607,
+      -0.7486
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    },
+    {
+     "position": [
+      -120.6379,
+      -45.6008,
+      -0.7486
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    },
+    {
+     "position": [
+      -120.5364,
+      -45.861,
+      -0.7482
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    },
+    {
+     "position": [
+      -120.5522,
+      -45.8671,
+      -0.7481
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 11523,
+   "flight_t": 61.045833,
+   "flight_step": 16635
+  },
+  {
+   "step": 16635,
+   "t": 48.012533,
+   "phase": "post-roll",
+   "beat": 4,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/rotor0/collision",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.801,
+      -45.5432,
+      -0.7482
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    },
+    {
+     "position": [
+      -120.7934,
+      -45.5583,
+      -0.7482
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    },
+    {
+     "position": [
+      -121.0423,
+      -45.6847,
+      -0.7468
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    },
+    {
+     "position": [
+      -121.05,
+      -45.6696,
+      -0.7469
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 11523,
+   "flight_t": 61.045833,
+   "flight_step": 16635
+  },
+  {
+   "step": 16635,
+   "t": 48.012533,
+   "phase": "post-roll",
+   "beat": 4,
+   "beat_label": "land W",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/rotor1/collision",
+   "other_collider": "/World/Terrain",
+   "other_actor": "/World/Terrain",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -120.3543,
+      -45.3366,
+      -0.7506
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    },
+    {
+     "position": [
+      -120.3467,
+      -45.3517,
+      -0.7506
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    },
+    {
+     "position": [
+      -120.5956,
+      -45.4781,
+      -0.7492
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    },
+    {
+     "position": [
+      -120.6033,
+      -45.463,
+      -0.7492
+     ],
+     "normal": [
+      0.0038,
+      0.0033,
+      1.0
+     ],
+     "impulse": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.28658
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 11523,
+   "flight_t": 61.045833,
+   "flight_step": 16635
+  }
+ ],
+ "termination": null
+}

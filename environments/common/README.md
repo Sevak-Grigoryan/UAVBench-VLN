@@ -28,6 +28,11 @@ identical across City, Coastal, Forest and Mountain.
 | `build_px4.sbatch` | Builds PX4 v1.14.3 SITL into `px4_env/` (not in the repo). |
 | `preview.sbatch`, `smoke_h100.sbatch` | Preview stills and the smoke test as Slurm jobs. |
 
+## `px4_patches/`
+
+Our only changes to the external PX4 and Pegasus checkouts: the airframe `10050_isaac_x500` and
+`pegasus_simulator.patch`. See [`px4_patches/README.md`](px4_patches/README.md).
+
 ## `vln_simulation/`
 
 The earlier generator, used for the first natural-valley proof of concept and still imported by the Forest scene.

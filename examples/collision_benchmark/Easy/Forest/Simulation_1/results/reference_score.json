@@ -1,0 +1,29 @@
+{
+ "episode_id": "Easy/Forest/Simulation_1",
+ "valid": true,
+ "success": true,
+ "oracle_success": true,
+ "navigation_error_m": 0.83,
+ "spl": 1.0,
+ "episode_end": "STOP in the goal state",
+ "stopped": true,
+ "distance_to_target_at_end_m": 27.17,
+ "in_distance_band_at_end": true,
+ "target_in_frame_at_end": true,
+ "heading_error_at_end_deg": 3.1,
+ "target_in_frame_fraction": 0.899,
+ "closest_to_ring_m": 0.02,
+ "crashed": false,
+ "collided": false,
+ "collision": null,
+ "below_min_agl": false,
+ "path_length_m": 126.3,
+ "reference_path_m": 126.3,
+ "duration_s": 26.47,
+ "time_limit_s": 60.0,
+ "end_position_xyz": [
+  56.62,
+  -30.83,
+  16.58
+ ]
+}

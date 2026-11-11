@@ -1,0 +1,9 @@
+{
+ "episode_id": "Easy/Warehouse/Collision_situations/1_shelf",
+ "expected": {
+  "outcome": "collision",
+  "first_prohibited_other_prefix": "/Root/Shelf_0"
+ },
+ "rule": "first prohibited UAV-environment contact during the episode = failure; landing-gear contact with the designated landing surface inside its footprint during the land beat is allowed; internal UAV pairs are ignored; a flight without verified collision monitoring is invalid",
+ "source_flight": "/mnt/weka/sgrigoryan/Benchmark_collision_work_warehouse/tests/colltest_shelf"
+}

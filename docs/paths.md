@@ -7,6 +7,11 @@ roots below. The scorer (`benchmark/evaluate.py`, `selftest.py`, `geometry.py`) 
 |---|---|---|
 | `/mnt/weka/sgrigoryan/dataset_codebase` | this repository's `environments/` folder | `<repo>/environments` |
 | `/home/sgrigoryan/Desktop/Benchmark_codebase` | this repository's `benchmark/` folder | `<repo>/benchmark` |
+| `/home/sgrigoryan/Desktop/Benchmark_collision_codebase` | `benchmark_collision/forest` | `<repo>/benchmark_collision/forest` |
+| `/home/sgrigoryan/Desktop/Benchmark_collision_warehouse_codebase` | `benchmark_collision/warehouse` | `<repo>/benchmark_collision/warehouse` |
+| `/home/sgrigoryan/Desktop/Benchmark_collision_codebase_isaac62` | `benchmark_collision/forest_isaac62` | `<repo>/benchmark_collision/forest_isaac62` |
+| `/mnt/weka/sgrigoryan/Benchmark_collision`, `Benchmark_collision_work*` | published v0.2 data and its work files | your output and scratch folders |
+| `/mnt/weka/sgrigoryan/isaac62` | Isaac Sim 6.2 environment (pip) and its Pegasus checkout | your Isaac Sim 6.2 install |
 | `/mnt/weka/sgrigoryan/All_Simulations` | published dataset | your dataset output folder |
 | `/mnt/weka/sgrigoryan/Benchmark`, `/mnt/weka/sgrigoryan/Benchmark_work` | published benchmark episodes and their work files | your benchmark output and scratch folders |
 | `/mnt/weka/sgrigoryan/assets` | downloaded Poly Haven assets | your asset cache (filled by `fetch_*_assets.py`) |
@@ -96,3 +101,40 @@ also specific to that cluster.
 | 7 | `environments/common/scripts/smoke_h100.sbatch` |
 | 4 | `environments/common/scripts/x500_job.sbatch` |
 | 1 | `environments/common/vln_simulation/fetch_assets.py` |
+| 2 | `benchmark_collision/forest/README.md` |
+| 5 | `benchmark_collision/forest/job.sbatch` |
+| 2 | `benchmark_collision/forest/package_collision_tests.py` |
+| 4 | `benchmark_collision/forest/publish_episode.py` |
+| 1 | `benchmark_collision/forest/render_debug.py` |
+| 5 | `benchmark_collision/forest/rerender_videos.sbatch` |
+| 3 | `benchmark_collision/forest/run_all.sh` |
+| 1 | `benchmark_collision/forest/run_flight.py` |
+| 1 | `benchmark_collision/forest/tests/check_tests.py` |
+| 2 | `benchmark_collision/forest_isaac62/README.md` |
+| 1 | `benchmark_collision/forest_isaac62/dataset_port/Forest/scene/encode_video.py` |
+| 1 | `benchmark_collision/forest_isaac62/dataset_port/Forest/scene/forest_bridge.py` |
+| 1 | `benchmark_collision/forest_isaac62/dataset_port/Forest/scene/hq_bridge.py` |
+| 3 | `benchmark_collision/forest_isaac62/dataset_port/Forest/scene/run_forest_mission.py` |
+| 1 | `benchmark_collision/forest_isaac62/dataset_port/common/pipeline/encode_video.py` |
+| 2 | `benchmark_collision/forest_isaac62/dataset_port/common/pipeline/finalize.py` |
+| 1 | `benchmark_collision/forest_isaac62/dataset_port/common/pipeline/render_slice.py` |
+| 1 | `benchmark_collision/forest_isaac62/isaac62_compat.py` |
+| 6 | `benchmark_collision/forest_isaac62/job.sbatch` |
+| 2 | `benchmark_collision/forest_isaac62/package_collision_tests.py` |
+| 4 | `benchmark_collision/forest_isaac62/publish_episode.py` |
+| 3 | `benchmark_collision/forest_isaac62/run_all.sh` |
+| 8 | `benchmark_collision/forest_isaac62/smoke62.sbatch` |
+| 9 | `benchmark_collision/forest_isaac62/smoke62_h100.sbatch` |
+| 1 | `benchmark_collision/forest_isaac62/tests/check_tests.py` |
+| 5 | `benchmark_collision/warehouse/job.sbatch` |
+| 6 | `benchmark_collision/warehouse/job_warehouse.sbatch` |
+| 2 | `benchmark_collision/warehouse/package_collision_tests.py` |
+| 1 | `benchmark_collision/warehouse/probe_warehouse.py` |
+| 5 | `benchmark_collision/warehouse/probe_warehouse.sbatch` |
+| 4 | `benchmark_collision/warehouse/publish_episode.py` |
+| 1 | `benchmark_collision/warehouse/render_debug.py` |
+| 5 | `benchmark_collision/warehouse/rerender_videos.sbatch` |
+| 3 | `benchmark_collision/warehouse/run_all.sh` |
+| 1 | `benchmark_collision/warehouse/run_flight.py` |
+| 1 | `benchmark_collision/warehouse/tests/check_tests.py` |
+| 1 | `benchmark_collision/warehouse/warehouse_env.py` |

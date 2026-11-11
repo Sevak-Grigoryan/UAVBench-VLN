@@ -1,0 +1,15 @@
+{
+ "valid": true,
+ "collided": false,
+ "success_possible": true,
+ "episode_end": "no prohibited contact",
+ "collision": null,
+ "allowed_landing_contact": {
+  "t": 43.570867,
+  "episode_step": 10457,
+  "drone_part": "landing_gear",
+  "drone_collider": "/World/x500/body/collision/skid_right",
+  "other_collider": "/World/Terrain"
+ },
+ "matches_expected": true
+}

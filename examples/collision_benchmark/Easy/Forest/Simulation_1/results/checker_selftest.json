@@ -1,0 +1,160 @@
+{
+ "note": "checker self-test: edited copies of the expert flight, in memory; not agent flights",
+ "all_pass": true,
+ "cases": [
+  {
+   "case": "expert flight, unchanged",
+   "expected_success": true,
+   "success": true,
+   "oracle_success": true,
+   "valid": true,
+   "navigation_error_m": 0.83,
+   "spl": 1.0,
+   "episode_end": "STOP in the goal state",
+   "pass": true
+  },
+  {
+   "case": "rotor touches a tree half-way (prohibited contact)",
+   "expected_success": false,
+   "success": false,
+   "oracle_success": false,
+   "valid": true,
+   "navigation_error_m": 61.44,
+   "spl": 0.0,
+   "episode_end": "COLLISION at t = 13.2333 s (physics step 3176): rotor rotor_disc_0 touched /World/CollisionProxies/(edited copy)",
+   "pass": true
+  },
+  {
+   "case": "brief prohibited contact 0.2 s before STOP",
+   "expected_success": false,
+   "success": false,
+   "oracle_success": true,
+   "valid": true,
+   "navigation_error_m": 0.78,
+   "spl": 0.0,
+   "episode_end": "COLLISION at t = 26.2667 s (physics step 6304): rotor rotor_disc_0 touched /World/CollisionProxies/(edited copy)",
+   "pass": true
+  },
+  {
+   "case": "contact only inside the contact offset (proximity, no touch)",
+   "expected_success": true,
+   "success": true,
+   "oracle_success": true,
+   "valid": true,
+   "navigation_error_m": 0.83,
+   "spl": 1.0,
+   "episode_end": "STOP in the goal state",
+   "pass": true
+  },
+  {
+   "case": "no collision-monitoring data",
+   "expected_success": false,
+   "success": false,
+   "oracle_success": false,
+   "valid": false,
+   "navigation_error_m": null,
+   "spl": 0.0,
+   "episode_end": "INVALID: no collision-monitoring data -- not scored as a collision-free flight",
+   "pass": true
+  },
+  {
+   "case": "collision monitor not verified",
+   "expected_success": false,
+   "success": false,
+   "oracle_success": false,
+   "valid": false,
+   "navigation_error_m": null,
+   "spl": 0.0,
+   "episode_end": "INVALID: collision monitor not verified (no contact reports seen during initialization)",
+   "pass": true
+  },
+  {
+   "case": "stops 6 m further out (inside the +-10 m band)",
+   "expected_success": true,
+   "success": true,
+   "oracle_success": true,
+   "valid": true,
+   "navigation_error_m": 5.17,
+   "spl": 0.955,
+   "episode_end": "STOP in the goal state",
+   "pass": true
+  },
+  {
+   "case": "stops half-way to the target",
+   "expected_success": false,
+   "success": false,
+   "oracle_success": false,
+   "valid": true,
+   "navigation_error_m": 61.62,
+   "spl": 0.0,
+   "episode_end": "STOP at 89.6 m from the target (needs 28 +- 10 m)",
+   "pass": true
+  },
+  {
+   "case": "stops 20 m too close to the target",
+   "expected_success": false,
+   "success": false,
+   "oracle_success": true,
+   "valid": true,
+   "navigation_error_m": 20.83,
+   "spl": 0.0,
+   "episode_end": "STOP at 7.2 m from the target (needs 28 +- 10 m)",
+   "pass": true
+  },
+  {
+   "case": "stops at the right distance but turned 120 deg away",
+   "expected_success": false,
+   "success": false,
+   "oracle_success": true,
+   "valid": true,
+   "navigation_error_m": 0.83,
+   "spl": 0.0,
+   "episode_end": "STOP at the right distance, but the target is not in the frame",
+   "pass": true
+  },
+  {
+   "case": "never says STOP (flies until the time limit)",
+   "expected_success": false,
+   "success": false,
+   "oracle_success": true,
+   "valid": true,
+   "navigation_error_m": 0.83,
+   "spl": 0.0,
+   "episode_end": "flight ended without STOP",
+   "pass": true
+  },
+  {
+   "case": "too slow: time limit cut to 20 s",
+   "expected_success": false,
+   "success": false,
+   "oracle_success": false,
+   "valid": true,
+   "navigation_error_m": 25.35,
+   "spl": 0.0,
+   "episode_end": "time limit reached without STOP",
+   "pass": true
+  },
+  {
+   "case": "crash: 75 deg tilt in the middle of the flight",
+   "expected_success": false,
+   "success": false,
+   "oracle_success": false,
+   "valid": true,
+   "navigation_error_m": 0.83,
+   "spl": 0.0,
+   "episode_end": "STOP, but tilted beyond 60 deg at t = 13.2 s (crash)",
+   "pass": true
+  },
+  {
+   "case": "touches the ground in the middle of the flight",
+   "expected_success": false,
+   "success": false,
+   "oracle_success": false,
+   "valid": true,
+   "navigation_error_m": 0.83,
+   "spl": 0.0,
+   "episode_end": "STOP, but below 2 m above the ground at t = 13.2 s",
+   "pass": true
+  }
+ ]
+}
