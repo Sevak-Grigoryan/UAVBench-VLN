@@ -1,0 +1,1244 @@
+{
+ "version": "collision-v1",
+ "rule": "first prohibited UAV-environment contact during the episode = failure; landing-gear contact with the designated landing surface inside its footprint during the land beat is allowed; internal UAV pairs are ignored",
+ "monitor_verified": true,
+ "monitor_verified_by": "the resting landing-gear contact on the take-off surface was reported during initialization",
+ "api": "omni.physx get_physx_simulation_interface().subscribe_contact_report_events (PhysxContactReportAPI, threshold 0)",
+ "physics": {
+  "hz": 240,
+  "substeps_per_frame": 8,
+  "gpu_dynamics": false,
+  "ccd": {
+   "scenes": [
+    "/PhysicsScene"
+   ],
+   "bodies": [
+    "/World/x500/body",
+    "/World/x500/rotor0",
+    "/World/x500/rotor1",
+    "/World/x500/rotor2",
+    "/World/x500/rotor3"
+   ]
+  },
+  "judged": "after every physics step, outside the PhysX callback"
+ },
+ "touch_separation_m": 0.005,
+ "drone_colliders": {
+  "/World/x500/body/collision/top_plate": "airframe",
+  "/World/x500/body/collision/leg_right": "landing_gear",
+  "/World/x500/body/collision/leg_left": "landing_gear",
+  "/World/x500/body/collision/skid_right": "landing_gear",
+  "/World/x500/body/collision/skid_left": "landing_gear",
+  "/World/x500/body/collision_proxies/rotor_disc_0": "rotor",
+  "/World/x500/body/collision_proxies/rotor_disc_1": "rotor",
+  "/World/x500/body/collision_proxies/rotor_disc_2": "rotor",
+  "/World/x500/body/collision_proxies/rotor_disc_3": "rotor",
+  "/World/x500/rotor0/collision": "rotor",
+  "/World/x500/rotor1/collision": "rotor",
+  "/World/x500/rotor2/collision": "rotor",
+  "/World/x500/rotor3/collision": "rotor"
+ },
+ "uav_coverage": {
+  "rotor_disc_proxies": [
+   "/World/x500/body/collision_proxies/rotor_disc_0",
+   "/World/x500/body/collision_proxies/rotor_disc_1",
+   "/World/x500/body/collision_proxies/rotor_disc_2",
+   "/World/x500/body/collision_proxies/rotor_disc_3"
+  ],
+  "rotor_disc_radius_m": 0.1396153846153846,
+  "rotor_disc_height_m": 0.02
+ },
+ "environment_coverage": {
+  "excluded_by_dataset_runner": [
+   "/World/Nature",
+   "/World/DenseNature",
+   "/World/EgoCamera",
+   "/World/Looks",
+   "/World/Materials",
+   "/World/River",
+   "/World/Far",
+   "/World/City/Marks",
+   "/World/City/Zebra",
+   "/World/City/Props",
+   "/World/City/Trees",
+   "/World/City/ParkTrees",
+   "/World/Ocean",
+   "/World/DistantTerrain"
+  ],
+  "vegetation_proxies": {
+   "instances_by_instancer": {},
+   "shapes": 0,
+   "not_collidable": {}
+  },
+  "proxy_file": "proxies.json",
+  "warehouse_triangle_mesh_colliders": {
+   "deinstanced": 0,
+   "colliders_added": 0,
+   "colliders_present": 1878
+  }
+ },
+ "landing_exception": null,
+ "episode": {
+  "flight_t0_s": 12.0333,
+  "flight_t1_s": 18.045833,
+  "flight_step0": 5040
+ },
+ "first_prohibited": {
+  "step": 6483,
+  "t": 6.012533,
+  "phase": "episode",
+  "beat": 4,
+  "beat_label": "slide right slowly into rack Shelf_1",
+  "event": "found",
+  "verdict": "prohibited",
+  "drone_part": "rotor",
+  "drone_collider": "/World/x500/rotor0/collision",
+  "other_collider": "/Root/Shelf_1/SM_RackShelf_163/SM_RackShelf_01/Section2",
+  "other_actor": "/Root/Shelf_1/SM_RackShelf_163/SM_RackShelf_01/Section2",
+  "other_proto_index": null,
+  "points": [
+   {
+    "position": [
+     -0.82,
+     5.7424,
+     2.6794
+    ],
+    "normal": [
+     -1.0,
+     -0.0,
+     0.0
+    ],
+    "impulse": [
+     -0.031801,
+     -0.0,
+     0.0
+    ],
+    "separation": 0.0357
+   },
+   {
+    "position": [
+     -0.82,
+     5.7551,
+     2.6795
+    ],
+    "normal": [
+     -1.0,
+     -0.0,
+     0.0
+    ],
+    "impulse": [
+     -0.0,
+     -0.0,
+     0.0
+    ],
+    "separation": 0.04684
+   },
+   {
+    "position": [
+     -0.82,
+     5.7551,
+     2.6803
+    ],
+    "normal": [
+     -1.0,
+     -0.0,
+     0.0
+    ],
+    "impulse": [
+     -0.0,
+     -0.0,
+     0.0
+    ],
+    "separation": 0.04684
+   },
+   {
+    "position": [
+     -0.82,
+     5.7424,
+     2.6802
+    ],
+    "normal": [
+     -1.0,
+     -0.0,
+     0.0
+    ],
+    "impulse": [
+     -0.000439,
+     -0.0,
+     0.0
+    ],
+    "separation": 0.0357
+   }
+  ],
+  "total_impulse_ns": 0.032239,
+  "episode_step": 1443,
+  "flight_t": 18.045833,
+  "flight_step": 6483
+ },
+ "first_allowed_landing": null,
+ "invalid": null,
+ "contacts": [
+  {
+   "step": 6457,
+   "t": 5.9042,
+   "phase": "episode",
+   "beat": 4,
+   "beat_label": "slide right slowly into rack Shelf_1",
+   "event": "found",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/body/collision_proxies/rotor_disc_3",
+   "other_collider": "/Root/Shelf_1/SM_RackShelf_163/SM_RackShelf_01/Section2",
+   "other_actor": "/Root/Shelf_1/SM_RackShelf_163/SM_RackShelf_01/Section2",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -0.8437,
+      5.307,
+      2.6899
+     ],
+     "normal": [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.04739
+    },
+    {
+     "position": [
+      -0.8438,
+      5.3069,
+      2.6699
+     ],
+     "normal": [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.04751
+    },
+    {
+     "position": [
+      -0.8437,
+      5.3069,
+      2.6899
+     ],
+     "normal": [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.04739
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 1417,
+   "flight_t": 17.9375,
+   "flight_step": 6457
+  },
+  {
+   "step": 6458,
+   "t": 5.908367,
+   "phase": "episode",
+   "beat": 4,
+   "beat_label": "slide right slowly into rack Shelf_1",
+   "event": "found",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/body/collision_proxies/rotor_disc_0",
+   "other_collider": "/Root/Shelf_1/SM_RackShelf_163/SM_RackShelf_01/Section2",
+   "other_actor": "/Root/Shelf_1/SM_RackShelf_163/SM_RackShelf_01/Section2",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -0.8435,
+      5.655,
+      2.6898
+     ],
+     "normal": [
+      -1.0,
+      -0.0,
+      -0.0
+     ],
+     "impulse": [
+      -0.0,
+      -0.0,
+      -0.0
+     ],
+     "separation": 0.04705
+    },
+    {
+     "position": [
+      -0.8436,
+      5.6549,
+      2.6698
+     ],
+     "normal": [
+      -1.0,
+      -0.0,
+      -0.0
+     ],
+     "impulse": [
+      -0.0,
+      -0.0,
+      -0.0
+     ],
+     "separation": 0.04717
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 1418,
+   "flight_t": 17.941667,
+   "flight_step": 6458
+  },
+  {
+   "step": 6458,
+   "t": 5.908367,
+   "phase": "episode",
+   "beat": 4,
+   "beat_label": "slide right slowly into rack Shelf_1",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/body/collision_proxies/rotor_disc_3",
+   "other_collider": "/Root/Shelf_1/SM_RackShelf_163/SM_RackShelf_01/Section2",
+   "other_actor": "/Root/Shelf_1/SM_RackShelf_163/SM_RackShelf_01/Section2",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -0.8429,
+      5.3071,
+      2.6899
+     ],
+     "normal": [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.04577
+    },
+    {
+     "position": [
+      -0.843,
+      5.3069,
+      2.6699
+     ],
+     "normal": [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.04589
+    },
+    {
+     "position": [
+      -0.8429,
+      5.307,
+      2.6899
+     ],
+     "normal": [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.04577
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 1418,
+   "flight_t": 17.941667,
+   "flight_step": 6458
+  },
+  {
+   "step": 6459,
+   "t": 5.912533,
+   "phase": "episode",
+   "beat": 4,
+   "beat_label": "slide right slowly into rack Shelf_1",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/body/collision_proxies/rotor_disc_3",
+   "other_collider": "/Root/Shelf_1/SM_RackShelf_163/SM_RackShelf_01/Section2",
+   "other_actor": "/Root/Shelf_1/SM_RackShelf_163/SM_RackShelf_01/Section2",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -0.8421,
+      5.3072,
+      2.6899
+     ],
+     "normal": [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.04416
+    },
+    {
+     "position": [
+      -0.8421,
+      5.307,
+      2.6699
+     ],
+     "normal": [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.04428
+    },
+    {
+     "position": [
+      -0.8421,
+      5.307,
+      2.6899
+     ],
+     "normal": [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.0,
+      0.0,
+      0.0
+     ],
+     "separation": 0.04416
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 1419,
+   "flight_t": 17.945833,
+   "flight_step": 6459
+  },
+  {
+   "step": 6459,
+   "t": 5.912533,
+   "phase": "episode",
+   "beat": 4,
+   "beat_label": "slide right slowly into rack Shelf_1",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/body/collision_proxies/rotor_disc_0",
+   "other_collider": "/Root/Shelf_1/SM_RackShelf_163/SM_RackShelf_01/Section2",
+   "other_actor": "/Root/Shelf_1/SM_RackShelf_163/SM_RackShelf_01/Section2",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -0.8427,
+      5.655,
+      2.6898
+     ],
+     "normal": [
+      -1.0,
+      -0.0,
+      -0.0
+     ],
+     "impulse": [
+      -0.0,
+      -0.0,
+      -0.0
+     ],
+     "separation": 0.04544
+    },
+    {
+     "position": [
+      -0.8428,
+      5.655,
+      2.6698
+     ],
+     "normal": [
+      -1.0,
+      -0.0,
+      -0.0
+     ],
+     "impulse": [
+      -0.0,
+      -0.0,
+      -0.0
+     ],
+     "separation": 0.04556
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 1419,
+   "flight_t": 17.945833,
+   "flight_step": 6459
+  },
+  {
+   "step": 6460,
+   "t": 5.9167,
+   "phase": "episode",
+   "beat": 4,
+   "beat_label": "slide right slowly into rack Shelf_1",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/body/collision_proxies/rotor_disc_0",
+   "other_collider": "/Root/Shelf_1/SM_RackShelf_163/SM_RackShelf_01/Section2",
+   "other_actor": "/Root/Shelf_1/SM_RackShelf_163/SM_RackShelf_01/Section2",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -0.8419,
+      5.6551,
+      2.6898
+     ],
+     "normal": [
+      -1.0,
+      -0.0,
+      -0.0
+     ],
+     "impulse": [
+      -0.0,
+      -0.0,
+      -0.0
+     ],
+     "separation": 0.04383
+    },
+    {
+     "position": [
+      -0.842,
+      5.6551,
+      2.6698
+     ],
+     "normal": [
+      -1.0,
+      -0.0,
+      -0.0
+     ],
+     "impulse": [
+      -0.0,
+      -0.0,
+      -0.0
+     ],
+     "separation": 0.04395
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 1420,
+   "flight_t": 17.95,
+   "flight_step": 6460
+  },
+  {
+   "step": 6462,
+   "t": 5.925033,
+   "phase": "episode",
+   "beat": 4,
+   "beat_label": "slide right slowly into rack Shelf_1",
+   "event": "found",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/rotor3/collision",
+   "other_collider": "/Root/Shelf_1/SM_RackShelf_163/SM_RackShelf_01/Section2",
+   "other_actor": "/Root/Shelf_1/SM_RackShelf_163/SM_RackShelf_01/Section2",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -0.82,
+      5.2936,
+      2.6795
+     ],
+     "normal": [
+      -1.0,
+      -0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.0,
+      -0.0,
+      0.0
+     ],
+     "separation": 0.0398
+    },
+    {
+     "position": [
+      -0.82,
+      5.3105,
+      2.6795
+     ],
+     "normal": [
+      -1.0,
+      -0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.0,
+      -0.0,
+      0.0
+     ],
+     "separation": 0.03917
+    },
+    {
+     "position": [
+      -0.82,
+      5.3105,
+      2.6803
+     ],
+     "normal": [
+      -1.0,
+      -0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.0,
+      -0.0,
+      0.0
+     ],
+     "separation": 0.03916
+    },
+    {
+     "position": [
+      -0.82,
+      5.2936,
+      2.6803
+     ],
+     "normal": [
+      -1.0,
+      -0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.0,
+      -0.0,
+      0.0
+     ],
+     "separation": 0.0398
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 1422,
+   "flight_t": 17.958333,
+   "flight_step": 6462
+  },
+  {
+   "step": 6462,
+   "t": 5.925033,
+   "phase": "episode",
+   "beat": 4,
+   "beat_label": "slide right slowly into rack Shelf_1",
+   "event": "found",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/rotor0/collision",
+   "other_collider": "/Root/Shelf_1/SM_RackShelf_163/SM_RackShelf_01/Section2",
+   "other_actor": "/Root/Shelf_1/SM_RackShelf_163/SM_RackShelf_01/Section2",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -0.82,
+      5.6695,
+      2.6802
+     ],
+     "normal": [
+      -1.0,
+      -0.0,
+      -0.0
+     ],
+     "impulse": [
+      -0.0,
+      -0.0,
+      -0.0
+     ],
+     "separation": 0.04114
+    },
+    {
+     "position": [
+      -0.82,
+      5.6526,
+      2.6802
+     ],
+     "normal": [
+      -1.0,
+      -0.0,
+      -0.0
+     ],
+     "impulse": [
+      -0.0,
+      -0.0,
+      -0.0
+     ],
+     "separation": 0.04044
+    },
+    {
+     "position": [
+      -0.82,
+      5.6526,
+      2.6794
+     ],
+     "normal": [
+      -1.0,
+      -0.0,
+      -0.0
+     ],
+     "impulse": [
+      -0.0,
+      -0.0,
+      -0.0
+     ],
+     "separation": 0.04044
+    },
+    {
+     "position": [
+      -0.82,
+      5.6695,
+      2.6794
+     ],
+     "normal": [
+      -1.0,
+      -0.0,
+      -0.0
+     ],
+     "impulse": [
+      -0.0,
+      -0.0,
+      -0.0
+     ],
+     "separation": 0.04115
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 1422,
+   "flight_t": 17.958333,
+   "flight_step": 6462
+  },
+  {
+   "step": 6463,
+   "t": 5.9292,
+   "phase": "episode",
+   "beat": 4,
+   "beat_label": "slide right slowly into rack Shelf_1",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/rotor3/collision",
+   "other_collider": "/Root/Shelf_1/SM_RackShelf_163/SM_RackShelf_01/Section2",
+   "other_actor": "/Root/Shelf_1/SM_RackShelf_163/SM_RackShelf_01/Section2",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -0.82,
+      5.3511,
+      2.6795
+     ],
+     "normal": [
+      -1.0,
+      -0.0,
+      -0.0
+     ],
+     "impulse": [
+      -0.0,
+      -0.0,
+      -0.0
+     ],
+     "separation": 0.04456
+    },
+    {
+     "position": [
+      -0.82,
+      5.3511,
+      2.6803
+     ],
+     "normal": [
+      -1.0,
+      -0.0,
+      -0.0
+     ],
+     "impulse": [
+      -0.0,
+      -0.0,
+      -0.0
+     ],
+     "separation": 0.04455
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 1423,
+   "flight_t": 17.9625,
+   "flight_step": 6463
+  },
+  {
+   "step": 6463,
+   "t": 5.9292,
+   "phase": "episode",
+   "beat": 4,
+   "beat_label": "slide right slowly into rack Shelf_1",
+   "event": "persist",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/rotor0/collision",
+   "other_collider": "/Root/Shelf_1/SM_RackShelf_163/SM_RackShelf_01/Section2",
+   "other_actor": "/Root/Shelf_1/SM_RackShelf_163/SM_RackShelf_01/Section2",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -0.82,
+      5.6121,
+      2.6803
+     ],
+     "normal": [
+      -1.0,
+      -0.0,
+      -0.0
+     ],
+     "impulse": [
+      -0.0,
+      -0.0,
+      -0.0
+     ],
+     "separation": 0.04566
+    },
+    {
+     "position": [
+      -0.82,
+      5.6121,
+      2.6794
+     ],
+     "normal": [
+      -1.0,
+      -0.0,
+      -0.0
+     ],
+     "impulse": [
+      -0.0,
+      -0.0,
+      -0.0
+     ],
+     "separation": 0.04566
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 1423,
+   "flight_t": 17.9625,
+   "flight_step": 6463
+  },
+  {
+   "step": 6469,
+   "t": 5.9542,
+   "phase": "episode",
+   "beat": 4,
+   "beat_label": "slide right slowly into rack Shelf_1",
+   "event": "found",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/rotor3/collision",
+   "other_collider": "/Root/Shelf_1/SM_RackShelf_163/SM_RackShelf_01/Section2",
+   "other_actor": "/Root/Shelf_1/SM_RackShelf_163/SM_RackShelf_01/Section2",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -0.82,
+      5.2797,
+      2.6804
+     ],
+     "normal": [
+      -1.0,
+      -0.0,
+      -0.0
+     ],
+     "impulse": [
+      -0.0,
+      -0.0,
+      -0.0
+     ],
+     "separation": 0.03068
+    },
+    {
+     "position": [
+      -0.82,
+      5.2633,
+      2.6804
+     ],
+     "normal": [
+      -1.0,
+      -0.0,
+      -0.0
+     ],
+     "impulse": [
+      -0.0,
+      -0.0,
+      -0.0
+     ],
+     "separation": 0.03508
+    },
+    {
+     "position": [
+      -0.82,
+      5.2633,
+      2.6795
+     ],
+     "normal": [
+      -1.0,
+      -0.0,
+      -0.0
+     ],
+     "impulse": [
+      -0.0,
+      -0.0,
+      -0.0
+     ],
+     "separation": 0.03509
+    },
+    {
+     "position": [
+      -0.82,
+      5.2797,
+      2.6795
+     ],
+     "normal": [
+      -1.0,
+      -0.0,
+      -0.0
+     ],
+     "impulse": [
+      -0.0,
+      -0.0,
+      -0.0
+     ],
+     "separation": 0.03069
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 1429,
+   "flight_t": 17.9875,
+   "flight_step": 6469
+  },
+  {
+   "step": 6469,
+   "t": 5.9542,
+   "phase": "episode",
+   "beat": 4,
+   "beat_label": "slide right slowly into rack Shelf_1",
+   "event": "found",
+   "verdict": "proximity",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/rotor0/collision",
+   "other_collider": "/Root/Shelf_1/SM_RackShelf_163/SM_RackShelf_01/Section2",
+   "other_actor": "/Root/Shelf_1/SM_RackShelf_163/SM_RackShelf_01/Section2",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -0.82,
+      5.6845,
+      2.6793
+     ],
+     "normal": [
+      -1.0,
+      -0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.0,
+      -0.0,
+      0.0
+     ],
+     "separation": 0.03211
+    },
+    {
+     "position": [
+      -0.82,
+      5.7008,
+      2.6793
+     ],
+     "normal": [
+      -1.0,
+      -0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.0,
+      -0.0,
+      0.0
+     ],
+     "separation": 0.03658
+    },
+    {
+     "position": [
+      -0.82,
+      5.7008,
+      2.6802
+     ],
+     "normal": [
+      -1.0,
+      -0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.0,
+      -0.0,
+      0.0
+     ],
+     "separation": 0.03657
+    },
+    {
+     "position": [
+      -0.82,
+      5.6845,
+      2.6802
+     ],
+     "normal": [
+      -1.0,
+      -0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.0,
+      -0.0,
+      0.0
+     ],
+     "separation": 0.0321
+    }
+   ],
+   "total_impulse_ns": 0.0,
+   "episode_step": 1429,
+   "flight_t": 17.9875,
+   "flight_step": 6469
+  },
+  {
+   "step": 6483,
+   "t": 6.012533,
+   "phase": "episode",
+   "beat": 4,
+   "beat_label": "slide right slowly into rack Shelf_1",
+   "event": "found",
+   "verdict": "prohibited",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/rotor0/collision",
+   "other_collider": "/Root/Shelf_1/SM_RackShelf_163/SM_RackShelf_01/Section2",
+   "other_actor": "/Root/Shelf_1/SM_RackShelf_163/SM_RackShelf_01/Section2",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -0.82,
+      5.7424,
+      2.6794
+     ],
+     "normal": [
+      -1.0,
+      -0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.031801,
+      -0.0,
+      0.0
+     ],
+     "separation": 0.0357
+    },
+    {
+     "position": [
+      -0.82,
+      5.7551,
+      2.6795
+     ],
+     "normal": [
+      -1.0,
+      -0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.0,
+      -0.0,
+      0.0
+     ],
+     "separation": 0.04684
+    },
+    {
+     "position": [
+      -0.82,
+      5.7551,
+      2.6803
+     ],
+     "normal": [
+      -1.0,
+      -0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.0,
+      -0.0,
+      0.0
+     ],
+     "separation": 0.04684
+    },
+    {
+     "position": [
+      -0.82,
+      5.7424,
+      2.6802
+     ],
+     "normal": [
+      -1.0,
+      -0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.000439,
+      -0.0,
+      0.0
+     ],
+     "separation": 0.0357
+    }
+   ],
+   "total_impulse_ns": 0.032239,
+   "episode_step": 1443,
+   "flight_t": 18.045833,
+   "flight_step": 6483
+  },
+  {
+   "step": 6483,
+   "t": 6.012533,
+   "phase": "episode",
+   "beat": 4,
+   "beat_label": "slide right slowly into rack Shelf_1",
+   "event": "found",
+   "verdict": "prohibited",
+   "drone_part": "rotor",
+   "drone_collider": "/World/x500/rotor3/collision",
+   "other_collider": "/Root/Shelf_1/SM_RackShelf_163/SM_RackShelf_01/Section2",
+   "other_actor": "/Root/Shelf_1/SM_RackShelf_163/SM_RackShelf_01/Section2",
+   "other_proto_index": null,
+   "points": [
+    {
+     "position": [
+      -0.82,
+      5.2239,
+      2.6805
+     ],
+     "normal": [
+      -1.0,
+      -0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.03243,
+      -0.0,
+      0.0
+     ],
+     "separation": 0.03401
+    },
+    {
+     "position": [
+      -0.82,
+      5.2111,
+      2.6805
+     ],
+     "normal": [
+      -1.0,
+      -0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.0,
+      -0.0,
+      0.0
+     ],
+     "separation": 0.04509
+    },
+    {
+     "position": [
+      -0.82,
+      5.2111,
+      2.6797
+     ],
+     "normal": [
+      -1.0,
+      -0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.0,
+      -0.0,
+      0.0
+     ],
+     "separation": 0.0451
+    },
+    {
+     "position": [
+      -0.82,
+      5.2239,
+      2.6796
+     ],
+     "normal": [
+      -1.0,
+      -0.0,
+      0.0
+     ],
+     "impulse": [
+      -0.0,
+      -0.0,
+      0.0
+     ],
+     "separation": 0.03401
+    }
+   ],
+   "total_impulse_ns": 0.03243,
+   "episode_step": 1443,
+   "flight_t": 18.045833,
+   "flight_step": 6483
+  }
+ ],
+ "termination": {
+  "reason": "prohibited contact",
+  "step": 6483,
+  "t": 6.012533,
+  "contact_step": 6483,
+  "episode_step": 1443,
+  "flight_t": 18.045833333333334
+ }
+}

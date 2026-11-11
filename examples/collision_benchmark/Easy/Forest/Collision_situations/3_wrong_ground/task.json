@@ -1,0 +1,34 @@
+{
+ "episode_id": "Easy/Forest/Collision_situations/3_wrong_ground",
+ "benchmark_version": "vln-x500-bench-collision v0.2 (2026-11-07; v0.1 + PhysX collision termination, collision-v1)",
+ "kind": "collision TEST flight (not a benchmark episode: no instruction, no target)",
+ "test": "wrong_ground",
+ "scenario": "land 8 m away from the designated landing clearing",
+ "scene": {
+  "environment": "Forest",
+  "scene_id": "easy_v2_037",
+  "same_scene_as": "Easy/Forest/Simulation_1"
+ },
+ "start": {
+  "xyz": [
+   -39.9975,
+   44.9784,
+   12.631
+  ],
+  "yaw_deg": -97.789,
+  "flight_t_s": 13.5333,
+  "note": "first frame of the evaluated part; take-off and settling are flown before it"
+ },
+ "test_obstacles": [],
+ "test_notes": {},
+ "video": {
+  "file": "reference/trajectory.mp4",
+  "layout": "left: outside camera following the drone; right: onboard camera",
+  "frames": [
+   939,
+   1299
+  ],
+  "stride": 2,
+  "note": "frames are episode-relative (telemetry frame index); red banner + circle = first prohibited contact"
+ }
+}

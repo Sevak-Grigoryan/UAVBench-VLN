@@ -1,0 +1,16 @@
+{
+ "valid": true,
+ "collided": true,
+ "success_possible": false,
+ "episode_end": "COLLISION at t = 5.4959 s (physics step 1319): rotor rotor_disc_2 touched /Root/SM_WallA_6M15/SM_WallA_6M/Section0",
+ "collision": {
+  "t": 5.495867,
+  "episode_step": 1319,
+  "drone_part": "rotor",
+  "drone_collider": "/World/x500/body/collision_proxies/rotor_disc_2",
+  "other_collider": "/Root/SM_WallA_6M15/SM_WallA_6M/Section0",
+  "total_impulse_ns": 1.051901
+ },
+ "allowed_landing_contact": null,
+ "matches_expected": true
+}

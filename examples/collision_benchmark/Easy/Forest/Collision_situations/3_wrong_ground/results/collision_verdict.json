@@ -1,0 +1,16 @@
+{
+ "valid": true,
+ "collided": true,
+ "success_possible": false,
+ "episode_end": "COLLISION at t = 43.3000 s (physics step 10392): landing_gear skid_right touched /World/Terrain",
+ "collision": {
+  "t": 43.300033,
+  "episode_step": 10392,
+  "drone_part": "landing_gear",
+  "drone_collider": "/World/x500/body/collision/skid_right",
+  "other_collider": "/World/Terrain",
+  "total_impulse_ns": 0.0
+ },
+ "allowed_landing_contact": null,
+ "matches_expected": true
+}

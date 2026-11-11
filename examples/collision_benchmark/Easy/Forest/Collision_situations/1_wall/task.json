@@ -1,0 +1,59 @@
+{
+ "episode_id": "Easy/Forest/Collision_situations/1_wall",
+ "benchmark_version": "vln-x500-bench-collision v0.2 (2026-11-07; v0.1 + PhysX collision termination, collision-v1)",
+ "kind": "collision TEST flight (not a benchmark episode: no instruction, no target)",
+ "test": "wall",
+ "scenario": "fly forward at 3 m/s into an upright 0.3 m thick wall spawned 6 m ahead",
+ "scene": {
+  "environment": "Forest",
+  "scene_id": "easy_v2_037",
+  "same_scene_as": "Easy/Forest/Simulation_1"
+ },
+ "start": {
+  "xyz": [
+   -40.0618,
+   44.989,
+   12.7356
+  ],
+  "yaw_deg": -95.91,
+  "flight_t_s": 13.5333,
+  "note": "first frame of the evaluated part; take-off and settling are flown before it"
+ },
+ "test_obstacles": [
+  {
+   "shape": "box",
+   "path": "/World/TestFixtures/wall",
+   "centre": [
+    -40.69280705320782,
+    38.87142016149696,
+    12.733915328979492
+   ],
+   "size": [
+    0.3,
+    12.0,
+    20.0
+   ],
+   "yaw": -1.6735721849845948
+  }
+ ],
+ "test_notes": {
+  "spawned_at_t": 13.5667,
+  "drone_at_spawn": [
+   -40.062,
+   44.989,
+   12.734,
+   -95.89
+  ]
+ },
+ "video": {
+  "file": "reference/trajectory.mp4",
+  "layout": "left: outside camera following the drone; right: onboard camera",
+  "frames": [
+   -30,
+   114
+  ],
+  "stride": 2,
+  "note": "frames are episode-relative (telemetry frame index); red banner + circle = first prohibited contact",
+  "camera": "re-rendered 2026-11-10 (job 380774): side camera chosen so the test obstacle does not block the view"
+ }
+}

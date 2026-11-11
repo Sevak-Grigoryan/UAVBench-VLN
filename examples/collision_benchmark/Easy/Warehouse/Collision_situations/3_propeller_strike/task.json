@@ -1,0 +1,42 @@
+{
+ "episode_id": "Easy/Warehouse/Collision_situations/3_propeller_strike",
+ "benchmark_version": "vln-x500-bench-collision v0.2 (2026-11-07; v0.1 + PhysX collision termination, collision-v1)",
+ "kind": "collision TEST flight (not a benchmark episode: no instruction, no target)",
+ "test": "propeller_strike",
+ "scenario": "hover next to a rack at the height of its shelf beam and slide sideways slowly (~0.4 m/s, stick 0.15) until a propeller touches the beam",
+ "scene": {
+  "environment": "Warehouse",
+  "scene_id": "warehouse_multiple_shelves",
+  "asset": "Isaac/Environments/Simple_Warehouse/warehouse_multiple_shelves.usd (Isaac Sim 5.1 assets), no people"
+ },
+ "start": {
+  "xyz": [
+   -2.6065,
+   5.422,
+   2.6227
+  ],
+  "yaw_deg": 90.195,
+  "flight_t_s": 12.0333,
+  "note": "first frame of the evaluated part; take-off and settling are flown before it"
+ },
+ "test_obstacles": [],
+ "test_notes": {
+  "obstacle": "front beam of rack Shelf_1's second level (z 2.455-2.825 m, edge x = -0.858), on the drone's right side, at rotor height",
+  "drone_at_episode_start": [
+   -2.607,
+   5.422,
+   2.623,
+   90.2
+  ]
+ },
+ "video": {
+  "file": "reference/trajectory.mp4",
+  "layout": "left: outside camera following the drone; right: onboard camera",
+  "frames": [
+   -30,
+   181
+  ],
+  "stride": 2,
+  "note": "frames are episode-relative (telemetry frame index); red banner + circle = first prohibited contact"
+ }
+}

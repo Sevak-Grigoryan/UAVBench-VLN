@@ -1,0 +1,1125 @@
+{
+ "source": "probe_warehouse.py, Slurm job 380965 (2026-11-10), warehouse_meshes.json",
+ "asset": "Isaac/Environments/Simple_Warehouse/warehouse_multiple_shelves.usd",
+ "floor_z": 0.0,
+ "ceiling_z": 9.0,
+ "bbox_min": [
+  -10.33,
+  -12.2,
+  0.0
+ ],
+ "bbox_max": [
+  9.41,
+  18.0,
+  9.0
+ ],
+ "note": "interior between the walls (x -10.33..9.41, y -12.2..18), ceiling plates at z 9; racks Shelf_0/1/2 run along y at x ~-9.4/-0.3/+8.7 (y -4.5..13.1, 6 m tall, boxes at z 1.3-2.3); every mesh already has a CollisionAPI in the template. blockers are only used to place the outside debug camera.",
+ "blockers": [
+  {
+   "name": "PalletBin_01",
+   "kind": "rack",
+   "min": [
+    -7.063,
+    12.901,
+    0.05
+   ],
+   "max": [
+    -5.194,
+    14.362,
+    1.17
+   ]
+  },
+  {
+   "name": "PalletBin_02",
+   "kind": "rack",
+   "min": [
+    3.515,
+    12.901,
+    0.05
+   ],
+   "max": [
+    5.384,
+    14.362,
+    1.17
+   ]
+  },
+  {
+   "name": "SM_PillarPartA_9M10_1473",
+   "kind": "pillar (assumed column at the bbox end)",
+   "min": [
+    0.412,
+    8.726,
+    -0.0
+   ],
+   "max": [
+    0.912,
+    9.274,
+    9.0
+   ]
+  },
+  {
+   "name": "SM_PillarPartA_9M10_1473",
+   "kind": "pillar (assumed column at the bbox end)",
+   "min": [
+    9.012,
+    8.726,
+    -0.0
+   ],
+   "max": [
+    9.512,
+    9.274,
+    9.0
+   ]
+  },
+  {
+   "name": "SM_PillarPartA_9M11_1481",
+   "kind": "pillar (assumed column at the bbox end)",
+   "min": [
+    -10.43,
+    14.726,
+    -0.0
+   ],
+   "max": [
+    -9.93,
+    15.274,
+    9.0
+   ]
+  },
+  {
+   "name": "SM_PillarPartA_9M11_1481",
+   "kind": "pillar (assumed column at the bbox end)",
+   "min": [
+    -1.83,
+    14.726,
+    -0.0
+   ],
+   "max": [
+    -1.33,
+    15.274,
+    9.0
+   ]
+  },
+  {
+   "name": "SM_PillarPartA_9M12_1482",
+   "kind": "pillar (assumed column at the bbox end)",
+   "min": [
+    0.412,
+    14.726,
+    -0.0
+   ],
+   "max": [
+    0.912,
+    15.274,
+    9.0
+   ]
+  },
+  {
+   "name": "SM_PillarPartA_9M12_1482",
+   "kind": "pillar (assumed column at the bbox end)",
+   "min": [
+    9.012,
+    14.726,
+    -0.0
+   ],
+   "max": [
+    9.512,
+    15.274,
+    9.0
+   ]
+  },
+  {
+   "name": "SM_PillarPartA_9M3_1445",
+   "kind": "pillar (assumed column at the bbox end)",
+   "min": [
+    -10.43,
+    -9.274,
+    -0.0
+   ],
+   "max": [
+    -9.93,
+    -8.726,
+    9.0
+   ]
+  },
+  {
+   "name": "SM_PillarPartA_9M3_1445",
+   "kind": "pillar (assumed column at the bbox end)",
+   "min": [
+    -1.83,
+    -9.274,
+    -0.0
+   ],
+   "max": [
+    -1.33,
+    -8.726,
+    9.0
+   ]
+  },
+  {
+   "name": "SM_PillarPartA_9M4_1446",
+   "kind": "pillar (assumed column at the bbox end)",
+   "min": [
+    0.412,
+    -9.274,
+    -0.0
+   ],
+   "max": [
+    0.912,
+    -8.726,
+    9.0
+   ]
+  },
+  {
+   "name": "SM_PillarPartA_9M4_1446",
+   "kind": "pillar (assumed column at the bbox end)",
+   "min": [
+    9.012,
+    -9.274,
+    -0.0
+   ],
+   "max": [
+    9.512,
+    -8.726,
+    9.0
+   ]
+  },
+  {
+   "name": "SM_PillarPartA_9M5_1454",
+   "kind": "pillar (assumed column at the bbox end)",
+   "min": [
+    -10.43,
+    -3.274,
+    -0.0
+   ],
+   "max": [
+    -9.93,
+    -2.726,
+    9.0
+   ]
+  },
+  {
+   "name": "SM_PillarPartA_9M5_1454",
+   "kind": "pillar (assumed column at the bbox end)",
+   "min": [
+    -1.83,
+    -3.274,
+    -0.0
+   ],
+   "max": [
+    -1.33,
+    -2.726,
+    9.0
+   ]
+  },
+  {
+   "name": "SM_PillarPartA_9M6_1455",
+   "kind": "pillar (assumed column at the bbox end)",
+   "min": [
+    0.412,
+    -3.274,
+    -0.0
+   ],
+   "max": [
+    0.912,
+    -2.726,
+    9.0
+   ]
+  },
+  {
+   "name": "SM_PillarPartA_9M6_1455",
+   "kind": "pillar (assumed column at the bbox end)",
+   "min": [
+    9.012,
+    -3.274,
+    -0.0
+   ],
+   "max": [
+    9.512,
+    -2.726,
+    9.0
+   ]
+  },
+  {
+   "name": "SM_PillarPartA_9M7_1463",
+   "kind": "pillar (assumed column at the bbox end)",
+   "min": [
+    -10.43,
+    2.726,
+    -0.0
+   ],
+   "max": [
+    -9.93,
+    3.274,
+    9.0
+   ]
+  },
+  {
+   "name": "SM_PillarPartA_9M7_1463",
+   "kind": "pillar (assumed column at the bbox end)",
+   "min": [
+    -1.83,
+    2.726,
+    -0.0
+   ],
+   "max": [
+    -1.33,
+    3.274,
+    9.0
+   ]
+  },
+  {
+   "name": "SM_PillarPartA_9M8_1464",
+   "kind": "pillar (assumed column at the bbox end)",
+   "min": [
+    0.412,
+    2.726,
+    -0.0
+   ],
+   "max": [
+    0.912,
+    3.274,
+    9.0
+   ]
+  },
+  {
+   "name": "SM_PillarPartA_9M8_1464",
+   "kind": "pillar (assumed column at the bbox end)",
+   "min": [
+    9.012,
+    2.726,
+    -0.0
+   ],
+   "max": [
+    9.512,
+    3.274,
+    9.0
+   ]
+  },
+  {
+   "name": "SM_PillarPartA_9M9_1472",
+   "kind": "pillar (assumed column at the bbox end)",
+   "min": [
+    -10.43,
+    8.726,
+    -0.0
+   ],
+   "max": [
+    -9.93,
+    9.274,
+    9.0
+   ]
+  },
+  {
+   "name": "SM_PillarPartA_9M9_1472",
+   "kind": "pillar (assumed column at the bbox end)",
+   "min": [
+    -1.83,
+    8.726,
+    -0.0
+   ],
+   "max": [
+    -1.33,
+    9.274,
+    9.0
+   ]
+  },
+  {
+   "name": "SM_WallA_3M13",
+   "kind": "wall",
+   "min": [
+    -2.95,
+    17.9,
+    3.0
+   ],
+   "max": [
+    3.05,
+    18.1,
+    6.0
+   ]
+  },
+  {
+   "name": "SM_WallA_3M13_01",
+   "kind": "wall",
+   "min": [
+    0.463,
+    17.9,
+    3.0
+   ],
+   "max": [
+    6.463,
+    18.1,
+    6.0
+   ]
+  },
+  {
+   "name": "SM_WallA_3M14",
+   "kind": "wall",
+   "min": [
+    -2.95,
+    17.9,
+    6.0
+   ],
+   "max": [
+    3.05,
+    18.1,
+    9.0
+   ]
+  },
+  {
+   "name": "SM_WallA_3M14_01",
+   "kind": "wall",
+   "min": [
+    0.463,
+    17.9,
+    6.0
+   ],
+   "max": [
+    6.463,
+    18.1,
+    9.0
+   ]
+  },
+  {
+   "name": "SM_WallA_3M15",
+   "kind": "wall",
+   "min": [
+    -8.95,
+    17.9,
+    3.0
+   ],
+   "max": [
+    -2.95,
+    18.1,
+    6.0
+   ]
+  },
+  {
+   "name": "SM_WallA_3M16",
+   "kind": "wall",
+   "min": [
+    -8.95,
+    17.9,
+    6.0
+   ],
+   "max": [
+    -2.95,
+    18.1,
+    9.0
+   ]
+  },
+  {
+   "name": "SM_WallA_3M18_460",
+   "kind": "wall",
+   "min": [
+    -10.43,
+    -3.0,
+    3.0
+   ],
+   "max": [
+    -10.23,
+    3.0,
+    6.0
+   ]
+  },
+  {
+   "name": "SM_WallA_3M19",
+   "kind": "wall",
+   "min": [
+    -10.43,
+    3.0,
+    3.0
+   ],
+   "max": [
+    -10.23,
+    9.0,
+    6.0
+   ]
+  },
+  {
+   "name": "SM_WallA_3M20",
+   "kind": "wall",
+   "min": [
+    -10.43,
+    9.0,
+    3.0
+   ],
+   "max": [
+    -10.23,
+    15.0,
+    6.0
+   ]
+  },
+  {
+   "name": "SM_WallA_3M21_1371",
+   "kind": "wall",
+   "min": [
+    -10.43,
+    -9.0,
+    6.0
+   ],
+   "max": [
+    -10.23,
+    -3.0,
+    9.0
+   ]
+  },
+  {
+   "name": "SM_WallA_3M26",
+   "kind": "wall",
+   "min": [
+    -10.43,
+    -3.0,
+    6.0
+   ],
+   "max": [
+    -10.23,
+    3.0,
+    9.0
+   ]
+  },
+  {
+   "name": "SM_WallA_3M27",
+   "kind": "wall",
+   "min": [
+    -10.43,
+    3.0,
+    6.0
+   ],
+   "max": [
+    -10.23,
+    9.0,
+    9.0
+   ]
+  },
+  {
+   "name": "SM_WallA_3M28",
+   "kind": "wall",
+   "min": [
+    -10.43,
+    9.0,
+    6.0
+   ],
+   "max": [
+    -10.23,
+    15.0,
+    9.0
+   ]
+  },
+  {
+   "name": "SM_WallA_3M36",
+   "kind": "wall",
+   "min": [
+    3.0,
+    -12.3,
+    6.0
+   ],
+   "max": [
+    9.0,
+    -12.1,
+    9.0
+   ]
+  },
+  {
+   "name": "SM_WallA_3M37",
+   "kind": "wall",
+   "min": [
+    3.0,
+    -12.3,
+    3.0
+   ],
+   "max": [
+    9.0,
+    -12.1,
+    6.0
+   ]
+  },
+  {
+   "name": "SM_WallA_3M38",
+   "kind": "wall",
+   "min": [
+    -3.0,
+    -12.3,
+    6.0
+   ],
+   "max": [
+    3.0,
+    -12.1,
+    9.0
+   ]
+  },
+  {
+   "name": "SM_WallA_3M39",
+   "kind": "wall",
+   "min": [
+    -3.0,
+    -12.3,
+    3.0
+   ],
+   "max": [
+    3.0,
+    -12.1,
+    6.0
+   ]
+  },
+  {
+   "name": "SM_WallA_3M40",
+   "kind": "wall",
+   "min": [
+    -9.0,
+    -12.3,
+    6.0
+   ],
+   "max": [
+    -3.0,
+    -12.1,
+    9.0
+   ]
+  },
+  {
+   "name": "SM_WallA_3M41",
+   "kind": "wall",
+   "min": [
+    -9.0,
+    -12.3,
+    3.0
+   ],
+   "max": [
+    -3.0,
+    -12.1,
+    6.0
+   ]
+  },
+  {
+   "name": "SM_WallA_3M43",
+   "kind": "wall",
+   "min": [
+    -3.0,
+    17.8,
+    -0.0
+   ],
+   "max": [
+    3.0,
+    18.0,
+    3.1
+   ]
+  },
+  {
+   "name": "SM_WallA_3M43_01",
+   "kind": "wall",
+   "min": [
+    0.413,
+    17.8,
+    -0.0
+   ],
+   "max": [
+    6.413,
+    18.0,
+    3.1
+   ]
+  },
+  {
+   "name": "SM_WallA_3M44",
+   "kind": "wall",
+   "min": [
+    -9.0,
+    17.8,
+    -0.0
+   ],
+   "max": [
+    -3.0,
+    18.0,
+    3.1
+   ]
+  },
+  {
+   "name": "SM_WallA_3M8",
+   "kind": "wall",
+   "min": [
+    -10.43,
+    -9.0,
+    3.0
+   ],
+   "max": [
+    -10.23,
+    -3.0,
+    6.0
+   ]
+  },
+  {
+   "name": "SM_WallA_6M10",
+   "kind": "wall",
+   "min": [
+    -10.33,
+    -3.0,
+    -0.0
+   ],
+   "max": [
+    -10.13,
+    3.0,
+    3.1
+   ]
+  },
+  {
+   "name": "SM_WallA_6M11",
+   "kind": "wall",
+   "min": [
+    -10.33,
+    3.0,
+    -0.0
+   ],
+   "max": [
+    -10.13,
+    9.0,
+    3.1
+   ]
+  },
+  {
+   "name": "SM_WallA_6M12",
+   "kind": "wall",
+   "min": [
+    -10.33,
+    9.0,
+    -0.0
+   ],
+   "max": [
+    -10.13,
+    15.0,
+    3.1
+   ]
+  },
+  {
+   "name": "SM_WallA_6M15",
+   "kind": "wall",
+   "min": [
+    9.212,
+    -9.0,
+    -0.0
+   ],
+   "max": [
+    9.412,
+    -3.0,
+    3.1
+   ]
+  },
+  {
+   "name": "SM_WallA_6M16",
+   "kind": "wall",
+   "min": [
+    9.212,
+    -3.0,
+    -0.0
+   ],
+   "max": [
+    9.412,
+    3.0,
+    3.1
+   ]
+  },
+  {
+   "name": "SM_WallA_6M17",
+   "kind": "wall",
+   "min": [
+    9.212,
+    3.0,
+    -0.0
+   ],
+   "max": [
+    9.412,
+    9.0,
+    3.1
+   ]
+  },
+  {
+   "name": "SM_WallA_6M18",
+   "kind": "wall",
+   "min": [
+    9.212,
+    9.0,
+    -0.0
+   ],
+   "max": [
+    9.412,
+    15.0,
+    3.1
+   ]
+  },
+  {
+   "name": "SM_WallA_6M4",
+   "kind": "wall",
+   "min": [
+    3.0,
+    -12.2,
+    -0.0
+   ],
+   "max": [
+    9.0,
+    -12.0,
+    3.1
+   ]
+  },
+  {
+   "name": "SM_WallA_6M5",
+   "kind": "wall",
+   "min": [
+    -10.33,
+    -9.0,
+    -0.0
+   ],
+   "max": [
+    -10.13,
+    -3.0,
+    3.1
+   ]
+  },
+  {
+   "name": "SM_WallA_6M6",
+   "kind": "wall",
+   "min": [
+    -3.0,
+    -12.2,
+    -0.0
+   ],
+   "max": [
+    3.0,
+    -12.0,
+    3.1
+   ]
+  },
+  {
+   "name": "SM_WallA_6M7",
+   "kind": "wall",
+   "min": [
+    -9.0,
+    -12.2,
+    -0.0
+   ],
+   "max": [
+    -3.0,
+    -12.0,
+    3.1
+   ]
+  },
+  {
+   "name": "SM_WallA_InnerCorner10",
+   "kind": "wall",
+   "min": [
+    6.419,
+    -12.2,
+    0.0
+   ],
+   "max": [
+    9.42,
+    -9.2,
+    3.1
+   ]
+  },
+  {
+   "name": "SM_WallA_InnerCorner11",
+   "kind": "wall",
+   "min": [
+    6.412,
+    15.0,
+    0.0
+   ],
+   "max": [
+    9.412,
+    18.0,
+    3.1
+   ]
+  },
+  {
+   "name": "SM_WallA_InnerCorner12",
+   "kind": "wall",
+   "min": [
+    -10.33,
+    15.0,
+    0.0
+   ],
+   "max": [
+    -7.33,
+    18.0,
+    3.1
+   ]
+  },
+  {
+   "name": "SM_WallA_InnerCorner13",
+   "kind": "wall",
+   "min": [
+    -10.33,
+    -12.2,
+    3.0
+   ],
+   "max": [
+    -7.33,
+    -9.2,
+    6.0
+   ]
+  },
+  {
+   "name": "SM_WallA_InnerCorner14",
+   "kind": "wall",
+   "min": [
+    6.419,
+    -12.2,
+    3.0
+   ],
+   "max": [
+    9.42,
+    -9.2,
+    6.0
+   ]
+  },
+  {
+   "name": "SM_WallA_InnerCorner15",
+   "kind": "wall",
+   "min": [
+    6.413,
+    15.0,
+    3.0
+   ],
+   "max": [
+    9.413,
+    18.0,
+    6.0
+   ]
+  },
+  {
+   "name": "SM_WallA_InnerCorner16",
+   "kind": "wall",
+   "min": [
+    -10.33,
+    15.0,
+    3.0
+   ],
+   "max": [
+    -7.33,
+    18.0,
+    6.0
+   ]
+  },
+  {
+   "name": "SM_WallA_InnerCorner18",
+   "kind": "wall",
+   "min": [
+    9.312,
+    -9.0,
+    3.0
+   ],
+   "max": [
+    9.512,
+    -3.0,
+    6.0
+   ]
+  },
+  {
+   "name": "SM_WallA_InnerCorner24",
+   "kind": "wall",
+   "min": [
+    9.312,
+    -3.0,
+    3.0
+   ],
+   "max": [
+    9.512,
+    3.0,
+    6.0
+   ]
+  },
+  {
+   "name": "SM_WallA_InnerCorner25",
+   "kind": "wall",
+   "min": [
+    9.312,
+    3.0,
+    3.0
+   ],
+   "max": [
+    9.512,
+    9.0,
+    6.0
+   ]
+  },
+  {
+   "name": "SM_WallA_InnerCorner26",
+   "kind": "wall",
+   "min": [
+    9.312,
+    9.0,
+    3.0
+   ],
+   "max": [
+    9.512,
+    15.0,
+    6.0
+   ]
+  },
+  {
+   "name": "SM_WallA_InnerCorner27",
+   "kind": "wall",
+   "min": [
+    -10.33,
+    -12.2,
+    6.0
+   ],
+   "max": [
+    -7.33,
+    -9.2,
+    9.0
+   ]
+  },
+  {
+   "name": "SM_WallA_InnerCorner28",
+   "kind": "wall",
+   "min": [
+    6.412,
+    15.0,
+    6.0
+   ],
+   "max": [
+    9.412,
+    18.0,
+    9.0
+   ]
+  },
+  {
+   "name": "SM_WallA_InnerCorner29",
+   "kind": "wall",
+   "min": [
+    -10.33,
+    15.0,
+    6.0
+   ],
+   "max": [
+    -7.33,
+    18.0,
+    9.0
+   ]
+  },
+  {
+   "name": "SM_WallA_InnerCorner30",
+   "kind": "wall",
+   "min": [
+    9.312,
+    -6.12,
+    6.0
+   ],
+   "max": [
+    9.512,
+    -5.88,
+    9.0
+   ]
+  },
+  {
+   "name": "SM_WallA_InnerCorner32",
+   "kind": "wall",
+   "min": [
+    9.312,
+    -0.12,
+    6.0
+   ],
+   "max": [
+    9.512,
+    0.12,
+    9.0
+   ]
+  },
+  {
+   "name": "SM_WallA_InnerCorner33",
+   "kind": "wall",
+   "min": [
+    9.312,
+    5.88,
+    6.0
+   ],
+   "max": [
+    9.512,
+    6.12,
+    9.0
+   ]
+  },
+  {
+   "name": "SM_WallA_InnerCorner34",
+   "kind": "wall",
+   "min": [
+    9.312,
+    11.88,
+    6.0
+   ],
+   "max": [
+    9.512,
+    12.12,
+    9.0
+   ]
+  },
+  {
+   "name": "SM_WallA_InnerCorner35",
+   "kind": "wall",
+   "min": [
+    6.419,
+    -12.2,
+    6.0
+   ],
+   "max": [
+    9.42,
+    -9.2,
+    9.0
+   ]
+  },
+  {
+   "name": "SM_WallA_InnerCorner9_88",
+   "kind": "wall",
+   "min": [
+    -10.33,
+    -12.2,
+    0.0
+   ],
+   "max": [
+    -7.33,
+    -9.2,
+    3.1
+   ]
+  },
+  {
+   "name": "Shelf_0",
+   "kind": "rack",
+   "min": [
+    -10.003,
+    -4.489,
+    -0.0
+   ],
+   "max": [
+    -8.607,
+    13.129,
+    6.0
+   ]
+  },
+  {
+   "name": "Shelf_1",
+   "kind": "rack",
+   "min": [
+    -1.003,
+    -4.489,
+    -0.0
+   ],
+   "max": [
+    0.393,
+    13.129,
+    6.0
+   ]
+  },
+  {
+   "name": "Shelf_2",
+   "kind": "rack",
+   "min": [
+    7.997,
+    -4.489,
+    -0.0
+   ],
+   "max": [
+    11.413,
+    13.129,
+    6.0
+   ]
+  }
+ ]
+}

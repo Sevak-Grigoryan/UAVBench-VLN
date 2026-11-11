@@ -1,0 +1,22 @@
+{
+ "actions": [
+  {
+   "index": 0,
+   "frame": 0,
+   "t": 0.0,
+   "x1": 0.0,
+   "y1": 0.0,
+   "x2": 0.0,
+   "y2": 0.2,
+   "gimbal_pitch_deg": 15.0,
+   "hold_frames": 150,
+   "hold_s": 5.0
+  },
+  {
+   "index": 1,
+   "frame": 150,
+   "t": 5.0,
+   "end": "prohibited contact"
+  }
+ ]
+}

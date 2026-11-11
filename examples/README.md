@@ -1,5 +1,9 @@
 # Examples
 
+- `mountain_episode_001`: one v0.1 episode (below).
+- [`collision_benchmark`](collision_benchmark/README.md): the published v0.2 data (Forest `Simulation_1` and the Forest
+  and Warehouse collision situations), without videos.
+
 ## `mountain_episode_001`
 
 A complete published benchmark episode: `Easy/Mountain/Simulation_1`, built in the scene of dataset simulation

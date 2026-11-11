@@ -1,0 +1,16 @@
+{
+ "valid": true,
+ "collided": true,
+ "success_possible": false,
+ "episode_end": "COLLISION at t = 4.9792 s (physics step 1195): landing_gear skid_left touched /Root/Shelf_0/CardBoxSet2/SM_CardBoxA_12/SM_CardBoxA_01",
+ "collision": {
+  "t": 4.9792,
+  "episode_step": 1195,
+  "drone_part": "landing_gear",
+  "drone_collider": "/World/x500/body/collision/skid_left",
+  "other_collider": "/Root/Shelf_0/CardBoxSet2/SM_CardBoxA_12/SM_CardBoxA_01",
+  "total_impulse_ns": 0.587785
+ },
+ "allowed_landing_contact": null,
+ "matches_expected": true
+}

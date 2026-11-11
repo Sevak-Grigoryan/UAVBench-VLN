@@ -1,0 +1,11 @@
+{
+ "vlncol_forest_037": {
+  "paraphrases": [
+   "Head for the red barn that has a grain silo next to it on the south side of the river, and come to a halt roughly 28 m away while facing it.",
+   "Find the red barn beside the grain silo south of the river; stop about 28 m short of it with the camera pointed at it.",
+   "Your target is the red barn with a silo, south of the river: approach it, hold about 28 m from it and face it."
+  ],
+  "short": "Stop about 28 m from the red barn with the silo, facing it.",
+  "source": "written by an LLM (Claude) from the canonical instruction; every one keeps the target and the 28 m stand-off"
+ }
+}

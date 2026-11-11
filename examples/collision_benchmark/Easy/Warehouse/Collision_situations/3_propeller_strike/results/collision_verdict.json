@@ -1,0 +1,16 @@
+{
+ "valid": true,
+ "collided": true,
+ "success_possible": false,
+ "episode_end": "COLLISION at t = 6.0125 s (physics step 1443): rotor collision touched /Root/Shelf_1/SM_RackShelf_163/SM_RackShelf_01/Section2",
+ "collision": {
+  "t": 6.012533,
+  "episode_step": 1443,
+  "drone_part": "rotor",
+  "drone_collider": "/World/x500/rotor0/collision",
+  "other_collider": "/Root/Shelf_1/SM_RackShelf_163/SM_RackShelf_01/Section2",
+  "total_impulse_ns": 0.032239
+ },
+ "allowed_landing_contact": null,
+ "matches_expected": true
+}

@@ -1,0 +1,36 @@
+diff --git a/extensions/pegasus.simulator/config/configs.yaml b/extensions/pegasus.simulator/config/configs.yaml
+index 3d61db5..205a1a1 100644
+--- a/extensions/pegasus.simulator/config/configs.yaml
++++ b/extensions/pegasus.simulator/config/configs.yaml
+@@ -4,5 +4,5 @@ global_coordinates:
+   altitude: 90.0
+   latitude: 38.736832
+   longitude: -9.137977
+-px4_default_airframe: gazebo-classic_iris # Change to 'iris' if using PX4 version lower than v1.14
+-px4_dir: ~/PX4-Autopilot
++px4_default_airframe: isaac_x500
++px4_dir: /mnt/weka/sgrigoryan/dataset_codebase/common/px4_env/PX4-Autopilot
+diff --git a/extensions/pegasus.simulator/pegasus/simulator/logic/backends/px4_mavlink_backend.py b/extensions/pegasus.simulator/pegasus/simulator/logic/backends/px4_mavlink_backend.py
+index 0270a2a..2da5319 100644
+--- a/extensions/pegasus.simulator/pegasus/simulator/logic/backends/px4_mavlink_backend.py
++++ b/extensions/pegasus.simulator/pegasus/simulator/logic/backends/px4_mavlink_backend.py
+@@ -633,8 +633,17 @@ class PX4MavlinkBackend(Backend):
+         # Use this loop to emulate a do-while loop (make sure this runs at least once)
+         while True:
+ 
+-            # Try to get a message
+-            msg = self._connection.recv_match(blocking=needs_to_wait_for_actuator)
++            # Try to get a message.
++            # dataset_codebase patch: the original waits forever for PX4's HIL_ACTUATOR_CONTROLS reply.
++            # If one reply never comes, PX4 waits for the next HIL_SENSOR while we wait for the reply and
++            # both sides sleep until the job times out (seen intermittently in the X500 forest flights,
++            # 2026-10-09: "poll timeout" from PX4, no progress here). Give up on that reply after 0.5 s
++            # and carry on with the previous actuator values; every such event is counted.
++            msg = self._connection.recv_match(blocking=needs_to_wait_for_actuator,
++                                              timeout=0.5 if needs_to_wait_for_actuator else None)
++            if msg is None and needs_to_wait_for_actuator:
++                self.lockstep_timeouts = getattr(self, "lockstep_timeouts", 0) + 1
++                break
+ 
+             # If a message was received
+             if msg is not None:
